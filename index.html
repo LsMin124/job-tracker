@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>채용 관제 보드</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F3; --surface:#FFFFFF; --ink:#1D2321; --muted:#6B7370;
+  --line:#DEE2E0; --accent:#C97A1A; --accent-dk:#A96510;
+  --ok:#2E7D4F; --bad:#B3452F; --idle:#8A9290;
+  --mono:'IBM Plex Mono',monospace; --sans:'IBM Plex Sans KR',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 80px}
+
+/* header */
+header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:8px}
+h1{font-size:20px;font-weight:700;letter-spacing:-.02em}
+h1 .sub{font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;letter-spacing:0}
+.counters{display:flex;gap:14px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.counters b{color:var(--ink);font-weight:600}
+.counters .warn b{color:var(--accent-dk)}
+
+/* toolbar */
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;
+  padding:4px 12px;font-size:12.5px;cursor:pointer;font-family:var(--sans);transition:border-color .15s,color .15s}
+.chip:hover{border-color:var(--muted)}
+.chip.on{border-color:var(--ink);color:var(--ink);font-weight:600}
+.spacer{flex:1}
+.btn{border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:6px;padding:6px 14px;
+  font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+.btn:hover{background:#000}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink)}
+
+/* card */
+.list{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;display:flex;overflow:hidden;transition:box-shadow .15s}
+.card:hover{box-shadow:0 2px 10px rgba(29,35,33,.07)}
+.lamp{width:6px;flex:none}
+.lamp.idle{background:var(--idle)} .lamp.run{background:var(--accent)}
+.lamp.ok{background:var(--ok)} .lamp.bad{background:var(--bad)}
+.card-body{flex:1;padding:14px 16px;min-width:0}
+.row1{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tier{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 6px;flex:none}
+.company{font-weight:700;font-size:15px}
+.org{color:var(--muted);font-size:12.5px}
+.dday{margin-left:auto;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent-dk);flex:none}
+.dday.over{color:var(--bad)}
+.role{margin-top:4px;font-size:13.5px}
+.meta{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);align-items:center}
+.fam{color:var(--ink);background:var(--bg);border-radius:4px;padding:1px 8px;font-size:11.5px;font-weight:600}
+.meta a{color:var(--accent-dk);text-decoration:none;font-weight:600}
+.meta a:hover{text-decoration:underline}
+.note{margin-top:8px;font-size:12.5px;color:var(--muted);background:var(--bg);border-radius:6px;padding:6px 10px;white-space:pre-wrap}
+
+/* stage line — signature */
+.stages{margin-top:12px;display:flex;align-items:center;gap:0;max-width:420px}
+.seg{flex:1;display:flex;flex-direction:column;gap:4px;position:relative}
+.bar{height:4px;background:var(--line);border-radius:2px;margin-right:4px;transition:background .25s}
+.seg:last-child .bar{margin-right:0}
+.seg.fill .bar{background:var(--accent)}
+.seg.fill-ok .bar{background:var(--ok)}
+.seg.fill-bad .bar{background:var(--bad)}
+.seg small{font-family:var(--mono);font-size:9.5px;color:var(--muted);letter-spacing:.02em}
+.seg.fill small,.seg.fill-ok small,.seg.fill-bad small{color:var(--ink);font-weight:600}
+
+/* card controls */
+.ctrl{display:flex;flex-direction:column;gap:6px;justify-content:center;padding:12px;border-left:1px solid var(--line);flex:none;width:150px}
+.ctrl select{width:100%;border:1px solid var(--line);border-radius:6px;padding:5px 6px;font-family:var(--sans);font-size:12.5px;background:var(--surface);color:var(--ink)}
+.mini{display:flex;gap:6px}
+.mini button{flex:1;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:4px 0;font-size:12px;cursor:pointer;color:var(--muted);font-family:var(--sans)}
+.mini button:hover{border-color:var(--ink);color:var(--ink)}
+
+.empty{padding:48px 20px;text-align:center;color:var(--muted);font-size:13.5px;border:1px dashed var(--line);border-radius:10px;margin-top:16px}
+
+/* modal */
+.overlay{position:fixed;inset:0;background:rgba(29,35,33,.4);display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto;z-index:10}
+.overlay.show{display:flex}
+.modal{background:var(--surface);border-radius:12px;width:100%;max-width:520px;padding:22px}
+.modal h2{font-size:16px;margin-bottom:16px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-family:var(--sans);font-size:13.5px;color:var(--ink);background:var(--surface)}
+.field textarea{min-height:70px;resize:vertical}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+
+/* toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;
+  padding:8px 18px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
+.toast.show{opacity:1}
+
+footer{margin-top:36px;font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer button{border:none;background:none;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:11.5px;font-family:var(--sans)}
+footer button:hover{color:var(--bad)}
+
+@media (max-width:640px){
+  .card{flex-direction:column}
+  .lamp{width:100%;height:5px}
+  .ctrl{width:100%;border-left:none;border-top:1px solid var(--line);flex-direction:row;align-items:center}
+  .ctrl select{flex:1}
+  .mini{flex:none;width:110px}
+  .dday{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>채용 관제 보드<span class="sub">로봇 · 생산 SW 신입 포지션</span></h1>
+    <div class="counters" id="counters"></div>
+  </header>
+
+  <div class="toolbar">
+    <div class="chips" id="famChips"></div>
+    <div class="chips" id="stChips"></div>
+    <div class="spacer"></div>
+    <button class="btn" id="addBtn">공고 추가</button>
+  </div>
+
+  <div class="list" id="list"></div>
+  <div class="empty" id="empty" style="display:none">이 필터에 해당하는 공고가 없습니다. 필터를 바꾸거나 「공고 추가」로 새 공고를 등록하세요.</div>
+
+  <footer>
+    <span id="savedAt"></span>
+    <button id="resetBtn">초기 목록으로 되돌리기</button>
+  </footer>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2 id="modalTitle">공고 추가</h2>
+    <div class="grid2">
+      <div class="field"><label>기업</label><input id="f_company" placeholder="예: 삼성전자 DX"></div>
+      <div class="field"><label>조직/부문</label><input id="f_org" placeholder="예: 생산기술연구소"></div>
+    </div>
+    <div class="field"><label>직무</label><input id="f_role" placeholder="예: 제조 소프트웨어"></div>
+    <div class="grid2">
+      <div class="field"><label>직무군</label>
+        <select id="f_family">
+          <option>로봇SW</option><option>제조·설비SW</option><option>생산기술SW형</option><option>안전판</option>
+        </select>
+      </div>
+      <div class="field"><label>구분</label>
+        <select id="f_tier"><option>1군</option><option>2군</option></select>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>채용 사이클 메모</label><input id="f_cycle" placeholder="예: 9월 공채 예상"></div>
+      <div class="field"><label>마감일 (알면 입력)</label><input id="f_deadline" type="date"></div>
+    </div>
+    <div class="field"><label>공고 링크</label><input id="f_link" placeholder="https://jasoseol.com/recruit/…"></div>
+    <div class="field"><label>메모</label><textarea id="f_note" placeholder="자소서 강조점, 준비할 것 등"></textarea></div>
+    <div class="modal-actions">
+      <button class="btn ghost" id="cancelBtn">취소</button>
+      <button class="btn" id="saveBtn">저장</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const KEY='jobtracker:v1';
+const STATUSES=['예정','서류작성','지원완료','코테·인적성','면접','최종합격','탈락','관망'];
+const STAGES=['지원전','서류','시험','면접','결과'];
+const stageIdx={'예정':0,'관망':0,'서류작성':1,'지원완료':1,'코테·인적성':2,'면접':3,'최종합격':4,'탈락':4};
+const FAMS=['전체','로봇SW','제조·설비SW','생산기술SW형','안전판'];
+const STFILTERS=['전체','진행중','예정·관망','종료'];
+
+const SEED=[
+ {tier:'1군',company:'삼성전자 DX',org:'생산기술연구소',role:'제조 소프트웨어 · 인공지능',family:'제조·설비SW',cycle:'9월 3급 공채 예상 (GSAT)',deadline:'',link:'https://jasoseol.com/recruit/99686',status:'예정',note:'트윈+코파일럿 프로젝트 정조준. 25하 공고로 직무 실증.'},
+ {tier:'1군',company:'삼성전자 DX',org:'미래로봇추진단',role:'시스템 소프트웨어',family:'로봇SW',cycle:'9월 3급 공채 예상 (26상 신설 직무)',deadline:'',link:'https://jasoseol.com/recruit/102920',status:'예정',note:'하반기 재모집 여부 최우선 확인.'},
+ {tier:'1군',company:'LG전자',org:'생산기술원(PRI)',role:'생산기술원_로봇 · Software R&D',family:'로봇SW',cycle:'하반기 공채 + 채용연계 인턴 추적',deadline:'',link:'https://jasoseol.com/recruit/99748',status:'예정',note:'인턴 공고가 사실상 신입 관문.'},
+ {tier:'1군',company:'현대위아',org:'RnA(로봇)',role:'모바일로봇 주행 SW · 협동로봇 비전 SW',family:'로봇SW',cycle:'직전 5월 공채 — 하반기 모니터링',deadline:'',link:'https://jasoseol.com/recruit/103945',status:'예정',note:'주행=자율주행 대회, 비전=6D Pose. 직무명 일치 최상.'},
+ {tier:'1군',company:'현대자동차',org:'생산기술 · SDF',role:'로보틱스 기술개발 · 디지털엔지니어링',family:'생산기술SW형',cycle:'내년 3월 공채 + 제조SW/AI 수시 특설',deadline:'',link:'https://jasoseol.com/recruit/103083',status:'예정',note:'talent-hyundai-now.com 특설 수시 병행 확인.'},
+ {tier:'1군',company:'현대모비스',org:'생산기술',role:'생산기술_스마트팩토리',family:'생산기술SW형',cycle:'상·하반기 공채 (26상 실증)',deadline:'',link:'https://jasoseol.com/recruit/102712',status:'예정',note:'B군 SW형 변종 — C군 서사 그대로 사용.'},
+ {tier:'1군',company:'두산로보틱스',org:'로봇연구소',role:'ROS SW · 제어알고리즘',family:'로봇SW',cycle:'하반기 9~10월 경향 + 수시',deadline:'',link:'https://doosanrobotics.ninehire.site/',status:'예정',note:'ROS2·PyTorch·시뮬레이션 요건. C++ 보강 시 가산.'},
+ {tier:'1군',company:'HD현대로보틱스',org:'로봇 R&D · SI',role:'로봇 제어 SW · 시스템솔루션 SW설계',family:'로봇SW',cycle:'상·하반기 (26상 신입/경력 실증)',deadline:'',link:'https://jasoseol.com/companies/5492/careers',status:'예정',note:'대구 본사 근무 검토 필요.'},
+ {tier:'1군',company:'세메스',org:'장비 SW',role:'SW설계',family:'제조·설비SW',cycle:'매년 11월 사이클 (25.11 실증)',deadline:'',link:'https://jasoseol.com/recruit/100787',status:'예정',note:'SW직무 코딩테스트 있음. GSAT 병행.'},
+ {tier:'2군',company:'현대오토에버',org:'스마트팩토리 · 로봇SW',role:'(로봇SW) Backend Developer',family:'안전판',cycle:'하반기 공채 (26상·25하 실증)',deadline:'',link:'https://jasoseol.com/recruit/102780',status:'예정',note:'코테 관문. Java/Spring 자산 직결.'},
+ {tier:'2군',company:'LG CNS',org:'스마트팩토리',role:'학사_스마트팩토리 · 스마트물류',family:'안전판',cycle:'공채 + DX Core 인재 Academy',deadline:'',link:'https://jasoseol.com/companies/57/careers',status:'예정',note:'버추얼팩토리(디지털트윈) 조직 보유.'},
+ {tier:'2군',company:'포스코DX',org:'스마트팩토리 IT',role:'전산설계',family:'안전판',cycle:'하반기 9~10월 예상 (26상 실증)',deadline:'',link:'https://jasoseol.com/recruit/103573',status:'예정',note:'AI직군은 석사↑ — 전산설계로 지원.'},
+ {tier:'2군',company:'삼성SDS',org:'인텔리전트팩토리',role:'3급 신입 (SW개발)',family:'안전판',cycle:'9월 3급 공채 예상',deadline:'',link:'https://jasoseol.com/companies/137/careers',status:'예정',note:'인텔리전트팩토리 배치 희망 기재.'},
+];
+
+let items=[]; let famFilter='전체'; let stFilter='전체'; let editingId=null; let memoryOnly=false;
+
+const $=id=>document.getElementById(id);
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1800)}
+
+async function load(){
+  try{
+    const raw=localStorage.getItem(KEY);
+    if(raw){const d=JSON.parse(raw);items=d.items||[];return}
+  }catch(e){
+    memoryOnly=true;toast('저장소 미지원 환경 — 이번 세션에만 유지됩니다');
+  }
+  items=SEED.map(s=>({id:uid(),...s}));
+  await persist(false);
+}
+async function persist(show=true){
+  if(memoryOnly){render();return}
+  try{
+    localStorage.setItem(KEY,JSON.stringify({items,updatedAt:new Date().toISOString()}));
+    if(show)toast('저장됨');
+  }catch(e){toast('저장 실패 — 브라우저 저장소를 확인하세요')}
+  render();
+}
+
+function lampClass(st){if(st==='최종합격')return'ok';if(st==='탈락')return'bad';if(st==='예정'||st==='관망')return'idle';return'run'}
+function stGroup(st){if(st==='최종합격'||st==='탈락')return'종료';if(st==='예정'||st==='관망')return'예정·관망';return'진행중'}
+function dday(d){if(!d)return null;const t=new Date();t.setHours(0,0,0,0);const dl=new Date(d+'T00:00:00');const n=Math.round((dl-t)/86400000);return n}
+
+function chips(el,arr,cur,onSel){
+  el.innerHTML='';
+  arr.forEach(v=>{
+    const b=document.createElement('button');b.className='chip'+(v===cur?' on':'');b.textContent=v;
+    b.onclick=()=>onSel(v);el.appendChild(b);
+  });
+}
+
+function render(){
+  chips($('famChips'),FAMS,famFilter,v=>{famFilter=v;render()});
+  chips($('stChips'),STFILTERS,stFilter,v=>{stFilter=v;render()});
+
+  const total=items.length;
+  const run=items.filter(i=>stGroup(i.status)==='진행중').length;
+  const applied=items.filter(i=>['지원완료','코테·인적성','면접','최종합격'].includes(i.status)).length;
+  const soon=items.filter(i=>{const n=dday(i.deadline);return n!==null&&n>=0&&n<=7}).length;
+  $('counters').innerHTML=`<span>전체 <b>${total}</b></span><span>진행중 <b>${run}</b></span><span>지원완료 <b>${applied}</b></span><span class="warn">마감 7일내 <b>${soon}</b></span>`;
+
+  let view=items.filter(i=>(famFilter==='전체'||i.family===famFilter)&&(stFilter==='전체'||stGroup(i.status)===stFilter));
+  view.sort((a,b)=>{
+    const da=dday(a.deadline),db=dday(b.deadline);
+    if(da!==null&&db!==null)return da-db;
+    if(da!==null)return -1;if(db!==null)return 1;
+    if(a.tier!==b.tier)return a.tier<b.tier?-1:1;
+    return a.company.localeCompare(b.company,'ko');
+  });
+
+  const list=$('list');list.innerHTML='';
+  $('empty').style.display=view.length?'none':'block';
+
+  view.forEach(it=>{
+    const idx=stageIdx[it.status]??0;
+    const segs=STAGES.map((s,i)=>{
+      let cls='seg';
+      if(i<=idx&&!(idx===0&&(it.status==='예정'||it.status==='관망'))){
+        cls+=it.status==='최종합격'?' fill-ok':it.status==='탈락'?(i===idx?' fill-bad':' fill'):' fill';
+      }
+      return `<div class="${cls}"><div class="bar"></div><small>${s}</small></div>`;
+    }).join('');
+    const n=dday(it.deadline);
+    const dd=n===null?'':(n<0?`<span class="dday over">마감</span>`:`<span class="dday">D-${n===0?'DAY':n}</span>`);
+    const link=it.link?`<a href="${it.link}" target="_blank" rel="noopener">공고 근거 ↗</a>`:'';
+    const note=it.note?`<div class="note">${escapeHtml(it.note)}</div>`:'';
+    const card=document.createElement('div');card.className='card';
+    card.innerHTML=`
+      <div class="lamp ${lampClass(it.status)}"></div>
+      <div class="card-body">
+        <div class="row1">
+          <span class="tier">${it.tier}</span>
+          <span class="company">${escapeHtml(it.company)}</span>
+          <span class="org">${escapeHtml(it.org)}</span>
+          ${dd}
+        </div>
+        <div class="role">${escapeHtml(it.role)}</div>
+        <div class="meta"><span class="fam">${it.family}</span><span>${escapeHtml(it.cycle||'')}</span>${link}</div>
+        <div class="stages">${segs}</div>
+        ${note}
+      </div>
+      <div class="ctrl">
+        <select data-id="${it.id}" class="stSel" aria-label="상태 변경">
+          ${STATUSES.map(s=>`<option${s===it.status?' selected':''}>${s}</option>`).join('')}
+        </select>
+        <div class="mini">
+          <button data-id="${it.id}" class="editB">수정</button>
+          <button data-id="${it.id}" class="delB">삭제</button>
+        </div>
+      </div>`;
+    list.appendChild(card);
+  });
+
+  list.querySelectorAll('.stSel').forEach(s=>s.onchange=async e=>{
+    const it=items.find(x=>x.id===e.target.dataset.id);if(!it)return;
+    it.status=e.target.value;await persist();
+  });
+  list.querySelectorAll('.editB').forEach(b=>b.onclick=()=>openModal(b.dataset.id));
+  list.querySelectorAll('.delB').forEach(b=>b.onclick=async()=>{
+    const it=items.find(x=>x.id===b.dataset.id);
+    if(it&&confirm(`「${it.company} — ${it.role}」 항목을 삭제할까요?`)){
+      items=items.filter(x=>x.id!==b.dataset.id);await persist();
+    }
+  });
+  $('savedAt').textContent=memoryOnly?'임시 모드 (세션 종료 시 소실)':'변경사항은 자동 저장됩니다';
+}
+
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+function openModal(id){
+  editingId=id||null;
+  $('modalTitle').textContent=id?'공고 수정':'공고 추가';
+  const it=id?items.find(x=>x.id===id):null;
+  $('f_company').value=it?it.company:''; $('f_org').value=it?it.org:'';
+  $('f_role').value=it?it.role:''; $('f_family').value=it?it.family:'로봇SW';
+  $('f_tier').value=it?it.tier:'1군'; $('f_cycle').value=it?it.cycle:'';
+  $('f_deadline').value=it?it.deadline:''; $('f_link').value=it?it.link:'';
+  $('f_note').value=it?it.note:'';
+  $('overlay').classList.add('show');
+}
+function closeModal(){$('overlay').classList.remove('show');editingId=null}
+
+$('addBtn').onclick=()=>openModal(null);
+$('cancelBtn').onclick=closeModal;
+$('overlay').onclick=e=>{if(e.target===$('overlay'))closeModal()};
+$('saveBtn').onclick=async()=>{
+  const company=$('f_company').value.trim();
+  if(!company){toast('기업명을 입력하세요');return}
+  const data={company,org:$('f_org').value.trim(),role:$('f_role').value.trim(),
+    family:$('f_family').value,tier:$('f_tier').value,cycle:$('f_cycle').value.trim(),
+    deadline:$('f_deadline').value,link:$('f_link').value.trim(),note:$('f_note').value.trim()};
+  if(editingId){const it=items.find(x=>x.id===editingId);Object.assign(it,data)}
+  else items.push({id:uid(),status:'예정',...data});
+  closeModal();await persist();
+};
+$('resetBtn').onclick=async()=>{
+  if(confirm('모든 변경사항을 버리고 초기 목록(핏 검증 13건)으로 되돌릴까요?')){
+    items=SEED.map(s=>({id:uid(),...s}));await persist();toast('초기 목록 복원됨');
+  }
+};
+
+load().then(render);
+</script>
+</body>
+</html>
