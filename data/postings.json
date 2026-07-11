@@ -1,0 +1,63 @@
+{
+ "updated": "2026-07-11T21:42:53+09:00",
+ "postings": [
+  {
+   "company": "LG CNS",
+   "title": "AM Inspire Camp 6기",
+   "url": "https://jasoseol.com/recruit/104581",
+   "start": "2026-06-12",
+   "end": "2026-07-12",
+   "jobs": [
+    "AM Inspire Camp 6기"
+   ],
+   "hit": false
+  },
+  {
+   "company": "LG전자",
+   "title": "2026년 K-뉴딜 아카데미 교육생 모집",
+   "url": "https://jasoseol.com/recruit/104930",
+   "start": "2026-06-26",
+   "end": "2026-07-13",
+   "jobs": [
+    "디지털 마케팅",
+    "스마트 팩토리",
+    "AX Work Flow"
+   ],
+   "hit": false
+  },
+  {
+   "company": "현대오토에버",
+   "title": "2026 3분기 신입사원 채용",
+   "url": "https://jasoseol.com/recruit/104742",
+   "start": "2026-06-23",
+   "end": "2026-07-13",
+   "jobs": [
+    "(코딩)[로봇SW]Platform Engineer-로봇 플랫폼 Backend 개발",
+    "(코딩)[로봇SW]Platform Engineer-로봇 플랫폼 Frontend 개발",
+    "(코딩)[모빌리티]Backend Developer-차량 및 로봇관제 자체 플랫폼 개발",
+    "(코딩)[모빌리티]Backend Developer-국내외 커넥티드카 서비스 개발/운영",
+    "(코딩)[모빌리티]Backend Developer-서비스 플랫폼 개발/운영",
+    "(코딩)[엔터프라이즈 IT]Fullstack Developer-완성차 글로벌 정비시스템 개발/운영",
+    "(코딩)[엔터프라이즈 IT]Fullstack Developer-완성차 AS 포털 및 컨텐츠 관리시스템 개발/운영",
+    "(코딩)[엔터프라이즈 IT]Fullstack Developer-엔터프라이즈IT 백오피스 서비스 개발",
+    "(코딩)[엔터프라이즈 IT]Fullstack Developer-연구소 엔지니어링 SW 관리시스템 운영",
+    "(코딩)[엔터프라이즈 IT]Fullstack Developer-금융 IT 시스템 개발",
+    "(코딩)[엔터프라이즈 IT]Fullstack Developer-차세대결재시스템 개발/운영",
+    "(코딩)[엔터프라이즈 IT]Fullstack Developer-오토웨이(Autoway)그룹웨어 플랫폼 개발/운영"
+   ],
+   "hit": true
+  },
+  {
+   "company": "LS일렉트릭",
+   "title": "JUMP UP 부트캠프",
+   "url": "https://jasoseol.com/recruit/104941",
+   "start": "2026-07-02",
+   "end": "2026-07-26",
+   "jobs": [
+    "AI·데이터 분석 부트캠프"
+   ],
+   "hit": false
+  }
+ ],
+ "errors": []
+}
