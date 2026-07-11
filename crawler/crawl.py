@@ -8,6 +8,7 @@ import json
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -39,6 +40,14 @@ COMPANIES = [
      "keywords": ["LS ELECTRIC", "일렉트릭", "자동화", "R&D"]},
     # 두산로보틱스: 자소설 미등재, 나인하이어는 클라이언트 렌더링이라 v1 미지원
 ]
+ID_TO_COMPANY = {c["id"]: c["company"] for c in COMPANIES}
+
+# 전역 탐색: 등록 기업 외 신입 공고를 키워드 검색으로 발견
+# 검색은 공고 본문까지 매칭해 노이즈가 많으므로, 제목·기업명·직무명에
+# 키워드가 실제 포함된 건만 채택한다
+DISCOVER_KEYWORDS = ["로봇", "로보틱스", "생산기술", "스마트팩토리", "자율주행"]
+DISCOVER_MAX_PAGES = 2   # 키워드당 최대 2페이지 (perPage=50)
+DISCOVER_LIMIT = 40      # 발견 목록 상한 (마감 임박 순)
 
 
 def fetch(url: str) -> str:
@@ -60,30 +69,83 @@ def active_postings(conf: dict, today: str) -> list[dict]:
     jobs = data["props"]["pageProps"].get("initialJobs") or []
     result = []
     for job in jobs:
-        end = str(job.get("end_time") or "")[:10]
-        if not end or end < today:
+        posting = job_to_posting(job, conf["company"], today)
+        if not posting:
             continue
-        # division: 1=신입, 2=경력, 3=인턴, 7=교육/아카데미 — 신입 포함 공고만
-        divisions = set()
-        for e in (job.get("employments") or []):
-            d = e.get("division")
-            divisions.update(d if isinstance(d, list) else [d])
-        if 1 not in divisions:
-            continue
-        fields = [str(e.get("field") or "")
-                  for e in (job.get("employments") or [])]
-        haystack = " ".join([str(job.get("title") or "")] + fields).lower()
-        hit = any(k.lower() in haystack for k in conf["keywords"])
-        result.append({
-            "company": conf["company"],
-            "title": str(job.get("title") or "").strip(),
-            "url": f"https://jasoseol.com/recruit/{job['id']}",
-            "start": str(job.get("start_time") or "")[:10],
-            "end": end,
-            "jobs": [f for f in fields if f][:12],
-            "hit": hit,
-        })
+        haystack = " ".join([posting["title"]] + posting["jobs"]).lower()
+        posting["hit"] = any(k.lower() in haystack for k in conf["keywords"])
+        result.append(posting)
     return result
+
+
+def job_to_posting(job: dict, company: str, today: str) -> dict | None:
+    """자소설 job 객체를 posting으로 변환. 마감/신입 조건 미달이면 None."""
+    end = str(job.get("end_time") or "")[:10]
+    if not end or end < today:
+        return None
+    divisions = set()
+    for e in (job.get("employments") or []):
+        d = e.get("division")
+        divisions.update(d if isinstance(d, list) else [d])
+    if 1 not in divisions:  # 1=신입
+        return None
+    fields = [str(e.get("field") or "") for e in (job.get("employments") or [])]
+    return {
+        "id": job["id"],
+        "company": company,
+        "title": str(job.get("title") or "").strip(),
+        "url": f"https://jasoseol.com/recruit/{job['id']}",
+        "start": str(job.get("start_time") or "")[:10],
+        "end": end,
+        "jobs": [f for f in fields if f][:12],
+    }
+
+
+def discover(today: str, known_ids: set) -> list[dict]:
+    """키워드 전역 검색으로 등록 기업 외 신입 공고를 발견."""
+    found = {}
+    for kw in DISCOVER_KEYWORDS:
+        page = 1
+        while page <= DISCOVER_MAX_PAGES:
+            qs = urllib.parse.urlencode({
+                "keyword": kw, "division": 1, "excludeClosed": "true",
+                "perPage": 50, "page": page,
+            })
+            data = parse_next_data(fetch(f"https://jasoseol.com/search?{qs}"))
+            payload = None
+            queries = (data["props"]["pageProps"].get("dehydratedState")
+                       or {}).get("queries", [])
+            for q in queries:
+                cand = (q.get("state") or {}).get("data")
+                if isinstance(cand, dict) and "data" in cand:
+                    payload = cand
+                    break
+            if not payload:
+                break
+            for job in payload.get("data", []):
+                if job["id"] in found or job["id"] in known_ids:
+                    continue
+                cg = job.get("company_group") or {}
+                cg_name = str(cg.get("name") or "").strip()
+                company = ID_TO_COMPANY.get(job.get("company_group_id"), cg_name)
+                posting = job_to_posting(job, company, today)
+                if not posting:
+                    continue
+                fields = " ".join(posting["jobs"])
+                haystack = f"{posting['title']} {cg_name} {fields}".lower()
+                matched = [k for k in DISCOVER_KEYWORDS
+                           if k.lower() in haystack]
+                if not matched:
+                    continue
+                posting["kw"] = matched
+                found[job["id"]] = posting
+            if page * 50 >= int(payload.get("totalCount") or 0):
+                break
+            page += 1
+            time.sleep(REQUEST_INTERVAL_SEC)
+        time.sleep(REQUEST_INTERVAL_SEC)
+    result = sorted(found.values(), key=lambda p: (p["end"], p["company"]))
+    return result[:DISCOVER_LIMIT]
 
 
 def main() -> int:
@@ -100,9 +162,22 @@ def main() -> int:
         time.sleep(REQUEST_INTERVAL_SEC)
 
     postings.sort(key=lambda p: (p["end"], p["company"]))
+
+    discovered = []
+    try:
+        known_ids = {p["id"] for p in postings}
+        tracked_names = {c["company"] for c in COMPANIES}
+        discovered = [p for p in discover(today, known_ids)
+                      if p["company"] not in tracked_names]
+        print(f"[ok] 전역 탐색: {len(discovered)} discovered")
+    except Exception as e:
+        errors.append(f"전역 탐색: {e}")
+        print(f"[fail] 전역 탐색: {e}", file=sys.stderr)
+
     out = {
         "updated": datetime.now(KST).isoformat(timespec="seconds"),
         "postings": postings,
+        "discovered": discovered,
         "errors": errors,
     }
     out_path = Path(__file__).resolve().parent.parent / "data" / "postings.json"

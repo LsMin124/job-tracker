@@ -115,6 +115,15 @@ h1 .sub{font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;lette
 .evlinks a:hover{border-color:var(--accent-dk)}
 .nodata{font-size:12px;color:var(--muted);font-style:italic}
 
+/* discovered postings (전역 탐색) */
+.disc-body{padding:0 16px 14px;display:flex;flex-direction:column;gap:6px}
+.disc-row{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12.5px}
+.disc-row .co{font-weight:700;flex:none}
+.disc-row a{color:var(--accent-dk);text-decoration:none;font-weight:600}
+.disc-row a:hover{text-decoration:underline}
+.disc-row .jobs2{color:var(--muted);font-size:12px;flex:1;min-width:140px}
+.disc-row .dd2{font-family:var(--mono);font-size:11.5px;color:var(--accent-dk);margin-left:auto;flex:none}
+
 /* live postings (자동 수집) */
 .live{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
 .livechip{display:inline-flex;align-items:baseline;gap:6px;border:1px solid var(--accent);border-radius:6px;
@@ -174,6 +183,11 @@ footer button:hover{color:var(--bad)}
   <details class="profile" id="profile">
     <summary>이력 요약<span class="sub2">프로젝트 · 논문 · 교육 · 자격 — 카드 매칭의 참조 기준</span></summary>
     <div class="profile-body" id="profileBody"></div>
+  </details>
+
+  <details class="profile" id="discoverBox" style="display:none" open>
+    <summary id="discoverTitle">발견 공고<span class="sub2">등록 외 기업 — 키워드 자동 탐색 (신입 채용만)</span></summary>
+    <div class="disc-body" id="discBody"></div>
   </details>
 
   <div class="list" id="list"></div>
@@ -322,7 +336,7 @@ const SEED=[
 
 let items=[]; let famFilter='전체'; let stFilter='전체'; let editingId=null; let memoryOnly=false;
 const openSet=new Set();
-const live={updated:'',byCompany:{},count:0};
+const live={updated:'',byCompany:{},count:0,discovered:[]};
 
 const $=id=>document.getElementById(id);
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
@@ -363,6 +377,7 @@ async function loadLive(){
     live.count=(d.postings||[]).length;
     live.byCompany={};
     (d.postings||[]).forEach(p=>{(live.byCompany[p.company]=live.byCompany[p.company]||[]).push(p)});
+    live.discovered=d.discovered||[];
   }catch(e){/* file:// 실행 또는 수집 데이터 없음 — 자동 수집 표시 생략 */}
 }
 
@@ -397,7 +412,7 @@ function render(){
   const run=items.filter(i=>stGroup(i.status)==='진행중').length;
   const applied=items.filter(i=>['지원완료','코테·인적성','면접','최종합격'].includes(i.status)).length;
   const soon=items.filter(i=>{const n=dday(i.deadline);return n!==null&&n>=0&&n<=7}).length;
-  $('counters').innerHTML=`<span>전체 <b>${total}</b></span><span>진행중 <b>${run}</b></span><span>지원완료 <b>${applied}</b></span><span class="warn">마감 7일내 <b>${soon}</b></span><span class="warn">접수중 공고 <b>${live.count}</b></span>`;
+  $('counters').innerHTML=`<span>전체 <b>${total}</b></span><span>진행중 <b>${run}</b></span><span>지원완료 <b>${applied}</b></span><span class="warn">마감 7일내 <b>${soon}</b></span><span class="warn">접수중 공고 <b>${live.count}</b></span><span class="warn">발견 <b>${live.discovered.length}</b></span>`;
 
   let view=items.filter(i=>(famFilter==='전체'||i.family===famFilter)&&(stFilter==='전체'||stGroup(i.status)===stFilter));
   const liveEnd=it=>{
@@ -562,7 +577,25 @@ function renderProfile(){
   ).join('');
 }
 
-Promise.all([load(),loadLive()]).then(()=>{renderProfile();render()});
+function renderDiscover(){
+  const arr=live.discovered;
+  if(!arr.length)return;
+  $('discoverBox').style.display='block';
+  $('discoverTitle').innerHTML=`발견 공고 (${arr.length})<span class="sub2">등록 외 기업 — 키워드 자동 탐색 (신입 채용만)</span>`;
+  $('discBody').innerHTML=arr.map(p=>{
+    const n=dday(p.end);
+    const dtxt=n===null?'':(n<0?'마감':(n===0?'D-DAY':'D-'+n));
+    const jobs=(p.jobs||[]).slice(0,3).join(' · ');
+    return `<div class="disc-row">
+      <span class="co">${escapeHtml(p.company)}</span>
+      <a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${escapeHtml(p.title)} ↗</a>
+      <span class="jobs2">${escapeHtml(jobs)}</span>
+      <span class="dd2">~${escapeHtml((p.end||'').slice(5))} ${dtxt}</span>
+    </div>`;
+  }).join('');
+}
+
+Promise.all([load(),loadLive()]).then(()=>{renderProfile();renderDiscover();render()});
 </script>
 </body>
 </html>
