@@ -49,6 +49,9 @@ h1 .sub{font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;lette
 .card-body{flex:1;padding:14px 16px;min-width:0}
 .row1{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .tier{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 6px;flex:none}
+.prio{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:4px;padding:1px 6px;flex:none;color:var(--muted)}
+.prio.pr1{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.prio.pr2{border-color:var(--accent-dk);color:var(--accent-dk);font-weight:600}
 .company{font-weight:700;font-size:15px}
 .org{color:var(--muted);font-size:12.5px}
 .dday{margin-left:auto;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent-dk);flex:none}
@@ -201,9 +204,16 @@ footer button:hover{color:var(--bad)}
       </div>
     </div>
     <div class="grid2">
-      <div class="field"><label>채용 사이클 메모</label><input id="f_cycle" placeholder="예: 9월 공채 예상"></div>
+      <div class="field"><label>우선순위</label>
+        <select id="f_priority">
+          <option value="1">1 (최우선)</option><option value="2">2</option>
+          <option value="3" selected>3 (기본)</option><option value="4">4</option>
+          <option value="5">5 (보류)</option>
+        </select>
+      </div>
       <div class="field"><label>마감일 (알면 입력)</label><input id="f_deadline" type="date"></div>
     </div>
+    <div class="field"><label>채용 사이클 메모</label><input id="f_cycle" placeholder="예: 9월 공채 예상"></div>
     <div class="field"><label>JD 핵심 요약 (한 줄에 하나)</label><textarea id="f_jd" placeholder="예: ROS2 기반 로봇 SW 개발&#10;예: C++/Python, 시뮬레이션 우대"></textarea></div>
     <div class="field"><label>이력 매칭 (요건 :: 내 근거, 한 줄에 하나)</label><textarea id="f_fit" placeholder="예: 로봇 제어 SW :: ROS2 자율주행 대회 동상"></textarea></div>
     <div class="field"><label>근거 링크 (라벨 :: URL, 한 줄에 하나)</label><textarea id="f_links" placeholder="예: 26상 공고 :: https://jasoseol.com/recruit/102920"></textarea></div>
@@ -378,6 +388,8 @@ function chips(el,arr,cur,onSel){
 }
 
 function render(){
+  // 우선순위 기본값: 1군=2, 2군=3 (기존 저장 데이터 포함)
+  items.forEach(it=>{if(it.priority==null)it.priority=it.tier==='1군'?2:3});
   chips($('famChips'),FAMS,famFilter,v=>{famFilter=v;render()});
   chips($('stChips'),STFILTERS,stFilter,v=>{stFilter=v;render()});
 
@@ -399,7 +411,10 @@ function render(){
     if(la!==null&&lb===null)return -1;
     if(la===null&&lb!==null)return 1;
     if(la!==null&&lb!==null&&la!==lb)return la-lb;
-    // 2순위: 수동 입력 마감일 → 구분 → 기업명
+    // 2순위: 사용자 지정 우선순위 (1=최우선)
+    const pa=a.priority??3,pb=b.priority??3;
+    if(pa!==pb)return pa-pb;
+    // 3순위: 수동 입력 마감일 → 구분 → 기업명
     const da=dday(a.deadline),db=dday(b.deadline);
     if(da!==null&&db!==null)return da-db;
     if(da!==null)return -1;if(db!==null)return 1;
@@ -447,6 +462,7 @@ function render(){
       <div class="card-body">
         <div class="row1">
           <span class="tier">${it.tier}</span>
+          <span class="prio pr${it.priority}">P${it.priority}</span>
           <span class="company">${escapeHtml(it.company)}</span>
           <span class="org">${escapeHtml(it.org)}</span>
           ${dd}
@@ -500,6 +516,7 @@ function openModal(id){
   $('f_company').value=it?it.company:''; $('f_org').value=it?it.org:'';
   $('f_role').value=it?it.role:''; $('f_family').value=it?it.family:'로봇SW';
   $('f_tier').value=it?it.tier:'1군'; $('f_cycle').value=it?it.cycle:'';
+  $('f_priority').value=String(it&&it.priority?it.priority:3);
   $('f_deadline').value=it?it.deadline:'';
   $('f_jd').value=(it&&it.jd)?it.jd.join('\n'):'';
   $('f_fit').value=(it&&it.fit)?it.fit.map(f=>`${f.req} :: ${f.my}`).join('\n'):'';
@@ -527,6 +544,7 @@ $('saveBtn').onclick=async()=>{
   }).filter(l=>l.url);
   const data={company,org:$('f_org').value.trim(),role:$('f_role').value.trim(),
     family:$('f_family').value,tier:$('f_tier').value,cycle:$('f_cycle').value.trim(),
+    priority:Number($('f_priority').value)||3,
     deadline:$('f_deadline').value,jd,fit,links,note:$('f_note').value.trim()};
   if(editingId){const it=items.find(x=>x.id===editingId);Object.assign(it,data)}
   else items.push({id:uid(),status:'예정',...data});

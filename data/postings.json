@@ -1,30 +1,6 @@
 {
- "updated": "2026-07-11T21:52:51+09:00",
+ "updated": "2026-07-11T22:01:26+09:00",
  "postings": [
-  {
-   "company": "LG CNS",
-   "title": "AM Inspire Camp 6기",
-   "url": "https://jasoseol.com/recruit/104581",
-   "start": "2026-06-12",
-   "end": "2026-07-12",
-   "jobs": [
-    "AM Inspire Camp 6기"
-   ],
-   "hit": false
-  },
-  {
-   "company": "LG전자",
-   "title": "2026년 K-뉴딜 아카데미 교육생 모집",
-   "url": "https://jasoseol.com/recruit/104930",
-   "start": "2026-06-26",
-   "end": "2026-07-13",
-   "jobs": [
-    "디지털 마케팅",
-    "스마트 팩토리",
-    "AX Work Flow"
-   ],
-   "hit": false
-  },
   {
    "company": "현대오토에버",
    "title": "2026 3분기 신입사원 채용",
@@ -46,17 +22,6 @@
     "(코딩)[엔터프라이즈 IT]Fullstack Developer-오토웨이(Autoway)그룹웨어 플랫폼 개발/운영"
    ],
    "hit": true
-  },
-  {
-   "company": "LS일렉트릭",
-   "title": "JUMP UP 부트캠프",
-   "url": "https://jasoseol.com/recruit/104941",
-   "start": "2026-07-02",
-   "end": "2026-07-26",
-   "jobs": [
-    "AI·데이터 분석 부트캠프"
-   ],
-   "hit": false
   }
  ],
  "errors": []

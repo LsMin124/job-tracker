@@ -63,6 +63,13 @@ def active_postings(conf: dict, today: str) -> list[dict]:
         end = str(job.get("end_time") or "")[:10]
         if not end or end < today:
             continue
+        # division: 1=신입, 2=경력, 3=인턴, 7=교육/아카데미 — 신입 포함 공고만
+        divisions = set()
+        for e in (job.get("employments") or []):
+            d = e.get("division")
+            divisions.update(d if isinstance(d, list) else [d])
+        if 1 not in divisions:
+            continue
         fields = [str(e.get("field") or "")
                   for e in (job.get("employments") or [])]
         haystack = " ".join([str(job.get("title") or "")] + fields).lower()
