@@ -116,14 +116,17 @@ h1 .sub{font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;lette
 .nodata{font-size:12px;color:var(--muted);font-style:italic}
 
 /* live postings (자동 수집) */
-.live{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
-.livechip{display:inline-flex;align-items:baseline;gap:6px;border:1px solid var(--accent);border-radius:6px;
-  padding:3px 10px;font-size:12px;color:var(--accent-dk);text-decoration:none;font-weight:600;background:var(--surface)}
-.livechip:hover{background:#FBF3E8}
-.livechip .end{font-family:var(--mono);font-size:10.5px;color:var(--muted);font-weight:500}
-.livechip.hit{background:var(--accent);color:#fff}
-.livechip.hit .end{color:rgba(255,255,255,.85)}
-.livechip.hit:hover{background:var(--accent-dk)}
+.live{margin-top:8px;display:flex;flex-direction:column;gap:6px}
+.live-post{border:1px solid var(--accent);border-radius:8px;padding:8px 12px;background:var(--surface)}
+.live-post.hit{background:#FDF8F0;border-width:2px;padding:7px 11px}
+.lp-head{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.lp-head .badge{font-family:var(--mono);font-size:10px;color:#fff;background:var(--accent);border-radius:4px;padding:1px 6px;flex:none}
+.lp-head a{color:var(--accent-dk);font-weight:700;font-size:13px;text-decoration:none}
+.lp-head a:hover{text-decoration:underline}
+.lp-head .end{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:auto;flex:none}
+.lp-jobs{list-style:none;margin-top:6px;display:flex;flex-wrap:wrap;gap:4px 6px}
+.lp-jobs li{font-size:11.5px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}
+.lp-jobs li.match{border-color:var(--accent-dk);color:var(--accent-dk);font-weight:600;background:#FBF3E8}
 
 /* modal */
 .overlay{position:fixed;inset:0;background:rgba(29,35,33,.4);display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto;z-index:10}
@@ -449,6 +452,10 @@ async function persist(show=true){
   render();
 }
 
+// 관심 직무 키워드 — 공고 내 직무명 강조에 사용
+const FIT_KW=['로봇','로보틱스','robot','생산기술','제조','스마트팩토리','소프트웨어','sw','s/w','제어','자율주행','비전','ai','백엔드','backend'];
+function isFitJob(name){const s=String(name||'').toLowerCase();return FIT_KW.some(k=>s.includes(k))}
+
 function lampClass(st){if(st==='최종합격')return'ok';if(st==='탈락')return'bad';if(st==='예정'||st==='관망')return'idle';return'run'}
 function stGroup(st){if(st==='최종합격'||st==='탈락')return'종료';if(st==='예정'||st==='관망')return'예정·관망';return'진행중'}
 function dday(d){if(!d)return null;const t=new Date();t.setHours(0,0,0,0);const dl=new Date(d+'T00:00:00');const n=Math.round((dl-t)/86400000);return n}
@@ -533,7 +540,15 @@ function render(){
     const liveHtml=lp.length?`<div class="live">${lp.map(p=>{
       const ln=dday(p.end);
       const dtxt=ln===null?'':(ln<0?'마감':(ln===0?'D-DAY':'D-'+ln));
-      return `<a class="livechip${p.hit?' hit':''}" href="${escapeHtml(p.url)}" target="_blank" rel="noopener">접수중 · ${escapeHtml(p.title)}<span class="end">~${escapeHtml((p.end||'').slice(5))} ${dtxt}</span></a>`;
+      const jobs=(p.jobs||[]).map(j=>({name:j,match:isFitJob(j)}));
+      jobs.sort((a,b)=>(b.match?1:0)-(a.match?1:0));
+      const jobsHtml=jobs.length?`<ul class="lp-jobs">${jobs.map(j=>
+        `<li${j.match?' class="match"':''}>${escapeHtml(j.name)}</li>`).join('')}</ul>`:'';
+      return `<div class="live-post${p.hit?' hit':''}">
+        <div class="lp-head"><span class="badge">접수중</span>
+          <a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${escapeHtml(p.title)} ↗</a>
+          <span class="end">~${escapeHtml((p.end||'').slice(5))} ${dtxt}</span></div>
+        ${jobsHtml}</div>`;
     }).join('')}</div>`:'';
     const isOpen=openSet.has(it.id);
     const detail=`

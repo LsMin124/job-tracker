@@ -93,26 +93,53 @@ def active_postings(conf: dict, today: str) -> list[dict]:
     return result
 
 
+# 석/박사 전용 판별: 석·박 표기가 있으면서 학사 지원 표기가 없는 제목/직무명
+MASTERS_ONLY = re.compile(r"석\s*[/·]?\s*박|석박|박사|석사")
+BACHELOR_OK = re.compile(r"학\s*[/·]?\s*석|학사")
+
+
+def is_masters_only(text: str) -> bool:
+    return bool(MASTERS_ONLY.search(text)) and not BACHELOR_OK.search(text)
+
+
+def emp_divisions(e: dict) -> set:
+    d = e.get("division")
+    return set(d if isinstance(d, list) else [d]) - {None}
+
+
 def job_to_posting(job: dict, company: str, today: str) -> dict | None:
-    """자소설 job 객체를 posting으로 변환. 마감/신입 조건 미달이면 None."""
+    """자소설 job 객체를 posting으로 변환.
+
+    제외 조건: 마감 지남 / 신입(division=1) 미포함 / 석·박사 전용.
+    jobs 목록은 신입 직무로 한정하고, 석·박사 전용 직무명은 제거한다.
+    """
     end = str(job.get("end_time") or "")[:10]
     if not end or end < today:
         return None
+    emps = job.get("employments") or []
     divisions = set()
-    for e in (job.get("employments") or []):
-        d = e.get("division")
-        divisions.update(d if isinstance(d, list) else [d])
+    for e in emps:
+        divisions.update(emp_divisions(e))
     if 1 not in divisions:  # 1=신입
         return None
-    fields = [str(e.get("field") or "") for e in (job.get("employments") or [])]
+    title = str(job.get("title") or "").strip()
+    if is_masters_only(title):
+        return None
+    newgrad = [e for e in emps if 1 in emp_divisions(e)]
+    fields_src = newgrad if newgrad else emps
+    fields = [str(e.get("field") or "") for e in fields_src]
+    fields = [f for f in fields if f and not is_masters_only(f)]
+    # 직무 정보가 있었는데 전부 석·박/경력 전용이면 지원 불가 공고
+    if fields_src and any(e.get("field") for e in fields_src) and not fields:
+        return None
     return {
         "id": job["id"],
         "company": company,
-        "title": str(job.get("title") or "").strip(),
+        "title": title,
         "url": f"https://jasoseol.com/recruit/{job['id']}",
         "start": str(job.get("start_time") or "")[:10],
         "end": end,
-        "jobs": [f for f in fields if f][:12],
+        "jobs": fields[:24],
     }
 
 
