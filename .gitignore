@@ -1,0 +1,12 @@
+# 개인 이력/정리 자료 — 절대 커밋 금지
+*.xlsx
+*.xls
+*.csv
+*.docx
+*.pdf
+*.hwp
+
+# OS/편집기 잡파일
+.DS_Store
+Thumbs.db
+~$*
