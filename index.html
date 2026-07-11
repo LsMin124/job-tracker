@@ -41,8 +41,17 @@ h1 .sub{font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;lette
 
 /* card */
 .list{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.sect{display:flex;align-items:baseline;gap:8px;margin:14px 0 2px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em}
+.sect:first-child{margin-top:0}
+.sect b{font-size:12.5px;color:var(--ink)}
+.sect::after{content:'';flex:1;border-top:1px solid var(--line);transform:translateY(-3px)}
+.sect.open b{color:var(--accent-dk)}
+.sect.open::after{border-color:var(--accent)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;display:flex;overflow:hidden;transition:box-shadow .15s}
 .card:hover{box-shadow:0 2px 10px rgba(29,35,33,.07)}
+.card.live-card{border:2px solid var(--accent);box-shadow:0 1px 6px rgba(201,122,26,.14)}
+.card.idle-card{background:#FBFCFB}
+.card.idle-card .company{color:#3A423F}
 .lamp{width:6px;flex:none}
 .lamp.idle{background:var(--idle)} .lamp.run{background:var(--accent)}
 .lamp.ok{background:var(--ok)} .lamp.bad{background:var(--bad)}
@@ -519,7 +528,19 @@ function render(){
   const list=$('list');list.innerHTML='';
   $('empty').style.display=view.length?'none':'block';
 
+  const openCnt=view.filter(x=>liveEnd(x)!==null).length;
+  let prevLive=null;
   view.forEach(it=>{
+    const isLive=liveEnd(it)!==null;
+    if(isLive!==prevLive){
+      const s=document.createElement('div');
+      s.className='sect'+(isLive?' open':'');
+      s.innerHTML=isLive
+        ?`<b>접수 가능</b><span>지금 지원할 수 있는 공고 보유 · ${openCnt}개사</span>`
+        :`<b>대기</b><span>접수중 공고 없음 · 채용 사이클 모니터링 · ${view.length-openCnt}개사</span>`;
+      list.appendChild(s);
+      prevLive=isLive;
+    }
     const idx=stageIdx[it.status]??0;
     const segs=STAGES.map((s,i)=>{
       let cls='seg';
@@ -558,7 +579,7 @@ function render(){
           <h4>요건 ← 내 근거</h4>${fitHtml}
           <h4>근거 링크</h4>${evHtml}
         </div>`;
-    const card=document.createElement('div');card.className='card';
+    const card=document.createElement('div');card.className='card '+(isLive?'live-card':'idle-card');
     card.innerHTML=`
       <div class="lamp ${lampClass(it.status)}"></div>
       <div class="card-body">
