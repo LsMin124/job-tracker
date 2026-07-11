@@ -80,6 +80,38 @@ h1 .sub{font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;lette
 
 .empty{padding:48px 20px;text-align:center;color:var(--muted);font-size:13.5px;border:1px dashed var(--line);border-radius:10px;margin-top:16px}
 
+/* my profile panel */
+.profile{margin-top:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.profile summary{cursor:pointer;padding:12px 16px;font-weight:700;font-size:13.5px;list-style:none;display:flex;align-items:baseline;gap:10px}
+.profile summary::-webkit-details-marker{display:none}
+.profile summary::before{content:'▸';font-size:11px;color:var(--muted);transition:transform .15s}
+.profile[open] summary::before{transform:rotate(90deg)}
+.profile summary .sub2{font-size:11.5px;font-weight:500;color:var(--muted)}
+.profile-body{padding:0 16px 14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.asset{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px}
+.asset b{display:block;font-size:12.5px;margin-bottom:2px}
+.asset .tag{font-family:var(--mono);font-size:10px;color:var(--accent-dk);margin-right:6px}
+.asset span{color:var(--muted)}
+
+/* detail section (JD · fit · evidence) */
+.detail-toggle{margin-top:10px;border:none;background:none;color:var(--accent-dk);font-size:12px;font-weight:600;cursor:pointer;font-family:var(--sans);padding:0}
+.detail-toggle:hover{text-decoration:underline}
+.detail{display:none;margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}
+.detail.open{display:block}
+.detail h4{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.05em;margin-bottom:5px;font-weight:600}
+.detail h4:not(:first-child){margin-top:10px}
+.jdlist{list-style:none;font-size:12.5px}
+.jdlist li{padding:2px 0 2px 14px;position:relative}
+.jdlist li::before{content:'·';position:absolute;left:2px;color:var(--accent)}
+.fitrow{display:flex;gap:8px;font-size:12.5px;padding:3px 0;align-items:baseline}
+.fitrow .req{flex:1;min-width:0}
+.fitrow .arrow{color:var(--accent-dk);font-family:var(--mono);font-size:11px;flex:none}
+.fitrow .my{flex:1;min-width:0;color:var(--ok);font-weight:600}
+.evlinks{display:flex;flex-wrap:wrap;gap:6px}
+.evlinks a{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:11.5px;color:var(--accent-dk);text-decoration:none;font-weight:600}
+.evlinks a:hover{border-color:var(--accent-dk)}
+.nodata{font-size:12px;color:var(--muted);font-style:italic}
+
 /* modal */
 .overlay{position:fixed;inset:0;background:rgba(29,35,33,.4);display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto;z-index:10}
 .overlay.show{display:flex}
@@ -126,6 +158,11 @@ footer button:hover{color:var(--bad)}
     <button class="btn" id="addBtn">공고 추가</button>
   </div>
 
+  <details class="profile" id="profile">
+    <summary>내 무기고<span class="sub2">이력 요약 — 아래 카드의 「매칭」이 참조하는 원천</span></summary>
+    <div class="profile-body" id="profileBody"></div>
+  </details>
+
   <div class="list" id="list"></div>
   <div class="empty" id="empty" style="display:none">이 필터에 해당하는 공고가 없습니다. 필터를 바꾸거나 「공고 추가」로 새 공고를 등록하세요.</div>
 
@@ -157,7 +194,9 @@ footer button:hover{color:var(--bad)}
       <div class="field"><label>채용 사이클 메모</label><input id="f_cycle" placeholder="예: 9월 공채 예상"></div>
       <div class="field"><label>마감일 (알면 입력)</label><input id="f_deadline" type="date"></div>
     </div>
-    <div class="field"><label>공고 링크</label><input id="f_link" placeholder="https://jasoseol.com/recruit/…"></div>
+    <div class="field"><label>JD 핵심 요약 (한 줄에 하나)</label><textarea id="f_jd" placeholder="예: ROS2 기반 로봇 SW 개발&#10;예: C++/Python, 시뮬레이션 우대"></textarea></div>
+    <div class="field"><label>이력 매칭 (요건 :: 내 근거, 한 줄에 하나)</label><textarea id="f_fit" placeholder="예: 로봇 제어 SW :: ROS2 자율주행 대회 동상"></textarea></div>
+    <div class="field"><label>근거 링크 (라벨 :: URL, 한 줄에 하나)</label><textarea id="f_links" placeholder="예: 26상 공고 :: https://jasoseol.com/recruit/102920"></textarea></div>
     <div class="field"><label>메모</label><textarea id="f_note" placeholder="자소서 강조점, 준비할 것 등"></textarea></div>
     <div class="modal-actions">
       <button class="btn ghost" id="cancelBtn">취소</button>
@@ -169,30 +208,100 @@ footer button:hover{color:var(--bad)}
 <div class="toast" id="toast"></div>
 
 <script>
-const KEY='jobtracker:v1';
+const KEY='jobtracker:v2';
+const OLDKEY='jobtracker:v1';
 const STATUSES=['예정','서류작성','지원완료','코테·인적성','면접','최종합격','탈락','관망'];
 const STAGES=['지원전','서류','시험','면접','결과'];
 const stageIdx={'예정':0,'관망':0,'서류작성':1,'지원완료':1,'코테·인적성':2,'면접':3,'최종합격':4,'탈락':4};
 const FAMS=['전체','로봇SW','제조·설비SW','생산기술SW형','안전판'];
 const STFILTERS=['전체','진행중','예정·관망','종료'];
 
+const PROFILE=[
+ {tag:'ROS2',name:'자율주행 SW 경진대회 동상',desc:'ROS2 실시간 주행 제어 알고리즘 설계·구현 (2024, 성균관대)'},
+ {tag:'VISION',name:'6D Pose Estimation 연구',desc:'검은 물체 6DoF 자세추정 — KROC 논문 (RISE Lab 학부연구)'},
+ {tag:'ROBOT',name:'화재 탐지·진압 로봇 (졸업작품)',desc:'CCTV 화재 인식 → 발화지점 추정 → 주행·진압 통합 시스템'},
+ {tag:'BACKEND',name:'근기능 측정 시스템',desc:'로드셀 HW + 웹·DB 서버 통합 — ICCE 논문 (Smart Biomedical Lab)'},
+ {tag:'CTRL',name:'Ball Throwing Robot',desc:'앱-HW 통신 · 모터 제어 · 주행/발사 알고리즘'},
+ {tag:'CAE',name:'전기차 차축 설계 개선',desc:'FEA 형상·소재 해석 — 강성·경량화 최적화'},
+ {tag:'EDU',name:'SSAFY · 우테코 프리코스',desc:'삼성 SW 아카데미 + Java 구현 트레이닝'},
+ {tag:'BASE',name:'기계공학 4.0/4.5 · 정보처리기사 · OPIc IH',desc:'기구학·동역학 기반 + IT 자격 + 영어'},
+];
+
 const SEED=[
- {tier:'1군',company:'삼성전자 DX',org:'생산기술연구소',role:'제조 소프트웨어 · 인공지능',family:'제조·설비SW',cycle:'9월 3급 공채 예상 (GSAT)',deadline:'',link:'https://jasoseol.com/recruit/99686',status:'예정',note:'트윈+코파일럿 프로젝트 정조준. 25하 공고로 직무 실증.'},
- {tier:'1군',company:'삼성전자 DX',org:'미래로봇추진단',role:'시스템 소프트웨어',family:'로봇SW',cycle:'9월 3급 공채 예상 (26상 신설 직무)',deadline:'',link:'https://jasoseol.com/recruit/102920',status:'예정',note:'하반기 재모집 여부 최우선 확인.'},
- {tier:'1군',company:'LG전자',org:'생산기술원(PRI)',role:'생산기술원_로봇 · Software R&D',family:'로봇SW',cycle:'하반기 공채 + 채용연계 인턴 추적',deadline:'',link:'https://jasoseol.com/recruit/99748',status:'예정',note:'인턴 공고가 사실상 신입 관문.'},
- {tier:'1군',company:'현대위아',org:'RnA(로봇)',role:'모바일로봇 주행 SW · 협동로봇 비전 SW',family:'로봇SW',cycle:'직전 5월 공채 — 하반기 모니터링',deadline:'',link:'https://jasoseol.com/recruit/103945',status:'예정',note:'주행=자율주행 대회, 비전=6D Pose. 직무명 일치 최상.'},
- {tier:'1군',company:'현대자동차',org:'생산기술 · SDF',role:'로보틱스 기술개발 · 디지털엔지니어링',family:'생산기술SW형',cycle:'내년 3월 공채 + 제조SW/AI 수시 특설',deadline:'',link:'https://jasoseol.com/recruit/103083',status:'예정',note:'talent-hyundai-now.com 특설 수시 병행 확인.'},
- {tier:'1군',company:'현대모비스',org:'생산기술',role:'생산기술_스마트팩토리',family:'생산기술SW형',cycle:'상·하반기 공채 (26상 실증)',deadline:'',link:'https://jasoseol.com/recruit/102712',status:'예정',note:'B군 SW형 변종 — C군 서사 그대로 사용.'},
- {tier:'1군',company:'두산로보틱스',org:'로봇연구소',role:'ROS SW · 제어알고리즘',family:'로봇SW',cycle:'하반기 9~10월 경향 + 수시',deadline:'',link:'https://doosanrobotics.ninehire.site/',status:'예정',note:'ROS2·PyTorch·시뮬레이션 요건. C++ 보강 시 가산.'},
- {tier:'1군',company:'HD현대로보틱스',org:'로봇 R&D · SI',role:'로봇 제어 SW · 시스템솔루션 SW설계',family:'로봇SW',cycle:'상·하반기 (26상 신입/경력 실증)',deadline:'',link:'https://jasoseol.com/companies/5492/careers',status:'예정',note:'대구 본사 근무 검토 필요.'},
- {tier:'1군',company:'세메스',org:'장비 SW',role:'SW설계',family:'제조·설비SW',cycle:'매년 11월 사이클 (25.11 실증)',deadline:'',link:'https://jasoseol.com/recruit/100787',status:'예정',note:'SW직무 코딩테스트 있음. GSAT 병행.'},
- {tier:'2군',company:'현대오토에버',org:'스마트팩토리 · 로봇SW',role:'(로봇SW) Backend Developer',family:'안전판',cycle:'하반기 공채 (26상·25하 실증)',deadline:'',link:'https://jasoseol.com/recruit/102780',status:'예정',note:'코테 관문. Java/Spring 자산 직결.'},
- {tier:'2군',company:'LG CNS',org:'스마트팩토리',role:'학사_스마트팩토리 · 스마트물류',family:'안전판',cycle:'공채 + DX Core 인재 Academy',deadline:'',link:'https://jasoseol.com/companies/57/careers',status:'예정',note:'버추얼팩토리(디지털트윈) 조직 보유.'},
- {tier:'2군',company:'포스코DX',org:'스마트팩토리 IT',role:'전산설계',family:'안전판',cycle:'하반기 9~10월 예상 (26상 실증)',deadline:'',link:'https://jasoseol.com/recruit/103573',status:'예정',note:'AI직군은 석사↑ — 전산설계로 지원.'},
- {tier:'2군',company:'삼성SDS',org:'인텔리전트팩토리',role:'3급 신입 (SW개발)',family:'안전판',cycle:'9월 3급 공채 예상',deadline:'',link:'https://jasoseol.com/companies/137/careers',status:'예정',note:'인텔리전트팩토리 배치 희망 기재.'},
+ {tier:'1군',company:'삼성전자 DX',org:'생산기술연구소',role:'제조 소프트웨어 · 인공지능',family:'제조·설비SW',cycle:'9월 3급 공채 예상 (GSAT)',deadline:'',status:'예정',
+  note:'트윈+코파일럿 프로젝트 정조준. 25하 공고로 직무 실증.',
+  jd:['생산기술연구소_제조 소프트웨어 / 인공지능 — 25하 모집 실증 (25상은 SW개발 단일 직무)','제조 현장 SW·AI 적용: 스마트팩토리, 디지털트윈, 데이터 기반 공정 최적화','GSAT + SW역량테스트 관문, 이공계 전공'],
+  fit:[{req:'제조 시스템·서버 구축',my:'근기능 측정 시스템 — HW+웹·DB 서버 통합 (ICCE)'},{req:'AI·비전 모델 적용',my:'6D Pose 연구 (KROC) · 화재 인식 비전'},{req:'삼성 SW 역량 검증',my:'SSAFY + 정보처리기사'}],
+  links:[{label:'25하 공고 (직무 실증)',url:'https://jasoseol.com/recruit/99686'},{label:'25상 공고',url:'https://jasoseol.com/recruit/97087'},{label:'삼성커리어스',url:'https://www.samsungcareers.com/'}]},
+ {tier:'1군',company:'삼성전자 DX',org:'미래로봇추진단',role:'시스템 소프트웨어',family:'로봇SW',cycle:'9월 3급 공채 예상 (26상 신설 직무)',deadline:'',status:'예정',
+  note:'하반기 재모집 여부 최우선 확인.',
+  jd:['[미래로봇추진단] 시스템 소프트웨어 — 26상 공고 직무목록에서 모집 확인 (2026-07 검증)','로봇 시스템·제어 SW: C/C++, 리눅스/RTOS, 로봇 미들웨어 계열','기구학·동역학 이해 우대 — 기계공학 출신 유리, GSAT 관문'],
+  fit:[{req:'로봇 제어·시스템 SW',my:'ROS2 자율주행 대회 동상 — 실시간 주행 제어'},{req:'로봇 인식·비전',my:'6D Pose Estimation 연구 (KROC 논문)'},{req:'기구학·동역학 기반',my:'기계공학 본전공 4.0/4.5'}],
+  links:[{label:'26상 공고 (직무 확인)',url:'https://jasoseol.com/recruit/102920'},{label:'삼성커리어스',url:'https://www.samsungcareers.com/'}]},
+ {tier:'1군',company:'LG전자',org:'생산기술원(PRI)',role:'생산기술원_로봇 · Software R&D',family:'로봇SW',cycle:'하반기 공채 + 채용연계 인턴 추적',deadline:'',status:'예정',
+  note:'인턴 공고가 사실상 신입 관문. 로봇AI/비전AI 수시 트랙 별도 — 기존 정리의 링크는 타사 공고로 확인돼 제외, LG커리어스에서 재검색 필요.',
+  jd:['생산기술원_로봇 / 생산기술원_생산기술 — 25하 공채 직무목록 확인','로봇 SW R&D: 제어·비전·시뮬레이션, 생산라인 적용','로봇AI·비전AI·AI Agent 수시 트랙 별도 운영'],
+  fit:[{req:'로봇 제어 SW',my:'ROS2 자율주행 대회 — 주행 제어'},{req:'로봇 비전',my:'6D Pose Estimation 연구'},{req:'설비·기구 이해',my:'기계공학 + 전기차 차축 FEA 해석'}],
+  links:[{label:'25하 공채 (직무 확인)',url:'https://jasoseol.com/recruit/99748'},{label:'LG커리어스',url:'https://careers.lg.com/'}]},
+ {tier:'1군',company:'현대위아',org:'RnA(로봇)',role:'모바일로봇 주행 SW · 협동로봇 비전 SW',family:'로봇SW',cycle:'직전 5월 공채 — 하반기 모니터링',deadline:'',status:'예정',
+  note:'직무명 일치 최상 — 두 직무 모두 내 프로젝트와 1:1 대응.',
+  jd:['모바일로봇 주행 SW 개발 + 협동로봇 비전 SW 개발 — 26상 공고 직무목록 확인 (2026-07 검증)','주행: 자율주행·경로계획 알고리즘 / 비전: 물체 인식·자세 추정','모바일로봇 전장/제어 개발 직무도 병행 모집'],
+  fit:[{req:'모바일로봇 주행 SW',my:'ROS2 자율주행 SW 대회 동상 — 직결'},{req:'협동로봇 비전 SW',my:'6D Pose Estimation 연구 — 직결'},{req:'전장/제어',my:'Ball Throwing Robot 모터 제어'}],
+  links:[{label:'26상 공고 (직무 확인)',url:'https://jasoseol.com/recruit/103945'}]},
+ {tier:'1군',company:'현대자동차',org:'생산기술 · SDF',role:'로보틱스 기술개발 · 디지털엔지니어링',family:'생산기술SW형',cycle:'내년 3월 공채 + 제조SW/AI 수시 특설',deadline:'',status:'예정',
+  note:'talent-hyundai-now.com 특설 수시 병행 확인.',
+  jd:['로보틱스 기술 및 사업 개발 + 디지털엔지니어링 — 26.03 공고 직무목록 확인','디지털엔지니어링: 가상검증·시뮬레이션 기반 생산기술','생산기술 직군 대규모 모집 (SDF 스마트팩토리 축)'],
+  fit:[{req:'로보틱스 기술개발',my:'ROS2 주행 제어 + 6D Pose 비전'},{req:'디지털엔지니어링 (해석·검증)',my:'전기차 차축 FEA 설계 개선'},{req:'생산 시스템 구축',my:'근기능 측정 시스템 — 서버·DB'}],
+  links:[{label:'26.03 공고 (직무 확인)',url:'https://jasoseol.com/recruit/103083'}]},
+ {tier:'1군',company:'현대모비스',org:'생산기술',role:'생산기술_스마트팩토리',family:'생산기술SW형',cycle:'상·하반기 공채 (26상 실증)',deadline:'',status:'예정',
+  note:'B군 SW형 변종 — C군 서사 그대로 사용.',
+  jd:['26상: 공정기술·자율주행시스템 등 / 25하: 생산기술_제어기·AI/ML 데이터분석 — 직무목록 확인','생산기술 SW: 설비 제어, 공정 데이터 시스템, 스마트팩토리','상·하반기 정기 공채 사이클 안정적'],
+  fit:[{req:'설비 제어·계측',my:'로드셀 센서 검교정 (ICCE) + 모터 제어'},{req:'공정 데이터 시스템',my:'근기능 측정 웹·DB 서버 구축'},{req:'AI/ML 분석',my:'6D Pose 딥러닝 연구'}],
+  links:[{label:'26상 공고',url:'https://jasoseol.com/recruit/102712'},{label:'25하 공고 (제어기·AI/ML 실증)',url:'https://jasoseol.com/recruit/99993'}]},
+ {tier:'1군',company:'두산로보틱스',org:'로봇연구소',role:'ROS SW · 제어알고리즘',family:'로봇SW',cycle:'하반기 9~10월 경향 + 수시',deadline:'',status:'예정',
+  note:'ROS2·PyTorch·시뮬레이션 요건. C++ 보강 시 가산.',
+  jd:['ROS 기반 로봇 SW·제어 알고리즘 개발 (협동로봇)','요건: ROS/ROS2, C++/Python, 시뮬레이션(Gazebo 등), PyTorch 우대','수시 채용 — 나인하이어 페이지 상시 모니터링'],
+  fit:[{req:'ROS2 로봇 SW',my:'ROS2 자율주행 대회 동상 — 직결'},{req:'비전·딥러닝 (PyTorch)',my:'6D Pose 연구'},{req:'제어 알고리즘',my:'Ball Throwing Robot 모터 제어·발사 알고리즘'}],
+  links:[{label:'두산로보틱스 채용 (수시)',url:'https://doosanrobotics.ninehire.site/'}]},
+ {tier:'1군',company:'HD현대로보틱스',org:'로봇 R&D · SI',role:'로봇 제어 SW · 시스템솔루션 SW설계',family:'로봇SW',cycle:'상·하반기 (26상 신입/경력 실증)',deadline:'',status:'예정',
+  note:'대구 본사 근무 검토 필요.',
+  jd:['로봇 제어 SW · 시스템솔루션 SW설계 — 26상 공식 채용 페이지 실증','산업용·협동로봇 제어, 로봇 SI 시스템 설계','기구학·제어 이론 기반 우대'],
+  fit:[{req:'로봇 제어 SW',my:'ROS2 주행 제어 + Ball Robot 모터 제어'},{req:'기구학·좌표변환',my:'6D Pose 기구학 좌표변환 + 기계공학'}],
+  links:[{label:'26상 공식 공고',url:'https://recruit.hd.com/kr/mainLayout/applyDetail/244687'},{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/5492/careers'}]},
+ {tier:'1군',company:'세메스',org:'장비 SW',role:'SW설계',family:'제조·설비SW',cycle:'매년 11월 사이클 (25.11 실증)',deadline:'',status:'예정',
+  note:'SW직무 코딩테스트 있음. GSAT 병행.',
+  jd:['SW설계 (제어SW) — 25하(11월) 공고 직무목록 확인','반도체 장비 제어 SW: C/C++, 장비 시퀀스·모션 제어','코딩테스트 + GSAT 관문'],
+  fit:[{req:'장비·모션 제어 SW',my:'Ball Throwing Robot 모터 제어 + 화재로봇 주행'},{req:'코딩테스트 대비',my:'SSAFY·우테코 구현 트레이닝'},{req:'센서·계측',my:'로드셀 센서 검교정'}],
+  links:[{label:'25.11 공고 (사이클 실증)',url:'https://jasoseol.com/recruit/100787'}]},
+ {tier:'2군',company:'현대오토에버',org:'스마트팩토리 · 로봇SW',role:'(로봇SW) Backend Developer',family:'안전판',cycle:'하반기 공채 (26상·25하 실증)',deadline:'',status:'예정',
+  note:'코테 관문. Java/Spring 자산 직결.',
+  jd:['(로봇SW) Backend Developer + 스마트팩토리 직군 — 26상 직무목록 확인','Java/Spring 백엔드, API·DB 설계, 코딩테스트 관문','25하: [스마트팩토리] FE/BE Developer 실증 — 매 시즌 반복 모집'],
+  fit:[{req:'백엔드 개발 (Java/Spring)',my:'근기능 시스템 웹·DB 서버 + 우테코 Java'},{req:'로봇 도메인 이해',my:'ROS2 대회 + 6D Pose 연구'},{req:'코딩테스트',my:'SSAFY·우테코 훈련'}],
+  links:[{label:'26상 공고 (직무 확인)',url:'https://jasoseol.com/recruit/102780'},{label:'25하 공고 (실증)',url:'https://jasoseol.com/recruit/100774'}]},
+ {tier:'2군',company:'LG CNS',org:'스마트팩토리 · RX',role:'Robotics Engineer · 스마트팩토리',family:'안전판',cycle:'수시 (26상 실증) + DX Core Academy',deadline:'',status:'예정',
+  note:'버추얼팩토리(디지털트윈) 조직 보유.',
+  jd:['26상 수시: Robotics Engineer · Physical AI Scientist 모집 확인 (AX/DX & RX)','로봇 솔루션·물류 자동화 SW, 스마트팩토리 SI','Software Engineer 트랙 병행 지원 가능'],
+  fit:[{req:'Robotics Engineer',my:'ROS2 주행 + 6D Pose 비전'},{req:'스마트팩토리 시스템',my:'근기능 웹·DB 서버 구축'}],
+  links:[{label:'26상 수시 공고 (직무 확인)',url:'https://jasoseol.com/recruit/104476'},{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/57/careers'}]},
+ {tier:'2군',company:'포스코DX',org:'스마트팩토리 IT',role:'전산설계',family:'안전판',cycle:'하반기 9~10월 예상 (26상 실증)',deadline:'',status:'예정',
+  note:'AI직군은 석사↑ — 전산설계로 지원.',
+  jd:['전산설계 — 26상 공고 직무목록 확인','유관전공: 전기·전자·제어계측 (타 전공 지원 가능 명시)','산업 자동화·스마트팩토리 IT 시스템'],
+  fit:[{req:'제어계측 유관 역량',my:'로드셀 센서 검교정 + 기계공학 제어 기초'},{req:'산업 IT 시스템',my:'근기능 웹·DB 서버'},{req:'IT 자격',my:'정보처리기사'}],
+  links:[{label:'26상 공고 (직무 확인)',url:'https://jasoseol.com/recruit/103573'}]},
+ {tier:'2군',company:'삼성SDS',org:'인텔리전트팩토리',role:'3급 신입 (SW개발)',family:'안전판',cycle:'9월 3급 공채 예상',deadline:'',status:'예정',
+  note:'인텔리전트팩토리 배치 희망 기재.',
+  jd:['3급 신입 SW개발 — 인텔리전트팩토리 배치 희망 기재 전략','SW역량테스트(코딩테스트) 관문','제조 IT·MES·스마트팩토리 솔루션 도메인'],
+  fit:[{req:'SW개발 역량 검증',my:'SSAFY (삼성 트랙 직결) + 정보처리기사'},{req:'팩토리 도메인',my:'근기능 측정 시스템 — 계측+서버 통합'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/137/careers'}]},
+ {tier:'2군',company:'LS일렉트릭',org:'자동화 R&D',role:'자동화 계열 R&D (상시)',family:'안전판',cycle:'R&D 상시채용 접수중 (26.01~)',deadline:'',status:'예정',
+  note:'직무조사에서 신규 편입. 수시 체계라 마감 개념 없음 — 분기별 점검.',
+  jd:['R&D 신입/경력 상시채용 — 자동화(PLC·드라이브·모션) 계열 포함','전력·자동화 기기 설계 R&D, 제어·임베디드 역량','25년 LS그룹 수시 공고로 체계 실증'],
+  fit:[{req:'자동화·모션 제어',my:'Ball Throwing Robot 모터 제어'},{req:'설계·해석 R&D',my:'전기차 차축 FEA + 기계공학'}],
+  links:[{label:'공식 상시채용 목록',url:'https://lselectric.recruiter.co.kr/app/jobnotice/list'},{label:'25 수시 실증 (자소설)',url:'https://jasoseol.com/recruit/98242'}]},
 ];
 
 let items=[]; let famFilter='전체'; let stFilter='전체'; let editingId=null; let memoryOnly=false;
+const openSet=new Set();
 
 const $=id=>document.getElementById(id);
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
@@ -203,6 +312,21 @@ async function load(){
   try{
     const raw=localStorage.getItem(KEY);
     if(raw){const d=JSON.parse(raw);items=d.items||[];return}
+    const old=localStorage.getItem(OLDKEY);
+    if(old){
+      // v1 → v2: 사용자의 상태/메모 수정은 유지하고, 시드에서 JD·매칭·근거를 이식
+      const oldItems=(JSON.parse(old).items)||[];
+      items=oldItems.map(o=>{
+        const s=SEED.find(x=>x.company===o.company&&x.role===o.role);
+        const base=s?{jd:s.jd,fit:s.fit,links:s.links}:{jd:[],fit:[],links:o.link?[{label:'공고',url:o.link}]:[]};
+        return {...base,...o};
+      });
+      SEED.filter(s=>!oldItems.some(o=>o.company===s.company&&o.role===s.role))
+          .forEach(s=>items.push({id:uid(),...s}));
+      localStorage.removeItem(OLDKEY);
+      await persist(false);
+      return;
+    }
   }catch(e){
     memoryOnly=true;toast('저장소 미지원 환경 — 이번 세션에만 유지됩니다');
   }
@@ -263,8 +387,20 @@ function render(){
     }).join('');
     const n=dday(it.deadline);
     const dd=n===null?'':(n<0?`<span class="dday over">마감</span>`:`<span class="dday">D-${n===0?'DAY':n}</span>`);
-    const link=it.link?`<a href="${it.link}" target="_blank" rel="noopener">공고 근거 ↗</a>`:'';
+    const links=it.links||[];
+    const link=links[0]?`<a href="${escapeHtml(links[0].url)}" target="_blank" rel="noopener">${escapeHtml(links[0].label)} ↗</a>`:'';
     const note=it.note?`<div class="note">${escapeHtml(it.note)}</div>`:'';
+    const jdHtml=(it.jd&&it.jd.length)?`<ul class="jdlist">${it.jd.map(j=>`<li>${escapeHtml(j)}</li>`).join('')}</ul>`:'<div class="nodata">JD 요약 없음 — 「수정」에서 추가</div>';
+    const fitHtml=(it.fit&&it.fit.length)?it.fit.map(f=>`<div class="fitrow"><span class="req">${escapeHtml(f.req)}</span><span class="arrow">←</span><span class="my">${escapeHtml(f.my)}</span></div>`).join(''):'<div class="nodata">매칭 항목 없음</div>';
+    const evHtml=links.length?`<div class="evlinks">${links.map(l=>`<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)} ↗</a>`).join('')}</div>`:'<div class="nodata">근거 링크 없음</div>';
+    const isOpen=openSet.has(it.id);
+    const detail=`
+        <button class="detail-toggle" data-id="${it.id}">${isOpen?'▾':'▸'} JD·매칭·근거 <span style="color:var(--muted);font-weight:500">(요건 ${it.jd?it.jd.length:0} · 매칭 ${it.fit?it.fit.length:0} · 링크 ${links.length})</span></button>
+        <div class="detail${isOpen?' open':''}">
+          <h4>JD 핵심 (요약)</h4>${jdHtml}
+          <h4>요건 ← 내 근거</h4>${fitHtml}
+          <h4>근거 링크</h4>${evHtml}
+        </div>`;
     const card=document.createElement('div');card.className='card';
     card.innerHTML=`
       <div class="lamp ${lampClass(it.status)}"></div>
@@ -279,6 +415,7 @@ function render(){
         <div class="meta"><span class="fam">${it.family}</span><span>${escapeHtml(it.cycle||'')}</span>${link}</div>
         <div class="stages">${segs}</div>
         ${note}
+        ${detail}
       </div>
       <div class="ctrl">
         <select data-id="${it.id}" class="stSel" aria-label="상태 변경">
@@ -295,6 +432,12 @@ function render(){
   list.querySelectorAll('.stSel').forEach(s=>s.onchange=async e=>{
     const it=items.find(x=>x.id===e.target.dataset.id);if(!it)return;
     it.status=e.target.value;await persist();
+  });
+  list.querySelectorAll('.detail-toggle').forEach(b=>b.onclick=()=>{
+    const id=b.dataset.id;
+    if(openSet.has(id))openSet.delete(id);else openSet.add(id);
+    const d=b.nextElementSibling;d.classList.toggle('open');
+    b.firstChild.textContent=(openSet.has(id)?'▾':'▸')+' JD·매칭·근거 ';
   });
   list.querySelectorAll('.editB').forEach(b=>b.onclick=()=>openModal(b.dataset.id));
   list.querySelectorAll('.delB').forEach(b=>b.onclick=async()=>{
@@ -315,7 +458,10 @@ function openModal(id){
   $('f_company').value=it?it.company:''; $('f_org').value=it?it.org:'';
   $('f_role').value=it?it.role:''; $('f_family').value=it?it.family:'로봇SW';
   $('f_tier').value=it?it.tier:'1군'; $('f_cycle').value=it?it.cycle:'';
-  $('f_deadline').value=it?it.deadline:''; $('f_link').value=it?it.link:'';
+  $('f_deadline').value=it?it.deadline:'';
+  $('f_jd').value=(it&&it.jd)?it.jd.join('\n'):'';
+  $('f_fit').value=(it&&it.fit)?it.fit.map(f=>`${f.req} :: ${f.my}`).join('\n'):'';
+  $('f_links').value=(it&&it.links)?it.links.map(l=>`${l.label} :: ${l.url}`).join('\n'):'';
   $('f_note').value=it?it.note:'';
   $('overlay').classList.add('show');
 }
@@ -324,23 +470,39 @@ function closeModal(){$('overlay').classList.remove('show');editingId=null}
 $('addBtn').onclick=()=>openModal(null);
 $('cancelBtn').onclick=closeModal;
 $('overlay').onclick=e=>{if(e.target===$('overlay'))closeModal()};
+const parseLines=t=>t.split('\n').map(s=>s.trim()).filter(Boolean);
 $('saveBtn').onclick=async()=>{
   const company=$('f_company').value.trim();
   if(!company){toast('기업명을 입력하세요');return}
+  const jd=parseLines($('f_jd').value);
+  const fit=parseLines($('f_fit').value).map(l=>{
+    const i=l.indexOf('::');
+    return i<0?{req:l,my:''}:{req:l.slice(0,i).trim(),my:l.slice(i+2).trim()};
+  }).filter(f=>f.req);
+  const links=parseLines($('f_links').value).map(l=>{
+    const i=l.indexOf('::');
+    return i<0?{label:'링크',url:l}:{label:l.slice(0,i).trim()||'링크',url:l.slice(i+2).trim()};
+  }).filter(l=>l.url);
   const data={company,org:$('f_org').value.trim(),role:$('f_role').value.trim(),
     family:$('f_family').value,tier:$('f_tier').value,cycle:$('f_cycle').value.trim(),
-    deadline:$('f_deadline').value,link:$('f_link').value.trim(),note:$('f_note').value.trim()};
+    deadline:$('f_deadline').value,jd,fit,links,note:$('f_note').value.trim()};
   if(editingId){const it=items.find(x=>x.id===editingId);Object.assign(it,data)}
   else items.push({id:uid(),status:'예정',...data});
   closeModal();await persist();
 };
 $('resetBtn').onclick=async()=>{
-  if(confirm('모든 변경사항을 버리고 초기 목록(핏 검증 13건)으로 되돌릴까요?')){
+  if(confirm('모든 변경사항을 버리고 초기 목록(핏 검증 14건)으로 되돌릴까요?')){
     items=SEED.map(s=>({id:uid(),...s}));await persist();toast('초기 목록 복원됨');
   }
 };
 
-load().then(render);
+function renderProfile(){
+  $('profileBody').innerHTML=PROFILE.map(p=>
+    `<div class="asset"><b><span class="tag">${escapeHtml(p.tag)}</span>${escapeHtml(p.name)}</b><span>${escapeHtml(p.desc)}</span></div>`
+  ).join('');
+}
+
+load().then(()=>{renderProfile();render()});
 </script>
 </body>
 </html>
