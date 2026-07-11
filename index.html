@@ -388,7 +388,18 @@ function render(){
   $('counters').innerHTML=`<span>전체 <b>${total}</b></span><span>진행중 <b>${run}</b></span><span>지원완료 <b>${applied}</b></span><span class="warn">마감 7일내 <b>${soon}</b></span><span class="warn">접수중 공고 <b>${live.count}</b></span>`;
 
   let view=items.filter(i=>(famFilter==='전체'||i.family===famFilter)&&(stFilter==='전체'||stGroup(i.status)===stFilter));
+  const liveEnd=it=>{
+    const lp=live.byCompany[it.company]||[];
+    if(!lp.length)return null;
+    return Math.min(...lp.map(p=>{const n=dday(p.end);return n===null?9999:n}));
+  };
   view.sort((a,b)=>{
+    // 1순위: 접수중 공고 보유 기업 (마감 임박 순)
+    const la=liveEnd(a),lb=liveEnd(b);
+    if(la!==null&&lb===null)return -1;
+    if(la===null&&lb!==null)return 1;
+    if(la!==null&&lb!==null&&la!==lb)return la-lb;
+    // 2순위: 수동 입력 마감일 → 구분 → 기업명
     const da=dday(a.deadline),db=dday(b.deadline);
     if(da!==null&&db!==null)return da-db;
     if(da!==null)return -1;if(db!==null)return 1;
