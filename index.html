@@ -115,15 +115,6 @@ h1 .sub{font-size:12px;font-weight:500;color:var(--muted);margin-left:10px;lette
 .evlinks a:hover{border-color:var(--accent-dk)}
 .nodata{font-size:12px;color:var(--muted);font-style:italic}
 
-/* discovered postings (전역 탐색) */
-.disc-body{padding:0 16px 14px;display:flex;flex-direction:column;gap:6px}
-.disc-row{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12.5px}
-.disc-row .co{font-weight:700;flex:none}
-.disc-row a{color:var(--accent-dk);text-decoration:none;font-weight:600}
-.disc-row a:hover{text-decoration:underline}
-.disc-row .jobs2{color:var(--muted);font-size:12px;flex:1;min-width:140px}
-.disc-row .dd2{font-family:var(--mono);font-size:11.5px;color:var(--accent-dk);margin-left:auto;flex:none}
-
 /* live postings (자동 수집) */
 .live{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
 .livechip{display:inline-flex;align-items:baseline;gap:6px;border:1px solid var(--accent);border-radius:6px;
@@ -185,11 +176,6 @@ footer button:hover{color:var(--bad)}
     <div class="profile-body" id="profileBody"></div>
   </details>
 
-  <details class="profile" id="discoverBox" style="display:none" open>
-    <summary id="discoverTitle">발견 공고<span class="sub2">등록 외 기업 — 키워드 자동 탐색 (신입 채용만)</span></summary>
-    <div class="disc-body" id="discBody"></div>
-  </details>
-
   <div class="list" id="list"></div>
   <div class="empty" id="empty" style="display:none">이 필터에 해당하는 공고가 없습니다. 필터를 바꾸거나 「공고 추가」로 새 공고를 등록하세요.</div>
 
@@ -213,8 +199,11 @@ footer button:hover{color:var(--bad)}
           <option>로봇SW</option><option>제조·설비SW</option><option>생산기술SW형</option><option>안전판</option>
         </select>
       </div>
-      <div class="field"><label>구분</label>
-        <select id="f_tier"><option>1군</option><option>2군</option></select>
+      <div class="field"><label>구분 / 규모</label>
+        <div style="display:flex;gap:6px">
+          <select id="f_tier" style="flex:1"><option>1군</option><option>2군</option></select>
+          <select id="f_size" style="flex:1"><option>대기업</option><option>중견</option><option>중소</option><option>기타</option></select>
+        </div>
       </div>
     </div>
     <div class="grid2">
@@ -244,6 +233,7 @@ footer button:hover{color:var(--bad)}
 <script>
 const KEY='jobtracker:v2';
 const OLDKEY='jobtracker:v1';
+const SEED_VER=2; // 시드에 기업 추가 시 +1 — 기존 사용자에게 신규 카드 자동 병합
 const STATUSES=['예정','서류작성','지원완료','코테·인적성','면접','최종합격','탈락','관망'];
 const STAGES=['지원전','서류','시험','면접','결과'];
 const stageIdx={'예정':0,'관망':0,'서류작성':1,'지원완료':1,'코테·인적성':2,'면접':3,'최종합격':4,'탈락':4};
@@ -332,6 +322,66 @@ const SEED=[
   jd:['R&D 신입/경력 상시채용 — 자동화(PLC·드라이브·모션) 계열 포함','전력·자동화 기기 설계 R&D, 제어·임베디드 역량','25년 LS그룹 수시 공고로 체계 실증'],
   fit:[{req:'자동화·모션 제어',my:'Ball Throwing Robot 모터 제어'},{req:'설계·해석 R&D',my:'전기차 차축 FEA + 기계공학'}],
   links:[{label:'상시채용 목록 (공식)',url:'https://lselectric.recruiter.co.kr/app/jobnotice/list'},{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/14058/careers'}]},
+ {tier:'1군',size:'중견',company:'레인보우로보틱스',org:'로봇 플랫폼',role:'로봇 제어·응용 SW',family:'로봇SW',cycle:'수시 — 자동 수집 추적',deadline:'',status:'예정',
+  note:'중견 (삼성전자 최대주주). 협동로봇·휴머노이드 라인업.',
+  jd:['협동로봇(RB 시리즈)·자율이동로봇·휴머노이드 개발','로봇 제어·응용 SW: C/C++, ROS, 모션 제어','삼성전자 인수 후 채용 확대 추세'],
+  fit:[{req:'ROS 로봇 SW',my:'ROS2 자율주행 대회'},{req:'제어·기구학',my:'기계공학 + 6D Pose 좌표변환'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/14694/careers'}]},
+ {tier:'1군',size:'중견',company:'로보스타',org:'LG전자 계열 · 산업용 로봇',role:'로봇 제어기·펌웨어 SW',family:'로봇SW',cycle:'수시·정기 병행 — 자동 수집 추적',deadline:'',status:'예정',
+  note:'중견 (LG전자 계열). 산업용 로봇 국내 대표 제조사.',
+  jd:['산업용 로봇(스카라·수직다관절) 제어기 SW·펌웨어','연구소 로봇 제어기·펌웨어 개발 직무 실증','LG 생산라인 로봇 공급 축'],
+  fit:[{req:'로봇 제어',my:'모터 제어 + ROS2 주행 제어'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/5764/careers'}]},
+ {tier:'1군',size:'중견',company:'고영테크놀러지',org:'3D 검사·의료로봇',role:'검사장비 SW · 스마트팩토리 솔루션',family:'로봇SW',cycle:'수시·인턴연계 — 자동 수집 추적',deadline:'',status:'예정',
+  note:'중견. 3D SPI/AOI 검사장비 세계 1위, 의료로봇 사업 보유.',
+  jd:['3D 비전 검사장비 — 알고리즘·SW 개발','산업용 검사장비 SW·스마트팩토리 SW솔루션 직무 실증','뇌수술 보조 의료로봇 개발'],
+  fit:[{req:'3D 비전·검사',my:'6D Pose Estimation 연구 직결'},{req:'스마트팩토리 SW',my:'근기능 시스템 웹·DB 서버'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/1073/careers'}]},
+ {tier:'1군',size:'대기업',company:'한화로보틱스',org:'한화 계열 · 협동로봇',role:'로봇 SW·제어',family:'로봇SW',cycle:'수시 — 공식 사이트 수동 확인 (자소설 미등재)',deadline:'',status:'예정',
+  note:'대기업 계열 (2023 출범). 자동 수집 미지원 — 공식 채용 페이지 직접 확인.',
+  jd:['협동로봇 HCR 시리즈 — 제어·SW·비전','푸드테크·물류 등 응용 로봇 확장'],
+  fit:[{req:'협동로봇 SW',my:'ROS2 제어 + 6D Pose 비전'}],
+  links:[{label:'공식 사이트',url:'https://www.hanwharobotics.com/'}]},
+ {tier:'1군',size:'중견',company:'에스에프에이',org:'스마트팩토리 장비',role:'SW·제어 · 물류 시스템',family:'제조·설비SW',cycle:'수시·정기 병행 — 자동 수집 추적',deadline:'',status:'예정',
+  note:'중견. 디스플레이·이차전지·물류 자동화 장비 국내 대표.',
+  jd:['공장 자동화·물류 시스템 장비 SW/제어','SW·솔루션, HW·임베디드, 제어 직무 채용 실증','AI 기반 스마트팩토리 솔루션 확장'],
+  fit:[{req:'설비 제어 SW',my:'모터 제어 + 센서 계측'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/1370/careers'}]},
+ {tier:'2군',size:'대기업',company:'기아',org:'오토랜드 (광명·화성·광주)',role:'생산기술 · 공정기술',family:'생산기술SW형',cycle:'상·하반기 공채 (26상 실증) — 자동 수집 추적',deadline:'',status:'예정',
+  note:'대기업. 현대차그룹 생산기술 서사 공유 가능.',
+  jd:['26상: 생산기술·생산운영·공정기술·머신러닝 직무 실증','스마트팩토리(E-FOREST) 전환 투자'],
+  fit:[{req:'생산기술·공정 시스템',my:'근기능 시스템 + FEA 해석'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/1690/careers'}]},
+ {tier:'2군',size:'대기업',company:'현대로템',org:'디펜스 · 레일 · 에코플랜트',role:'SW개발 · 시스템설계 · 자동화',family:'생산기술SW형',cycle:'연 2~3회 정기 (26상 4~5월 실증) — 자동 수집 추적',deadline:'',status:'예정',
+  note:'대기업. 무인체계·웨어러블 로봇 개발 조직 보유.',
+  jd:['디펜스솔루션 SW개발·체계설계 / 레일 열차제어 / 에코플랜트 자동화','무인차량(HR-셰르파 계열) 등 로보틱스 과제'],
+  fit:[{req:'무인체계·제어 SW',my:'ROS2 자율주행 제어'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/3887/careers'}]},
+ {tier:'2군',size:'대기업',company:'HL만도',org:'자율주행 · 샤시 SW',role:'ADAS·제어 SW',family:'로봇SW',cycle:'수시 (판교·평택·원주) — 자동 수집 추적',deadline:'',status:'예정',
+  note:'대기업. 자율주행·섀시 제어 — ROS2 대회 경험 직결 소구.',
+  jd:['ADAS·자율주행 SW, 제동/조향 제어기 SW','신입/경력 수시 채용 체계 실증'],
+  fit:[{req:'자율주행 SW',my:'ROS2 자율주행 대회 — 직결'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/38/careers'}]},
+ {tier:'2군',size:'대기업',company:'한화시스템',org:'방산 · ICT',role:'방산 SW · 무인체계',family:'안전판',cycle:'상·하반기 학/석사 신입 (실증) — 자동 수집 추적',deadline:'',status:'예정',
+  note:'대기업. 무인체계·로봇 과제 다수, ICT부문 스마트팩토리 SI 병행.',
+  jd:['방산부문 SW·시스템엔지니어링 신입 (연 2회 실증)','무인차량·로봇·AI 과제 수행'],
+  fit:[{req:'무인체계 SW',my:'ROS2 제어 + 비전'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/4332/careers'}]},
+ {tier:'2군',size:'대기업',company:'LG이노텍',org:'광학솔루션 · 전장',role:'설비·생산기술 SW',family:'제조·설비SW',cycle:'공채+수시 — 자동 수집 추적',deadline:'',status:'예정',
+  note:'대기업. 설비 제어·생산기술 SW 직무 실증 (Actuator 설비/생산기술).',
+  jd:['설비 제어·생산기술·공정 SW','전장부품(모터·센서) — 자율주행 부품 축'],
+  fit:[{req:'설비·계측',my:'로드셀 센서 검교정'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/56/careers'}]},
+ {tier:'2군',size:'대기업',company:'SK하이닉스',org:'양산기술 · IT',role:'양산기술 · Tech IT',family:'제조·설비SW',cycle:'수시+정기 (26상 Talent hy-way 실증) — 자동 수집 추적',deadline:'',status:'예정',
+  note:'대기업. FAB 자동화·스마트 매뉴팩처링 축.',
+  jd:['양산기술 — 장비·계측 자동화','반도체 FAB 스마트 매뉴팩처링·IT 직무'],
+  fit:[{req:'장비·계측 자동화',my:'센서 검교정 + 제어'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/1511/careers'}]},
+ {tier:'2군',size:'대기업',company:'삼성디스플레이',org:'설비 · 공정',role:'설비기반기술 · 공정기술',family:'제조·설비SW',cycle:'3급 공채 상·하반기 (26상 실증) — 자동 수집 추적',deadline:'',status:'예정',
+  note:'대기업. GSAT 계열 — 삼성 공채 축 병행 지원.',
+  jd:['3급 신입: R&D·공정기술·설비기반기술 직무 (26상 실증)','디스플레이 FAB 설비 자동화'],
+  fit:[{req:'설비 자동화',my:'기계공학 + 제어·계측'}],
+  links:[{label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/135/careers'}]},
 ];
 
 let items=[]; let famFilter='전체'; let stFilter='전체'; let editingId=null; let memoryOnly=false;
@@ -346,7 +396,15 @@ function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show')
 async function load(){
   try{
     const raw=localStorage.getItem(KEY);
-    if(raw){const d=JSON.parse(raw);items=d.items||[];return}
+    if(raw){
+      const d=JSON.parse(raw);items=d.items||[];
+      if((d.seedVer||1)<SEED_VER){
+        SEED.filter(s=>!items.some(o=>o.company===s.company&&o.role===s.role))
+            .forEach(s=>items.push({id:uid(),...s}));
+        await persist(false);
+      }
+      return;
+    }
     const old=localStorage.getItem(OLDKEY);
     if(old){
       // v1 → v2: 사용자의 상태/메모 수정은 유지하고, 시드에서 JD·매칭·근거를 이식
@@ -374,17 +432,18 @@ async function loadLive(){
     if(!r.ok)return;
     const d=await r.json();
     live.updated=d.updated||'';
-    live.count=(d.postings||[]).length;
-    live.byCompany={};
-    (d.postings||[]).forEach(p=>{(live.byCompany[p.company]=live.byCompany[p.company]||[]).push(p)});
     live.discovered=d.discovered||[];
+    const all=(d.postings||[]).concat(live.discovered);
+    live.count=all.length;
+    live.byCompany={};
+    all.forEach(p=>{(live.byCompany[p.company]=live.byCompany[p.company]||[]).push(p)});
   }catch(e){/* file:// 실행 또는 수집 데이터 없음 — 자동 수집 표시 생략 */}
 }
 
 async function persist(show=true){
   if(memoryOnly){render();return}
   try{
-    localStorage.setItem(KEY,JSON.stringify({items,updatedAt:new Date().toISOString()}));
+    localStorage.setItem(KEY,JSON.stringify({items,seedVer:SEED_VER,updatedAt:new Date().toISOString()}));
     if(show)toast('저장됨');
   }catch(e){toast('저장 실패 — 브라우저 저장소를 확인하세요')}
   render();
@@ -403,8 +462,11 @@ function chips(el,arr,cur,onSel){
 }
 
 function render(){
-  // 우선순위 기본값: 1군=2, 2군=3 (기존 저장 데이터 포함)
-  items.forEach(it=>{if(it.priority==null)it.priority=it.tier==='1군'?2:3});
+  // 기본값 보정 (기존 저장 데이터 포함): 우선순위 1군=2·2군=3, 규모는 대기업
+  items.forEach(it=>{
+    if(it.priority==null)it.priority=it.tier==='1군'?2:3;
+    if(it.size==null)it.size='대기업';
+  });
   chips($('famChips'),FAMS,famFilter,v=>{famFilter=v;render()});
   chips($('stChips'),STFILTERS,stFilter,v=>{stFilter=v;render()});
 
@@ -412,7 +474,7 @@ function render(){
   const run=items.filter(i=>stGroup(i.status)==='진행중').length;
   const applied=items.filter(i=>['지원완료','코테·인적성','면접','최종합격'].includes(i.status)).length;
   const soon=items.filter(i=>{const n=dday(i.deadline);return n!==null&&n>=0&&n<=7}).length;
-  $('counters').innerHTML=`<span>전체 <b>${total}</b></span><span>진행중 <b>${run}</b></span><span>지원완료 <b>${applied}</b></span><span class="warn">마감 7일내 <b>${soon}</b></span><span class="warn">접수중 공고 <b>${live.count}</b></span><span class="warn">발견 <b>${live.discovered.length}</b></span>`;
+  $('counters').innerHTML=`<span>전체 <b>${total}</b></span><span>진행중 <b>${run}</b></span><span>지원완료 <b>${applied}</b></span><span class="warn">마감 7일내 <b>${soon}</b></span><span class="warn">접수중 공고 <b>${live.count}</b></span>`;
 
   let view=items.filter(i=>(famFilter==='전체'||i.family===famFilter)&&(stFilter==='전체'||stGroup(i.status)===stFilter));
   const liveEnd=it=>{
@@ -420,16 +482,26 @@ function render(){
     if(!lp.length)return null;
     return Math.min(...lp.map(p=>{const n=dday(p.end);return n===null?9999:n}));
   };
+  const sizeRank=it=>{
+    const s=it.size||'';
+    if(s.includes('대기업'))return 0;
+    if(s.includes('중견'))return 1;
+    if(s.includes('중소'))return 2;
+    return 3;
+  };
   view.sort((a,b)=>{
-    // 1순위: 접수중 공고 보유 기업 (마감 임박 순)
+    // 1순위: 현재 접수중 여부
     const la=liveEnd(a),lb=liveEnd(b);
-    if(la!==null&&lb===null)return -1;
-    if(la===null&&lb!==null)return 1;
-    if(la!==null&&lb!==null&&la!==lb)return la-lb;
-    // 2순위: 사용자 지정 우선순위 (1=최우선)
+    if((la!==null)!==(lb!==null))return la!==null?-1:1;
+    // 2순위: 기업규모 (대기업 → 중견 → 중소 → 기타)
+    const sa=sizeRank(a),sb=sizeRank(b);
+    if(sa!==sb)return sa-sb;
+    // 3순위: 사용자 지정 우선순위 (1=최우선)
     const pa=a.priority??3,pb=b.priority??3;
     if(pa!==pb)return pa-pb;
-    // 3순위: 수동 입력 마감일 → 구분 → 기업명
+    // 4순위: 접수중 마감 임박 순
+    if(la!==null&&lb!==null&&la!==lb)return la-lb;
+    // 5순위: 수동 입력 마감일 → 구분 → 기업명
     const da=dday(a.deadline),db=dday(b.deadline);
     if(da!==null&&db!==null)return da-db;
     if(da!==null)return -1;if(db!==null)return 1;
@@ -476,7 +548,7 @@ function render(){
       <div class="lamp ${lampClass(it.status)}"></div>
       <div class="card-body">
         <div class="row1">
-          <span class="tier">${it.tier}</span>
+          <span class="tier">${it.tier} · ${escapeHtml(it.size||'기타')}</span>
           <span class="prio pr${it.priority}">P${it.priority}</span>
           <span class="company">${escapeHtml(it.company)}</span>
           <span class="org">${escapeHtml(it.org)}</span>
@@ -531,6 +603,7 @@ function openModal(id){
   $('f_company').value=it?it.company:''; $('f_org').value=it?it.org:'';
   $('f_role').value=it?it.role:''; $('f_family').value=it?it.family:'로봇SW';
   $('f_tier').value=it?it.tier:'1군'; $('f_cycle').value=it?it.cycle:'';
+  $('f_size').value=(it&&it.size)?(['대기업','중견','중소','기타'].find(s=>String(it.size).includes(s))||'기타'):'대기업';
   $('f_priority').value=String(it&&it.priority?it.priority:3);
   $('f_deadline').value=it?it.deadline:'';
   $('f_jd').value=(it&&it.jd)?it.jd.join('\n'):'';
@@ -558,7 +631,7 @@ $('saveBtn').onclick=async()=>{
     return i<0?{label:'링크',url:l}:{label:l.slice(0,i).trim()||'링크',url:l.slice(i+2).trim()};
   }).filter(l=>l.url);
   const data={company,org:$('f_org').value.trim(),role:$('f_role').value.trim(),
-    family:$('f_family').value,tier:$('f_tier').value,cycle:$('f_cycle').value.trim(),
+    family:$('f_family').value,tier:$('f_tier').value,size:$('f_size').value,cycle:$('f_cycle').value.trim(),
     priority:Number($('f_priority').value)||3,
     deadline:$('f_deadline').value,jd,fit,links,note:$('f_note').value.trim()};
   if(editingId){const it=items.find(x=>x.id===editingId);Object.assign(it,data)}
@@ -566,7 +639,7 @@ $('saveBtn').onclick=async()=>{
   closeModal();await persist();
 };
 $('resetBtn').onclick=async()=>{
-  if(confirm('모든 변경사항을 버리고 초기 목록(14건)으로 되돌릴까요?')){
+  if(confirm('모든 변경사항을 버리고 초기 목록(26건)으로 되돌릴까요?')){
     items=SEED.map(s=>({id:uid(),...s}));await persist();toast('초기 목록 복원됨');
   }
 };
@@ -577,25 +650,28 @@ function renderProfile(){
   ).join('');
 }
 
-function renderDiscover(){
-  const arr=live.discovered;
-  if(!arr.length)return;
-  $('discoverBox').style.display='block';
-  $('discoverTitle').innerHTML=`발견 공고 (${arr.length})<span class="sub2">등록 외 기업 — 키워드 자동 탐색 (신입 채용만)</span>`;
-  $('discBody').innerHTML=arr.map(p=>{
-    const n=dday(p.end);
-    const dtxt=n===null?'':(n<0?'마감':(n===0?'D-DAY':'D-'+n));
-    const jobs=(p.jobs||[]).slice(0,3).join(' · ');
-    return `<div class="disc-row">
-      <span class="co">${escapeHtml(p.company)}</span>
-      <a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${escapeHtml(p.title)} ↗</a>
-      <span class="jobs2">${escapeHtml(jobs)}</span>
-      <span class="dd2">~${escapeHtml((p.end||'').slice(5))} ${dtxt}</span>
-    </div>`;
-  }).join('');
+async function registerDiscovered(){
+  // 전역 탐색으로 발견된 기업을 등록 기업과 동일한 카드로 자동 등록
+  let added=0;
+  live.discovered.forEach(p=>{
+    if(items.some(i=>i.company===p.company))return;
+    const kw=p.kw||[];
+    const family=kw.some(k=>k==='로봇'||k==='로보틱스'||k==='자율주행')?'로봇SW'
+      :kw.includes('생산기술')?'생산기술SW형'
+      :kw.includes('스마트팩토리')?'제조·설비SW':'안전판';
+    const links=[{label:'접수중 공고',url:p.url}];
+    if(p.cg)links.push({label:'자소설 기업 페이지',url:'https://jasoseol.com/companies/'+p.cg+'/careers'});
+    items.push({id:uid(),tier:'2군',priority:4,size:p.size||'기타',company:p.company,
+      org:'자동 등록',role:(p.jobs&&p.jobs.length?p.jobs.slice(0,2).join(' · '):p.title),
+      family,cycle:'전역 탐색 자동 등록',deadline:p.end||'',status:'예정',
+      jd:(p.jobs||[]).slice(0,6),fit:[],links,
+      note:'전역 탐색으로 자동 등록됨'+(live.updated?` (${live.updated.slice(0,10)})`:'')});
+    added++;
+  });
+  if(added)await persist(false);
 }
 
-Promise.all([load(),loadLive()]).then(()=>{renderProfile();renderDiscover();render()});
+Promise.all([load(),loadLive()]).then(async()=>{await registerDiscovered();renderProfile();render()});
 </script>
 </body>
 </html>

@@ -38,7 +38,20 @@ COMPANIES = [
     # LS그룹 페이지에는 전 계열사 공고가 섞여 있어 키워드를 좁힌다
     {"company": "LS일렉트릭", "id": 14058,
      "keywords": ["LS ELECTRIC", "일렉트릭", "자동화", "R&D"]},
-    # 두산로보틱스: 자소설 미등재, 나인하이어는 클라이언트 렌더링이라 v1 미지원
+    # --- 확장 (대기업·중견, 로보틱스+지능형 제조) ---
+    {"company": "레인보우로보틱스", "id": 14694, "keywords": COMMON_KEYWORDS},
+    {"company": "로보스타", "id": 5764, "keywords": COMMON_KEYWORDS},
+    {"company": "고영테크놀러지", "id": 1073, "keywords": COMMON_KEYWORDS},
+    {"company": "현대로템", "id": 3887, "keywords": COMMON_KEYWORDS},
+    {"company": "기아", "id": 1690, "keywords": COMMON_KEYWORDS},
+    {"company": "HL만도", "id": 38, "keywords": COMMON_KEYWORDS},
+    {"company": "한화시스템", "id": 4332, "keywords": COMMON_KEYWORDS},
+    {"company": "한화시스템", "id": 13786, "keywords": COMMON_KEYWORDS},  # 방산부문
+    {"company": "에스에프에이", "id": 1370, "keywords": COMMON_KEYWORDS},
+    {"company": "LG이노텍", "id": 56, "keywords": COMMON_KEYWORDS},
+    {"company": "SK하이닉스", "id": 1511, "keywords": COMMON_KEYWORDS},
+    {"company": "삼성디스플레이", "id": 135, "keywords": COMMON_KEYWORDS},
+    # 두산로보틱스·한화로보틱스·로보티즈: 자소설 미등재 — 자동 수집 미지원 (카드로만 추적)
 ]
 ID_TO_COMPANY = {c["id"]: c["company"] for c in COMPANIES}
 
@@ -48,6 +61,8 @@ ID_TO_COMPANY = {c["id"]: c["company"] for c in COMPANIES}
 DISCOVER_KEYWORDS = ["로봇", "로보틱스", "생산기술", "스마트팩토리", "자율주행"]
 DISCOVER_MAX_PAGES = 2   # 키워드당 최대 2페이지 (perPage=50)
 DISCOVER_LIMIT = 40      # 발견 목록 상한 (마감 임박 순)
+SIZE_MAP = {"big_business": "대기업", "middle_market": "중견",
+            "small_business": "중소", "public_institution": "공공"}
 
 
 def fetch(url: str) -> str:
@@ -138,6 +153,9 @@ def discover(today: str, known_ids: set) -> list[dict]:
                 if not matched:
                     continue
                 posting["kw"] = matched
+                posting["cg"] = job.get("company_group_id")
+                raw_size = str(cg.get("business_size") or "")
+                posting["size"] = SIZE_MAP.get(raw_size, raw_size or "기타")
                 found[job["id"]] = posting
             if page * 50 >= int(payload.get("totalCount") or 0):
                 break
@@ -161,7 +179,11 @@ def main() -> int:
             print(f"[fail] {conf['company']}: {e}", file=sys.stderr)
         time.sleep(REQUEST_INTERVAL_SEC)
 
-    postings.sort(key=lambda p: (p["end"], p["company"]))
+    # 한화시스템처럼 한 기업이 복수 페이지로 등재된 경우 중복 제거
+    unique = {}
+    for p in postings:
+        unique.setdefault(p["id"], p)
+    postings = sorted(unique.values(), key=lambda p: (p["end"], p["company"]))
 
     discovered = []
     try:
