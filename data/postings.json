@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-15T06:53:49+09:00",
+ "updated": "2026-07-15T08:35:37+09:00",
  "postings": [
   {
    "id": "js-105018",
@@ -12,7 +12,6 @@
    "jobs": [
     "Product Manager"
    ],
-   "hit": false,
    "cg": 1982,
    "size": "중견"
   },
@@ -24,8 +23,7 @@
    "url": "https://linkareer.com/activity/332834",
    "start": "",
    "end": "2026-07-15",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-105030",
@@ -38,7 +36,6 @@
    "jobs": [
     "위성서비스 운영"
    ],
-   "hit": false,
    "cg": 956,
    "size": "대기업"
   },
@@ -53,7 +50,6 @@
    "jobs": [
     "기술 영업 및 기술관리"
    ],
-   "hit": false,
    "cg": 2937,
    "size": "대기업"
   },
@@ -68,7 +64,6 @@
    "jobs": [
     "Korea Graduate Program "
    ],
-   "hit": false,
    "cg": 13317,
    "size": "중견"
   },
@@ -93,7 +88,6 @@
     "시공·물류관리",
     "서비스교육"
    ],
-   "hit": false,
    "cg": 233,
    "size": "중견"
   },
@@ -109,7 +103,6 @@
     "Graduate Management Trainee (GMT)",
     "Commercial Excellent Trainee (CET)"
    ],
-   "hit": true,
    "cg": 14042,
    "size": "중견"
   },
@@ -124,7 +117,6 @@
    "jobs": [
     "회계 및 세무"
    ],
-   "hit": false,
    "cg": 1264,
    "size": "대기업"
   },
@@ -141,7 +133,6 @@
     "영상기자",
     "방송엔지니어"
    ],
-   "hit": false,
    "cg": 6467,
    "size": "대기업"
   },
@@ -158,7 +149,6 @@
     "HL 기획팀",
     "HR팀 (신입)"
    ],
-   "hit": false,
    "cg": 1479,
    "size": "중견"
   },
@@ -176,7 +166,6 @@
     "[소재사업부문] 생산직",
     "[R&D부문] 연구 운영 기획"
    ],
-   "hit": false,
    "cg": 1140,
    "size": "중견"
   },
@@ -192,7 +181,6 @@
     "RA파트 신입",
     "해외영업 신입"
    ],
-   "hit": false,
    "cg": 15066,
    "size": "중견"
   },
@@ -209,7 +197,6 @@
     "생산관리",
     "구매 "
    ],
-   "hit": false,
    "cg": 6270,
    "size": "중견"
   },
@@ -231,7 +218,6 @@
     "생산관리(화장품/생활용품)",
     "공장회계/원가관리"
    ],
-   "hit": false,
    "cg": 187,
    "size": "중견"
   },
@@ -247,7 +233,6 @@
     "사업관리 (신입)",
     "밸브 엔지니어 (신입)"
    ],
-   "hit": false,
    "cg": 14416,
    "size": "중견"
   },
@@ -262,7 +247,6 @@
    "jobs": [
     "공정평가-경기도 화성시(R&D센터)"
    ],
-   "hit": false,
    "cg": 2119,
    "size": "중견"
   },
@@ -277,7 +261,6 @@
    "jobs": [
     "[한미사이언스] 영업지원"
    ],
-   "hit": false,
    "cg": 908,
    "size": "중견"
   },
@@ -289,8 +272,7 @@
    "url": "https://linkareer.com/activity/335209",
    "start": "",
    "end": "2026-07-19",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-105022",
@@ -303,7 +285,6 @@
    "jobs": [
     "본사 수출영업부(러시아)"
    ],
-   "hit": false,
    "cg": 2190,
    "size": "중견"
   },
@@ -318,7 +299,6 @@
    "jobs": [
     "생산기획"
    ],
-   "hit": false,
    "cg": 6770,
    "size": "대기업"
   },
@@ -330,8 +310,17 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54447530",
    "start": "",
    "end": "2026-07-21",
-   "jobs": [],
-   "hit": false
+   "jobs": []
+  },
+  {
+   "id": "srm-54431968",
+   "source": "saramin",
+   "company": "대구텍유한책임회사",
+   "title": "대구텍 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54431968",
+   "start": "",
+   "end": "2026-07-24",
+   "jobs": []
   },
   {
    "id": "lk-335210",
@@ -341,19 +330,17 @@
    "url": "https://linkareer.com/activity/335210",
    "start": "",
    "end": "2026-07-24",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
-   "id": "srm-54345685",
+   "id": "srm-54256754",
    "source": "saramin",
-   "company": "크린팩토메이션",
-   "title": "2026년 3분기 부문별 정기 공개채용 (정규직전환형 인턴)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54345685",
+   "company": "에스티아이",
+   "title": "[㈜에스티아이] 2026년 하반기 공채",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54256754",
    "start": "",
    "end": "2026-07-24",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-104300",
@@ -366,7 +353,6 @@
    "jobs": [
     "IDC 운영자(인재풀)"
    ],
-   "hit": false,
    "cg": 15775,
    "size": "중견"
   },
@@ -378,8 +364,7 @@
    "url": "https://linkareer.com/activity/335062",
    "start": "",
    "end": "2026-07-26",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-105121",
@@ -393,7 +378,6 @@
     "해외영업",
     "HR"
    ],
-   "hit": false,
    "cg": 8466,
    "size": "중견"
   },
@@ -405,8 +389,7 @@
    "url": "https://linkareer.com/activity/335193",
    "start": "",
    "end": "2026-07-26",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-105070",
@@ -419,7 +402,6 @@
    "jobs": [
     "[조선내화] 기술솔루션 (부정형) "
    ],
-   "hit": false,
    "cg": 1272,
    "size": "중견"
   },
@@ -431,8 +413,7 @@
    "url": "https://linkareer.com/activity/335235",
    "start": "",
    "end": "2026-07-26",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-105119",
@@ -445,7 +426,6 @@
    "jobs": [
     "본사 회장비서실"
    ],
-   "hit": false,
    "cg": 2190,
    "size": "중견"
   },
@@ -457,8 +437,7 @@
    "url": "https://linkareer.com/activity/335411",
    "start": "",
    "end": "2026-07-27",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-105095",
@@ -476,7 +455,6 @@
     "품질관리",
     "생산기술"
    ],
-   "hit": true,
    "cg": 2254,
    "size": "중견"
   },
@@ -491,7 +469,6 @@
    "jobs": [
     "기술인재육성-HRD 컨설팅 및 모빌리티 기술 인재육성 프로그램 기획/개발/운영"
    ],
-   "hit": false,
    "cg": 614,
    "size": "대기업"
   },
@@ -503,8 +480,7 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54323823",
    "start": "",
    "end": "2026-07-30",
-   "jobs": [],
-   "hit": false
+   "jobs": []
   },
   {
    "id": "js-104485",
@@ -517,7 +493,6 @@
    "jobs": [
     "전문영업 서비스디자이너 (전국)"
    ],
-   "hit": false,
    "cg": 217,
    "size": "중견"
   },
@@ -532,7 +507,6 @@
    "jobs": [
     "수출부문 KNIT 해외영업 신입 채용"
    ],
-   "hit": false,
    "cg": 959,
    "size": "중견"
   },
@@ -549,7 +523,6 @@
     "양산 제조",
     "개발 제조"
    ],
-   "hit": true,
    "cg": 5538,
    "size": "중견"
   },
@@ -567,7 +540,6 @@
     "영업 (신입)",
     "HR (신입)"
    ],
-   "hit": false,
    "cg": 1558,
    "size": "중견"
   },
@@ -582,7 +554,6 @@
    "jobs": [
     "인사(Payroll) 담당자"
    ],
-   "hit": false,
    "cg": 1657,
    "size": "중견"
   },
@@ -597,20 +568,18 @@
    "jobs": [
     "해외 대학생 채용 설명회"
    ],
-   "hit": false,
    "cg": 43,
    "size": "대기업"
   },
   {
-   "id": "srm-54460727",
+   "id": "srm-54268603",
    "source": "saramin",
-   "company": "태봉산업",
-   "title": "2026년 하반기 (주)태봉산업 울산/아산공장 경력직 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54460727",
+   "company": "싸이몬",
+   "title": "싸이몬 2026년 하반기 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54268603",
    "start": "",
-   "end": "2026-08-16",
-   "jobs": [],
-   "hit": false
+   "end": "2026-08-09",
+   "jobs": []
   },
   {
    "id": "js-104737",
@@ -624,7 +593,6 @@
     "Customer Engineer(반도체 장비 엔지니어)_학사",
     "Customer Support Technician(반도체/디스플레이 장비 테크니션)_전문학사"
    ],
-   "hit": false,
    "cg": 3070,
    "size": "대기업"
   },
@@ -639,7 +607,6 @@
    "jobs": [
     "인사총무"
    ],
-   "hit": false,
    "cg": 14884,
    "size": "중견"
   }

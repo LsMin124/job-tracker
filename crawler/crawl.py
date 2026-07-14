@@ -9,7 +9,8 @@
 공통 필터: 학사 신입 지원 가능(경력·인턴·교육·석박 전용 제외).
 자소설은 기업규모(대기업/중견)로 필터하고, 규모 정보가 없는 소스는
 공채형 제목이거나 기존 등록 기업일 때만 채택해 중소·비정규 노이즈를 막는다.
-직무 키워드로 공고를 걸러내지는 않는다(전 직무 수집) — hit 플래그로 강조만 한다.
+직무 키워드로 공고를 걸러내지 않는다(전 도메인·전 직무 수집).
+강조 여부는 프런트에서 사용자별 관심 키워드로 판단한다.
 """
 import gzip
 import json
@@ -26,10 +27,6 @@ UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 REQUEST_INTERVAL_SEC = 1.0
 JOBS_PER_POSTING = 40
-
-# 관심 직무 강조(hit)용 — 필터가 아니라 표시용
-FIT_KEYWORDS = ["로봇", "로보틱스", "Robot", "생산기술", "제조", "스마트팩토리",
-                "소프트웨어", "SW", "S/W", "제어", "자율주행", "비전", "AI"]
 
 # 자소설 등록 기업 (기업 페이지 정밀 수집 + 기업명 정규화 기준)
 COMPANIES = [
@@ -105,12 +102,6 @@ def is_masters_only(text: str) -> bool:
     return bool(MASTERS_ONLY.search(text)) and not BACHELOR_OK.search(text)
 
 
-def mark_hit(posting: dict) -> dict:
-    hay = " ".join([posting["title"]] + posting["jobs"]).lower()
-    posting["hit"] = any(k.lower() in hay for k in FIT_KEYWORDS)
-    return posting
-
-
 # ---------- 소스 1: 자소설 ----------
 
 def emp_divisions(e: dict) -> set:
@@ -137,7 +128,7 @@ def jaso_job_to_posting(job: dict, company: str, today: str) -> dict | None:
     fields = [f for f in fields if f and not is_masters_only(f)]
     if fields_src and any(e.get("field") for e in fields_src) and not fields:
         return None
-    return mark_hit({
+    return {
         "id": f"js-{job['id']}",
         "source": "jasoseol",
         "company": company,
@@ -146,7 +137,7 @@ def jaso_job_to_posting(job: dict, company: str, today: str) -> dict | None:
         "start": str(job.get("start_time") or "")[:10],
         "end": end,
         "jobs": fields[:JOBS_PER_POSTING],
-    })
+    }
 
 
 def jasoseol_company_pages(today: str) -> list[dict]:
@@ -256,7 +247,7 @@ def saramin(today_dt: datetime) -> list[dict]:
             end = saramin_deadline(date.group(1) if date else "", today_dt)
             if not end:
                 continue
-            result.append(mark_hit({
+            result.append({
                 "id": f"srm-{rec.group(1)}",
                 "source": "saramin",
                 "company": company,
@@ -266,7 +257,7 @@ def saramin(today_dt: datetime) -> list[dict]:
                 "start": "",
                 "end": end,
                 "jobs": [],
-            }))
+            })
         time.sleep(REQUEST_INTERVAL_SEC)
     return result
 
@@ -296,7 +287,7 @@ def linkareer(today: str) -> list[dict]:
             end = datetime.fromtimestamp(int(close) / 1000, KST).strftime("%Y-%m-%d")
             if end < today:
                 continue
-            result.append(mark_hit({
+            result.append({
                 "id": f"lk-{act.get('id')}",
                 "source": "linkareer",
                 "company": company,
@@ -305,7 +296,7 @@ def linkareer(today: str) -> list[dict]:
                 "start": "",
                 "end": end,
                 "jobs": [],
-            }))
+            })
         time.sleep(REQUEST_INTERVAL_SEC)
     return result
 
