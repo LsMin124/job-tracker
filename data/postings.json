@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-15T06:25:37+09:00",
+ "updated": "2026-07-15T06:53:49+09:00",
  "postings": [
   {
    "id": "js-105018",
@@ -494,6 +494,17 @@
    "hit": false,
    "cg": 614,
    "size": "대기업"
+  },
+  {
+   "id": "srm-54323823",
+   "source": "saramin",
+   "company": "덕산테코피아",
+   "title": "각 사업부별 우수인재 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54323823",
+   "start": "",
+   "end": "2026-07-30",
+   "jobs": [],
+   "hit": false
   },
   {
    "id": "js-104485",
