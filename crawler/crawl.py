@@ -66,14 +66,17 @@ ALIASES = {
 SIZE_MAP = {"big_business": "대기업", "middle_market": "중견",
             "small_business": "중소", "public_institution": "공공"}
 
-# 공채형 제목 — 규모 미상 소스의 채택 조건
+# 공채형 제목 — 사람인(전 직군 대량 목록)의 채택 조건
 PUBLIC_RE = re.compile(r"공채|공개\s*채용|신입\s*사원|대졸|정기\s*채용|수시\s*채용")
 MASTERS_ONLY = re.compile(r"석\s*[/·]?\s*박|석박|박사|석사")
 BACHELOR_OK = re.compile(r"학\s*[/·]?\s*석|학사")
+# 비정규직 제목 — 정규직 언급 없이 계약/파견 등만 있으면 제외
+CONTRACT_RE = re.compile(r"계약직|파견|아르바이트|알바|촉탁|위촉|프리랜서")
 
-SEARCH_PAGES_MAX = 4        # 자소설 전체 검색 (perPage=50)
-SARAMIN_PAGES = 3           # 사람인 IT 직군 최신순
-LINKAREER_PAGES = 8         # 링커리어 최신순 (페이지당 20)
+SEARCH_PAGES_MAX = 6        # 자소설 전체 검색 (perPage=50)
+SARAMIN_CATS = list(range(2, 20))  # 사람인 전 직군 카테고리
+SARAMIN_PAGES = 2           # 카테고리당 최신순 페이지 수
+LINKAREER_PAGES = 15        # 링커리어 최신순 (페이지당 20)
 
 
 def fetch(url: str) -> str:
@@ -102,6 +105,10 @@ def is_masters_only(text: str) -> bool:
     return bool(MASTERS_ONLY.search(text)) and not BACHELOR_OK.search(text)
 
 
+def is_non_regular(title: str) -> bool:
+    return bool(CONTRACT_RE.search(title)) and "정규" not in title
+
+
 # ---------- 소스 1: 자소설 ----------
 
 def emp_divisions(e: dict) -> set:
@@ -120,7 +127,7 @@ def jaso_job_to_posting(job: dict, company: str, today: str) -> dict | None:
     if 1 not in divisions:  # 1=신입
         return None
     title = str(job.get("title") or "").strip()
-    if is_masters_only(title):
+    if is_masters_only(title) or is_non_regular(title):
         return None
     newgrad = [e for e in emps if 1 in emp_divisions(e)]
     fields_src = newgrad if newgrad else emps
@@ -184,9 +191,7 @@ def jasoseol_search_all(today: str) -> list[dict]:
             company = ID_TO_COMPANY.get(
                 job.get("company_group_id"),
                 normalize_company(cg.get("name")))
-            # 중견 이상만 (등록 기업은 규모 무관 유지)
-            if size not in ("대기업", "중견") and company not in KNOWN_COMPANIES:
-                continue
+            # 규모 제한 없음 — 대졸 지원 가능 정규직 신입 공고 전수 수집
             p = jaso_job_to_posting(job, company, today)
             if p:
                 p["cg"] = job.get("company_group_id")
@@ -220,45 +225,59 @@ def saramin_deadline(text: str, today: datetime) -> str:
     return ""  # 상시 등 — 제외
 
 
-def saramin(today_dt: datetime) -> list[dict]:
+def saramin_block_to_posting(blk: str, today_dt: datetime) -> dict | None:
     import html as H
+    career = re.search(r'"career"[^>]*>([^<]+)<', blk)
+    # 대졸 신입 정규직만
+    if not career or "신입" not in career.group(1) or "정규직" not in career.group(1):
+        return None
+    edu = re.search(r'"education"[^>]*>([^<]+)<', blk)
+    if edu and re.search(r"석사|박사", edu.group(1)):
+        return None
+    tit = re.search(r'class="job_tit"[^>]*>\s*<a[^>]*title="([^"]+)"', blk)
+    corp = re.search(r'str_tit"[^>]*>([^<]+)<', blk)
+    rec = re.search(r'rec_idx=(\d+)', blk)
+    date = re.search(r'class="date"[^>]*>([^<]+)<', blk)
+    if not (tit and corp and rec):
+        return None
+    title = H.unescape(tit.group(1)).strip()
+    company = normalize_company(H.unescape(corp.group(1)))
+    if is_masters_only(title) or is_non_regular(title):
+        return None
+    # 대량 목록 소스라 공채형 제목이거나 등록 기업일 때만 채택
+    if company not in KNOWN_COMPANIES and not PUBLIC_RE.search(title):
+        return None
+    end = saramin_deadline(date.group(1) if date else "", today_dt)
+    if not end:
+        return None
+    return {
+        "id": f"srm-{rec.group(1)}",
+        "source": "saramin",
+        "company": company,
+        "title": title,
+        "url": ("https://www.saramin.co.kr/zf_user/jobs/relay/view"
+                f"?rec_idx={rec.group(1)}"),
+        "start": "",
+        "end": end,
+        "jobs": [],
+    }
+
+
+def saramin(today_dt: datetime) -> list[dict]:
     result = []
-    for page in range(1, SARAMIN_PAGES + 1):
-        url = ("https://www.saramin.co.kr/zf_user/jobs/list/job-category"
-               f"?cat_mcls=2&page={page}")
-        raw = fetch(url)
-        for blk in re.split(r'class="box_item"', raw)[1:]:
-            career = re.search(r'"career"[^>]*>([^<]+)<', blk)
-            if not career or "신입" not in career.group(1):
-                continue
-            tit = re.search(r'class="job_tit"[^>]*>\s*<a[^>]*title="([^"]+)"', blk)
-            corp = re.search(r'str_tit"[^>]*>([^<]+)<', blk)
-            rec = re.search(r'rec_idx=(\d+)', blk)
-            date = re.search(r'class="date"[^>]*>([^<]+)<', blk)
-            if not (tit and corp and rec):
-                continue
-            title = H.unescape(tit.group(1)).strip()
-            company = normalize_company(H.unescape(corp.group(1)))
-            if is_masters_only(title):
-                continue
-            # 규모 미상 → 공채형 제목이거나 등록 기업일 때만
-            if company not in KNOWN_COMPANIES and not PUBLIC_RE.search(title):
-                continue
-            end = saramin_deadline(date.group(1) if date else "", today_dt)
-            if not end:
-                continue
-            result.append({
-                "id": f"srm-{rec.group(1)}",
-                "source": "saramin",
-                "company": company,
-                "title": title,
-                "url": ("https://www.saramin.co.kr/zf_user/jobs/relay/view"
-                        f"?rec_idx={rec.group(1)}"),
-                "start": "",
-                "end": end,
-                "jobs": [],
-            })
-        time.sleep(REQUEST_INTERVAL_SEC)
+    for cat in SARAMIN_CATS:
+        for page in range(1, SARAMIN_PAGES + 1):
+            try:
+                url = ("https://www.saramin.co.kr/zf_user/jobs/list/job-category"
+                       f"?cat_mcls={cat}&page={page}")
+                raw = fetch(url)
+                for blk in re.split(r'class="box_item"', raw)[1:]:
+                    p = saramin_block_to_posting(blk, today_dt)
+                    if p:
+                        result.append(p)
+            except Exception as e:  # 카테고리별 실패 격리
+                print(f"[warn] 사람인 cat={cat} p{page}: {e}", file=sys.stderr)
+            time.sleep(REQUEST_INTERVAL_SEC)
     return result
 
 
@@ -277,9 +296,7 @@ def linkareer(today: str) -> list[dict]:
                 continue
             title = str(act.get("title") or "").strip()
             company = normalize_company(act.get("organizationName"))
-            if not title or not company or is_masters_only(title):
-                continue
-            if company not in KNOWN_COMPANIES and not PUBLIC_RE.search(title):
+            if not title or not company or is_masters_only(title) or is_non_regular(title):
                 continue
             close = act.get("recruitCloseAt")
             if not close:
