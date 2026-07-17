@@ -1,16 +1,6 @@
 {
- "updated": "2026-07-17T06:59:48+09:00",
+ "updated": "2026-07-17T23:02:55+09:00",
  "postings": [
-  {
-   "id": "lk-335493",
-   "source": "linkareer",
-   "company": "노블컴퍼니",
-   "title": "[노블컴퍼니] 2026 하반기 콘텐츠마케터 신입/경력 채용",
-   "url": "https://linkareer.com/activity/335493",
-   "start": "",
-   "end": "2026-07-17",
-   "jobs": []
-  },
   {
    "id": "js-105021",
    "source": "jasoseol",
@@ -349,6 +339,16 @@
    "size": "대기업"
   },
   {
+   "id": "srm-54458217",
+   "source": "saramin",
+   "company": "미코",
+   "title": "미코 수시채용 - 영업, 연구개발, 공정기술, 장비운영",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54458217",
+   "start": "",
+   "end": "2026-07-20",
+   "jobs": []
+  },
+  {
    "id": "lk-335544",
    "source": "linkareer",
    "company": "엘티정밀",
@@ -551,6 +551,16 @@
    ],
    "cg": 3959,
    "size": "기타"
+  },
+  {
+   "id": "srm-54431968",
+   "source": "saramin",
+   "company": "대구텍유한책임회사",
+   "title": "대구텍 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54431968",
+   "start": "",
+   "end": "2026-07-24",
+   "jobs": []
   },
   {
    "id": "js-105132",
@@ -820,6 +830,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54452423",
+   "source": "saramin",
+   "company": "사임당화장품",
+   "title": "2026년 ㈜사임당화장품 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54452423",
+   "start": "",
+   "end": "2026-07-27",
+   "jobs": []
+  },
+  {
    "id": "js-105178",
    "source": "jasoseol",
    "company": "삼립",
@@ -1074,6 +1094,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54471570",
+   "source": "saramin",
+   "company": "모다이노칩",
+   "title": "[인천점]모다아울렛 영업관리(정규직)신입사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54471570",
+   "start": "",
+   "end": "2026-07-31",
+   "jobs": []
+  },
+  {
    "id": "lk-335852",
    "source": "linkareer",
    "company": "서희건설",
@@ -1298,16 +1328,6 @@
    "jobs": []
   },
   {
-   "id": "srm-54482780",
-   "source": "saramin",
-   "company": "메디포스트",
-   "title": "GMP 센터 품질관리 (미생물) 신입,경력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54482780",
-   "start": "",
-   "end": "2026-08-05",
-   "jobs": []
-  },
-  {
    "id": "lk-335851",
    "source": "linkareer",
    "company": "KG이니시스",
@@ -1474,16 +1494,6 @@
    "url": "https://linkareer.com/activity/335502",
    "start": "",
    "end": "2026-09-08",
-   "jobs": []
-  },
-  {
-   "id": "srm-54463598",
-   "source": "saramin",
-   "company": "메디렉스",
-   "title": "의료기기 영업 경력 및 신입 사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54463598",
-   "start": "",
-   "end": "2026-09-12",
    "jobs": []
   },
   {
