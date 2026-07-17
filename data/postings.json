@@ -1,58 +1,6 @@
 {
- "updated": "2026-07-17T23:02:55+09:00",
+ "updated": "2026-07-18T06:46:49+09:00",
  "postings": [
-  {
-   "id": "js-105021",
-   "source": "jasoseol",
-   "company": "드림라인",
-   "title": "2026 하반기 채용",
-   "url": "https://jasoseol.com/recruit/105021",
-   "start": "2026-07-01",
-   "end": "2026-07-17",
-   "jobs": [
-    "기술 영업 및 기술관리"
-   ],
-   "cg": 2937,
-   "size": "대기업"
-  },
-  {
-   "id": "js-104936",
-   "source": "jasoseol",
-   "company": "린데코리아",
-   "title": "2026 정규직 대졸 신입 채용 Korea Graduate Program",
-   "url": "https://jasoseol.com/recruit/104936",
-   "start": "2026-07-02",
-   "end": "2026-07-17",
-   "jobs": [
-    "Korea Graduate Program "
-   ],
-   "cg": 13317,
-   "size": "중견"
-  },
-  {
-   "id": "js-104950",
-   "source": "jasoseol",
-   "company": "퍼시스그룹",
-   "title": "2026 하반기 신입사원 채용",
-   "url": "https://jasoseol.com/recruit/104950",
-   "start": "2026-07-06",
-   "end": "2026-07-17",
-   "jobs": [
-    "국내영업",
-    "해외영업",
-    "제품엔지니어",
-    "제품설계",
-    "상품기획",
-    "제품기술",
-    "생산",
-    "구매",
-    "품질관리",
-    "시공·물류관리",
-    "서비스교육"
-   ],
-   "cg": 233,
-   "size": "중견"
-  },
   {
    "id": "js-104872",
    "source": "jasoseol",
@@ -277,16 +225,6 @@
    "size": "중견"
   },
   {
-   "id": "srm-54365748",
-   "source": "saramin",
-   "company": "한국알콜산업",
-   "title": "[한국알콜그룹] 7월 수시 채용 (울산/아산/천안)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54365748",
-   "start": "",
-   "end": "2026-07-19",
-   "jobs": []
-  },
-  {
    "id": "srm-54449472",
    "source": "saramin",
    "company": "한국캐피탈",
@@ -452,6 +390,16 @@
    "size": "대기업"
   },
   {
+   "id": "srm-54407445",
+   "source": "saramin",
+   "company": "엘디카본",
+   "title": "[엘디카본] 2026년 하반기 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54407445",
+   "start": "",
+   "end": "2026-07-22",
+   "jobs": []
+  },
+  {
    "id": "js-105053",
    "source": "jasoseol",
    "company": "웨이비스",
@@ -597,16 +545,6 @@
    "jobs": []
   },
   {
-   "id": "srm-54450829",
-   "source": "saramin",
-   "company": "이디야",
-   "title": "2026년 하반기 부문별 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54450829",
-   "start": "",
-   "end": "2026-07-24",
-   "jobs": []
-  },
-  {
    "id": "srm-54345685",
    "source": "saramin",
    "company": "크린팩토메이션",
@@ -668,6 +606,26 @@
    "size": "대기업"
   },
   {
+   "id": "srm-54483404",
+   "source": "saramin",
+   "company": "금성에이스산업",
+   "title": "금성에이스산업㈜ 부문별 신입 및 경력 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54483404",
+   "start": "",
+   "end": "2026-07-26",
+   "jobs": []
+  },
+  {
+   "id": "srm-54432729",
+   "source": "saramin",
+   "company": "동방",
+   "title": "각 부문 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54432729",
+   "start": "",
+   "end": "2026-07-26",
+   "jobs": []
+  },
+  {
    "id": "js-105121",
    "source": "jasoseol",
    "company": "디와이파워",
@@ -708,16 +666,6 @@
    "company": "삼진제약",
    "title": "[삼진제약] 각 부문별 채용",
    "url": "https://linkareer.com/activity/335932",
-   "start": "",
-   "end": "2026-07-26",
-   "jobs": []
-  },
-  {
-   "id": "srm-54429508",
-   "source": "saramin",
-   "company": "와이케이건기",
-   "title": "[YK건기] 2026년도 신입/경력 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54429508",
    "start": "",
    "end": "2026-07-26",
    "jobs": []
@@ -776,16 +724,6 @@
    "company": "하나머티리얼즈",
    "title": "[하나머티리얼즈] [신입] 반도체 및 디스플레이용 실리콘계 세라믹 신소재 개발 (연구직) 모집",
    "url": "https://linkareer.com/activity/335850",
-   "start": "",
-   "end": "2026-07-26",
-   "jobs": []
-  },
-  {
-   "id": "srm-54396646",
-   "source": "saramin",
-   "company": "한국인사관리협회",
-   "title": "2026년 하반기 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54396646",
    "start": "",
    "end": "2026-07-26",
    "jobs": []
@@ -1328,6 +1266,26 @@
    "jobs": []
   },
   {
+   "id": "srm-54482780",
+   "source": "saramin",
+   "company": "메디포스트",
+   "title": "GMP 센터 품질관리 (미생물) 신입,경력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54482780",
+   "start": "",
+   "end": "2026-08-05",
+   "jobs": []
+  },
+  {
+   "id": "srm-54476765",
+   "source": "saramin",
+   "company": "메디포스트",
+   "title": "GMP 센터 제조,품질 부문 신입,경력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54476765",
+   "start": "",
+   "end": "2026-08-05",
+   "jobs": []
+  },
+  {
    "id": "lk-335851",
    "source": "linkareer",
    "company": "KG이니시스",
@@ -1355,16 +1313,6 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54416753",
    "start": "",
    "end": "2026-08-07",
-   "jobs": []
-  },
-  {
-   "id": "srm-54268603",
-   "source": "saramin",
-   "company": "싸이몬",
-   "title": "싸이몬 2026년 하반기 공개 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54268603",
-   "start": "",
-   "end": "2026-08-09",
    "jobs": []
   },
   {
@@ -1484,6 +1432,16 @@
    "url": "https://linkareer.com/activity/336008",
    "start": "",
    "end": "2026-09-04",
+   "jobs": []
+  },
+  {
+   "id": "srm-54428631",
+   "source": "saramin",
+   "company": "에스앤디",
+   "title": "(주)에스앤디 품질안전센터 신입사원 모집 (2명)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54428631",
+   "start": "",
+   "end": "2026-09-08",
    "jobs": []
   },
   {
