@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-25T07:00:57+09:00",
+ "updated": "2026-07-26T06:50:18+09:00",
  "postings": [
   {
    "id": "lk-337607",
@@ -41,16 +41,6 @@
    "size": "기타"
   },
   {
-   "id": "srm-54429508",
-   "source": "saramin",
-   "company": "와이케이건기",
-   "title": "[YK건기] 2026년도 신입/경력 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54429508",
-   "start": "",
-   "end": "2026-07-26",
-   "jobs": []
-  },
-  {
    "id": "js-105068",
    "source": "jasoseol",
    "company": "일성아이에스",
@@ -77,16 +67,6 @@
    ],
    "cg": 1272,
    "size": "중견"
-  },
-  {
-   "id": "srm-54475293",
-   "source": "saramin",
-   "company": "창해에탄올",
-   "title": "생산기술팀 신입사원 채용공고",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54475293",
-   "start": "",
-   "end": "2026-07-26",
-   "jobs": []
   },
   {
    "id": "js-105170",
@@ -138,6 +118,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54452423",
+   "source": "saramin",
+   "company": "사임당화장품",
+   "title": "2026년 ㈜사임당화장품 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54452423",
+   "start": "",
+   "end": "2026-07-27",
+   "jobs": []
+  },
+  {
    "id": "js-105178",
    "source": "jasoseol",
    "company": "삼립",
@@ -183,6 +173,16 @@
    ],
    "cg": 7443,
    "size": "기타"
+  },
+  {
+   "id": "srm-54517300",
+   "source": "saramin",
+   "company": "한양이엔지",
+   "title": "부문별 수시채용 직원모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54517300",
+   "start": "",
+   "end": "2026-07-28",
+   "jobs": []
   },
   {
    "id": "js-105150",
@@ -286,6 +286,16 @@
    "size": "중견"
   },
   {
+   "id": "srm-54172693",
+   "source": "saramin",
+   "company": "폴라리스투자자문",
+   "title": "[투자자문사] 경영지원팀 신입사원 채용 (급여공개) - 정규직",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54172693",
+   "start": "",
+   "end": "2026-07-29",
+   "jobs": []
+  },
+  {
    "id": "srm-54471022",
    "source": "saramin",
    "company": "한국공항보안",
@@ -345,6 +355,16 @@
    "company": "종근당",
    "title": "종근당 수시채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54430795",
+   "start": "",
+   "end": "2026-07-30",
+   "jobs": []
+  },
+  {
+   "id": "srm-54546710",
+   "source": "saramin",
+   "company": "케이씨씨글라스",
+   "title": "[KCC글라스] '26년 7월 신입/경력사원 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54546710",
    "start": "",
    "end": "2026-07-30",
    "jobs": []
@@ -916,6 +936,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54476765",
+   "source": "saramin",
+   "company": "메디포스트",
+   "title": "GMP 센터 제조,품질 부문 신입,경력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54476765",
+   "start": "",
+   "end": "2026-08-05",
+   "jobs": []
+  },
+  {
    "id": "lk-337361",
    "source": "linkareer",
    "company": "성동구도시관리공단",
@@ -1101,16 +1131,6 @@
    "jobs": []
   },
   {
-   "id": "srm-54405944",
-   "source": "saramin",
-   "company": "모아엔지니어링",
-   "title": "모아엔지니어링(주) 설계팀  신입사원 모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54405944",
-   "start": "",
-   "end": "2026-08-07",
-   "jobs": []
-  },
-  {
    "id": "js-105277",
    "source": "jasoseol",
    "company": "한국수력원자력(KHNP)",
@@ -1224,11 +1244,31 @@
    "jobs": []
   },
   {
+   "id": "srm-54488449",
+   "source": "saramin",
+   "company": "지테크시스템",
+   "title": "2026년도 신입사원 공개채용-영업(거래처 관리)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54488449",
+   "start": "",
+   "end": "2026-08-18",
+   "jobs": []
+  },
+  {
    "id": "lk-337127",
    "source": "linkareer",
    "company": "바이오노트",
    "title": "[바이오노트] [정규직/신입경력] T.S팀 고객 기술 지원 신규 인재채용_7월",
    "url": "https://linkareer.com/activity/337127",
+   "start": "",
+   "end": "2026-08-20",
+   "jobs": []
+  },
+  {
+   "id": "srm-54516837",
+   "source": "saramin",
+   "company": "현우이앤에스",
+   "title": "2026 기술영업부 신입사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54516837",
    "start": "",
    "end": "2026-08-20",
    "jobs": []
