@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-01T06:59:58+09:00",
+ "updated": "2026-08-02T06:49:50+09:00",
  "postings": [
   {
    "id": "js-105217",
@@ -61,16 +61,6 @@
    "size": "중견"
   },
   {
-   "id": "srm-54451960",
-   "source": "saramin",
-   "company": "동일캔바스엔지니어링",
-   "title": "하반기 신입/경력 수시 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54451960",
-   "start": "",
-   "end": "2026-08-02",
-   "jobs": []
-  },
-  {
    "id": "js-105246",
    "source": "jasoseol",
    "company": "에코마케팅",
@@ -111,16 +101,6 @@
    ],
    "cg": 1741,
    "size": "대기업"
-  },
-  {
-   "id": "srm-54520180",
-   "source": "saramin",
-   "company": "티디케이한국",
-   "title": "[평택본사] 생산직/기술직 정규직 신입 인력 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54520180",
-   "start": "",
-   "end": "2026-08-02",
-   "jobs": []
   },
   {
    "id": "js-105229",
@@ -402,16 +382,6 @@
    "jobs": []
   },
   {
-   "id": "srm-54559262",
-   "source": "saramin",
-   "company": "(재)한국국민경제연구원",
-   "title": "원가분석 신입사원 채용(정규직)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54559262",
-   "start": "",
-   "end": "2026-08-05",
-   "jobs": []
-  },
-  {
    "id": "js-105363",
    "source": "jasoseol",
    "company": "동국제약",
@@ -541,6 +511,16 @@
    "url": "https://linkareer.com/activity/339293",
    "start": "",
    "end": "2026-08-05",
+   "jobs": []
+  },
+  {
+   "id": "srm-54557120",
+   "source": "saramin",
+   "company": "인컴즈",
+   "title": "[네이버 계열사] 2026 하반기 인컴즈 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54557120",
+   "start": "",
+   "end": "2026-08-06",
    "jobs": []
   },
   {
@@ -1164,6 +1144,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54488528",
+   "source": "saramin",
+   "company": "지테크시스템",
+   "title": "2026년도 신입사원 공개채용-영업지원직",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54488528",
+   "start": "",
+   "end": "2026-08-18",
+   "jobs": []
+  },
+  {
    "id": "js-105406",
    "source": "jasoseol",
    "company": "서울특별시",
@@ -1346,16 +1336,6 @@
    "jobs": []
   },
   {
-   "id": "srm-54606431",
-   "source": "saramin",
-   "company": "박미지뷰티에스테틱",
-   "title": "피부관리사 정규직 채용(신입사원)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54606431",
-   "start": "",
-   "end": "2026-08-29",
-   "jobs": []
-  },
-  {
    "id": "js-105421",
    "source": "jasoseol",
    "company": "신원",
@@ -1370,21 +1350,21 @@
    "size": "중견"
   },
   {
-   "id": "srm-54605229",
-   "source": "saramin",
-   "company": "에이큐엔씨",
-   "title": "생산팀 사원 공채 모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54605229",
-   "start": "",
-   "end": "2026-08-29",
-   "jobs": []
-  },
-  {
    "id": "srm-54608335",
    "source": "saramin",
    "company": "지원건설",
    "title": "2026년 하반기 기술직/관리직 공채 모집",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54608335",
+   "start": "",
+   "end": "2026-08-29",
+   "jobs": []
+  },
+  {
+   "id": "srm-54608131",
+   "source": "saramin",
+   "company": "지향이노베이션",
+   "title": "(주)지향이노베이션 경영관리팀 총무·회계 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54608131",
    "start": "",
    "end": "2026-08-29",
    "jobs": []
@@ -1450,16 +1430,6 @@
    "jobs": []
   },
   {
-   "id": "srm-54350023",
-   "source": "saramin",
-   "company": "아모텍",
-   "title": "㈜아모텍 2026년 하반기 신입/경력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54350023",
-   "start": "",
-   "end": "2026-08-31",
-   "jobs": []
-  },
-  {
    "id": "srm-54547535",
    "source": "saramin",
    "company": "아이즈비전",
@@ -1515,6 +1485,16 @@
    "company": "올릭스",
    "title": "[올릭스] IR 담당자",
    "url": "https://linkareer.com/activity/339502",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54617460",
+   "source": "saramin",
+   "company": "피아이이",
+   "title": "필드 엔지니어 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54617460",
    "start": "",
    "end": "2026-08-31",
    "jobs": []
