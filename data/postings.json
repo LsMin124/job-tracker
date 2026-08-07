@@ -1,55 +1,6 @@
 {
- "updated": "2026-08-07T10:00:10+09:00",
+ "updated": "2026-08-08T06:34:01+09:00",
  "postings": [
-  {
-   "id": "lk-339938",
-   "source": "linkareer",
-   "company": "서울특별시종로구시설관리공단",
-   "title": "종로구시설관리공단 헬스 정액제 위탁강사 모집 공고",
-   "url": "https://linkareer.com/activity/339938",
-   "start": "",
-   "end": "2026-08-07",
-   "jobs": []
-  },
-  {
-   "id": "js-105277",
-   "source": "jasoseol",
-   "company": "한국수력원자력(KHNP)",
-   "title": "2026년도 제4차 신입사원 모집(고졸수준 일반전형)",
-   "url": "https://jasoseol.com/recruit/105277",
-   "start": "2026-07-23",
-   "end": "2026-08-07",
-   "jobs": [
-    "기계분야 (재학생)",
-    "기계분야 (졸업생)",
-    "전기･전자분야 (재학생)",
-    "전기･전자분야 (졸업생)"
-   ],
-   "cg": 1502,
-   "size": "기타"
-  },
-  {
-   "id": "js-105251",
-   "source": "jasoseol",
-   "company": "현대자동차",
-   "title": "2026 계약학과 모집",
-   "url": "https://jasoseol.com/recruit/105251",
-   "start": "2026-07-27",
-   "end": "2026-08-07",
-   "jobs": [
-    "[계약학과] 자율주행기술개발",
-    "[계약학과] 시스템 시험 및 검증",
-    "[계약학과] 차량제어개발",
-    "[계약학과] 소재연구개발",
-    "[계약학과] 배터리 시스템 설계 (선행개발)",
-    "[계약학과] BMS SW 개발 및 검증",
-    "[계약학과] 수소연료전지개발",
-    "[계약학과] 전동화개발",
-    "[계약학과] 선행생기",
-    "[계약학과] 제조 SW개발"
-   ],
-   "cg": 1472
-  },
   {
    "id": "js-105312",
    "source": "jasoseol",
@@ -93,16 +44,6 @@
    "size": "대기업"
   },
   {
-   "id": "lk-339929",
-   "source": "linkareer",
-   "company": "SK오션플랜트",
-   "title": "[SK오션플랜트] 생산지원 구성원 모집",
-   "url": "https://linkareer.com/activity/339929",
-   "start": "",
-   "end": "2026-08-09",
-   "jobs": []
-  },
-  {
    "id": "lk-340837",
    "source": "linkareer",
    "company": "남선알미늄",
@@ -141,6 +82,16 @@
    ],
    "cg": 6091,
    "size": "기타"
+  },
+  {
+   "id": "srm-54610053",
+   "source": "saramin",
+   "company": "엠에스홀딩스",
+   "title": "MS홀딩스 매장 전략 관리자(계장) / 실무파트 리더(주임) 신입 공채",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54610053",
+   "start": "",
+   "end": "2026-08-09",
+   "jobs": []
   },
   {
    "id": "js-105346",
@@ -258,16 +209,6 @@
    "size": "중견"
   },
   {
-   "id": "lk-340220",
-   "source": "linkareer",
-   "company": "김앤장법률사무소",
-   "title": "[김앤장법률사무소] 지식재산권 부문 수시 채용",
-   "url": "https://linkareer.com/activity/340220",
-   "start": "",
-   "end": "2026-08-10",
-   "jobs": []
-  },
-  {
    "id": "js-105375",
    "source": "jasoseol",
    "company": "유니드비티플러스",
@@ -308,11 +249,31 @@
    "size": "대기업"
   },
   {
+   "id": "srm-54598712",
+   "source": "saramin",
+   "company": "(재)사람사는세상노무현재단",
+   "title": "2026년 하반기 공개 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54598712",
+   "start": "",
+   "end": "2026-08-11",
+   "jobs": []
+  },
+  {
    "id": "lk-340504",
    "source": "linkareer",
    "company": "DB하이텍",
    "title": "[DB하이텍] 상우캠퍼스 제조MS 수시채용",
    "url": "https://linkareer.com/activity/340504",
+   "start": "",
+   "end": "2026-08-11",
+   "jobs": []
+  },
+  {
+   "id": "srm-54588468",
+   "source": "saramin",
+   "company": "비앤비코리아",
+   "title": "(주)비앤비코리아 국내영업 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54588468",
    "start": "",
    "end": "2026-08-11",
    "jobs": []
@@ -384,11 +345,21 @@
    "size": "중견"
   },
   {
-   "id": "lk-340173",
-   "source": "linkareer",
-   "company": "셀트리온제약",
-   "title": "[셀트리온제약] 인사 분야 수시채용 (신입)",
-   "url": "https://linkareer.com/activity/340173",
+   "id": "srm-54645593",
+   "source": "saramin",
+   "company": "한양이엔지",
+   "title": "부문별 수시채용 직원모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54645593",
+   "start": "",
+   "end": "2026-08-11",
+   "jobs": []
+  },
+  {
+   "id": "srm-54649082",
+   "source": "saramin",
+   "company": "의료법의료법인 한국의료재단 종합검진센터(여의도IFC)",
+   "title": "[한국의료재단] 하반기 부문별 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54649082",
    "start": "",
    "end": "2026-08-12",
    "jobs": []
@@ -401,16 +372,6 @@
    "url": "https://linkareer.com/activity/340629",
    "start": "",
    "end": "2026-08-12",
-   "jobs": []
-  },
-  {
-   "id": "lk-340199",
-   "source": "linkareer",
-   "company": "연합인포맥스",
-   "title": "[연합인포맥스] AI 부문 및 금융데이터 서비스 기획·운영 채용",
-   "url": "https://linkareer.com/activity/340199",
-   "start": "",
-   "end": "2026-08-13",
    "jobs": []
   },
   {
@@ -473,13 +434,13 @@
    "jobs": []
   },
   {
-   "id": "lk-340191",
-   "source": "linkareer",
-   "company": "티씨케이",
-   "title": "[티씨케이] 정규직 채용 : 품질그룹",
-   "url": "https://linkareer.com/activity/340191",
+   "id": "srm-54475948",
+   "source": "saramin",
+   "company": "엘앤에스",
+   "title": "(주)L&amp;S 2026년 하반기 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54475948",
    "start": "",
-   "end": "2026-08-14",
+   "end": "2026-08-15",
    "jobs": []
   },
   {
@@ -517,16 +478,6 @@
    "size": "대기업"
   },
   {
-   "id": "lk-339923",
-   "source": "linkareer",
-   "company": "SK오션플랜트",
-   "title": "[SK오션플랜트] 상생협력/외주관리 구성원 모집",
-   "url": "https://linkareer.com/activity/339923",
-   "start": "",
-   "end": "2026-08-16",
-   "jobs": []
-  },
-  {
    "id": "js-105543",
    "source": "jasoseol",
    "company": "에코마케팅",
@@ -553,6 +504,16 @@
    ],
    "cg": 6091,
    "size": "기타"
+  },
+  {
+   "id": "srm-54460727",
+   "source": "saramin",
+   "company": "태봉산업",
+   "title": "2026년 하반기 (주)태봉산업 울산/아산공장 경력직 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54460727",
+   "start": "",
+   "end": "2026-08-16",
+   "jobs": []
   },
   {
    "id": "js-105412",
@@ -626,16 +587,6 @@
    "size": "중견"
   },
   {
-   "id": "lk-340328",
-   "source": "linkareer",
-   "company": "YG엔터테인먼트",
-   "title": "[YG엔터테인먼트] [3분기 정기채용] IR팀 / 경영·재무전략 담당자 (신입)",
-   "url": "https://linkareer.com/activity/340328",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
    "id": "js-105414",
    "source": "jasoseol",
    "company": "니프코코리아",
@@ -652,11 +603,59 @@
    "size": "중견"
   },
   {
+   "id": "srm-54620674",
+   "source": "saramin",
+   "company": "동구바이오제약",
+   "title": "동구바이오제약 부문별 수시채용 모집(신입&amp;경력)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54620674",
+   "start": "",
+   "end": "2026-08-17",
+   "jobs": []
+  },
+  {
+   "id": "srm-54669349",
+   "source": "saramin",
+   "company": "삼진식품",
+   "title": "[삼진어묵] 인사총무팀 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54669349",
+   "start": "",
+   "end": "2026-08-17",
+   "jobs": []
+  },
+  {
+   "id": "js-105547",
+   "source": "jasoseol",
+   "company": "세방그룹",
+   "title": "2026년 3분기 신입·채용연계형 인턴·경력 정기 채용",
+   "url": "https://jasoseol.com/recruit/105547",
+   "start": "2026-08-08",
+   "end": "2026-08-17",
+   "jobs": [
+    "[세방(주)]원가관리",
+    "[세방(주)]경영기획",
+    "[세방(주)]국내영업",
+    "[세방(주)]경영지원",
+    "[세방전지(주)]해외영업"
+   ],
+   "cg": 494,
+   "size": "중견"
+  },
+  {
    "id": "lk-340863",
    "source": "linkareer",
    "company": "세방전지",
    "title": "[세방전지] 2026년 3분기 세방전지(주) 신입 채용",
    "url": "https://linkareer.com/activity/340863",
+   "start": "",
+   "end": "2026-08-17",
+   "jobs": []
+  },
+  {
+   "id": "lk-341198",
+   "source": "linkareer",
+   "company": "소노인터내셔널",
+   "title": "[소노인터내셔널] 소노캄 고양 안전관리 신입/경력 채용",
+   "url": "https://linkareer.com/activity/341198",
    "start": "",
    "end": "2026-08-17",
    "jobs": []
@@ -672,11 +671,11 @@
    "jobs": []
   },
   {
-   "id": "lk-339994",
-   "source": "linkareer",
-   "company": "안다르",
-   "title": "andar 인플루언서 마케팅 담당자 신입-3년 채용",
-   "url": "https://linkareer.com/activity/339994",
+   "id": "srm-54620423",
+   "source": "saramin",
+   "company": "아이씨바이오",
+   "title": "2026년 ICBIO 각 부문 공개채용(신입/경력)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54620423",
    "start": "",
    "end": "2026-08-17",
    "jobs": []
@@ -714,61 +713,31 @@
    "size": "대기업"
   },
   {
-   "id": "lk-340125",
-   "source": "linkareer",
-   "company": "에스디바이오센서",
-   "title": "[에스디바이오센서] [8월/신입경력/수원] 센서개발 연구문서 관리 담당자 채용",
-   "url": "https://linkareer.com/activity/340125",
+   "id": "srm-54619607",
+   "source": "saramin",
+   "company": "와이지엔터테인먼트",
+   "title": "2026년 3분기 YG엔터테인먼트 정기채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54619607",
    "start": "",
    "end": "2026-08-17",
    "jobs": []
   },
   {
-   "id": "lk-340121",
-   "source": "linkareer",
-   "company": "에스디바이오센서",
-   "title": "[에스디바이오센서] [8월/신입경력/기흥] 수도권 영업 담당자 채용",
-   "url": "https://linkareer.com/activity/340121",
+   "id": "srm-54685890",
+   "source": "saramin",
+   "company": "포스포",
+   "title": "유기사업부(연구직)/경영지원(인사총무)/제조부 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54685890",
    "start": "",
    "end": "2026-08-17",
    "jobs": []
   },
   {
-   "id": "lk-340118",
-   "source": "linkareer",
-   "company": "에스디바이오센서",
-   "title": "[에스디바이오센서] [8월/신입경력/수원] 기구설계 개발자 채용",
-   "url": "https://linkareer.com/activity/340118",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
-   "id": "lk-339981",
-   "source": "linkareer",
-   "company": "코스메카코리아",
-   "title": "[코스메카코리아] 글로벌 고객지원 담당자 모집",
-   "url": "https://linkareer.com/activity/339981",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
-   "id": "lk-339976",
-   "source": "linkareer",
-   "company": "코스메카코리아",
-   "title": "[코스메카코리아] 영업관리 담당자 모집",
-   "url": "https://linkareer.com/activity/339976",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
-   "id": "lk-339997",
-   "source": "linkareer",
-   "company": "테슬라코리아",
-   "title": "[테슬라코리아] 2026 Tesla Korea 대규모 공개채용 (~08/17)",
-   "url": "https://linkareer.com/activity/339997",
+   "id": "srm-54604649",
+   "source": "saramin",
+   "company": "한강식품",
+   "title": "하림그룹 (주)한강식품 2026년 8월 한강식품 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54604649",
    "start": "",
    "end": "2026-08-17",
    "jobs": []
@@ -793,26 +762,6 @@
    "company": "현대종합금속",
    "title": "[현대종합금속] 기계사업본부 설계부 신입/경력사원 모집",
    "url": "https://linkareer.com/activity/340411",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
-   "id": "lk-340336",
-   "source": "linkareer",
-   "company": "현대종합금속",
-   "title": "[현대종합금속] 기계사업본부 연구개발부 신입/경력사원 모집",
-   "url": "https://linkareer.com/activity/340336",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
-   "id": "lk-340334",
-   "source": "linkareer",
-   "company": "현대종합금속",
-   "title": "[현대종합금속] 기계사업본부 설계부 신입/경력사원 모집",
-   "url": "https://linkareer.com/activity/340334",
    "start": "",
    "end": "2026-08-17",
    "jobs": []
@@ -847,16 +796,6 @@
    "company": "메디톡스",
    "title": "[메디톡스] 인사총무 신입/경력사원 채용",
    "url": "https://linkareer.com/activity/340764",
-   "start": "",
-   "end": "2026-08-18",
-   "jobs": []
-  },
-  {
-   "id": "lk-340259",
-   "source": "linkareer",
-   "company": "소노인터내셔널",
-   "title": "[소노인터내셔널] 본사 해외OTA 신입/경력 채용",
-   "url": "https://linkareer.com/activity/340259",
    "start": "",
    "end": "2026-08-18",
    "jobs": []
@@ -966,6 +905,66 @@
    "size": "기타"
   },
   {
+   "id": "lk-341147",
+   "source": "linkareer",
+   "company": "에이피알에이전시",
+   "title": "인플루언서마케팅 신입/경력 채용",
+   "url": "https://linkareer.com/activity/341147",
+   "start": "",
+   "end": "2026-08-21",
+   "jobs": []
+  },
+  {
+   "id": "lk-341140",
+   "source": "linkareer",
+   "company": "에이피알에이전시",
+   "title": "패션브랜드 디지털 바이럴 마케팅 신입 채용",
+   "url": "https://linkareer.com/activity/341140",
+   "start": "",
+   "end": "2026-08-21",
+   "jobs": []
+  },
+  {
+   "id": "lk-340984",
+   "source": "linkareer",
+   "company": "에이피알에이전시",
+   "title": "패션브랜드 스타마케팅 신입 채용",
+   "url": "https://linkareer.com/activity/340984",
+   "start": "",
+   "end": "2026-08-21",
+   "jobs": []
+  },
+  {
+   "id": "lk-340975",
+   "source": "linkareer",
+   "company": "에이피알에이전시",
+   "title": "패션브랜드 미디어PR 신입 채용",
+   "url": "https://linkareer.com/activity/340975",
+   "start": "",
+   "end": "2026-08-21",
+   "jobs": []
+  },
+  {
+   "id": "srm-54545235",
+   "source": "saramin",
+   "company": "티케이지솔믹스",
+   "title": "부문별 신입/경력 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54545235",
+   "start": "",
+   "end": "2026-08-21",
+   "jobs": []
+  },
+  {
+   "id": "lk-341199",
+   "source": "linkareer",
+   "company": "한국철도공사",
+   "title": "[한국철도공사] 2026년 하반기 신입사원 채용 공고",
+   "url": "https://linkareer.com/activity/341199",
+   "start": "",
+   "end": "2026-08-21",
+   "jobs": []
+  },
+  {
    "id": "js-104737",
    "source": "jasoseol",
    "company": "어플라이드 머티어리얼즈 코리아",
@@ -1017,6 +1016,16 @@
    ],
    "cg": 6091,
    "size": "기타"
+  },
+  {
+   "id": "lk-341162",
+   "source": "linkareer",
+   "company": "커리어넷",
+   "title": "2026년도 안전보건공단 하반기 채용 공고",
+   "url": "https://linkareer.com/activity/341162",
+   "start": "",
+   "end": "2026-08-24",
+   "jobs": []
   },
   {
    "id": "js-105521",
@@ -1095,6 +1104,26 @@
    "jobs": []
   },
   {
+   "id": "srm-54670164",
+   "source": "saramin",
+   "company": "동일캔바스엔지니어링",
+   "title": "하반기 신입/경력 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54670164",
+   "start": "",
+   "end": "2026-08-26",
+   "jobs": []
+  },
+  {
+   "id": "srm-54597725",
+   "source": "saramin",
+   "company": "자연과환경",
+   "title": "2026년 하반기 정기채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54597725",
+   "start": "",
+   "end": "2026-08-27",
+   "jobs": []
+  },
+  {
    "id": "js-105421",
    "source": "jasoseol",
    "company": "신원",
@@ -1107,36 +1136,6 @@
    ],
    "cg": 959,
    "size": "중견"
-  },
-  {
-   "id": "lk-340327",
-   "source": "linkareer",
-   "company": "오스템임플란트",
-   "title": "[오스템임플란트] 국내 치과 영업",
-   "url": "https://linkareer.com/activity/340327",
-   "start": "",
-   "end": "2026-08-30",
-   "jobs": []
-  },
-  {
-   "id": "lk-339882",
-   "source": "linkareer",
-   "company": "AJIN USA",
-   "title": "[미국/조지아] AjinUSA  품질관리 사원 채용 (비자발급비 지원)",
-   "url": "https://linkareer.com/activity/339882",
-   "start": "",
-   "end": "2026-08-31",
-   "jobs": []
-  },
-  {
-   "id": "lk-340298",
-   "source": "linkareer",
-   "company": "KT나스미디어",
-   "title": "[KT나스미디어] 2026년 8월 kt nasmedia 채용 (채용 시 마감)",
-   "url": "https://linkareer.com/activity/340298",
-   "start": "",
-   "end": "2026-08-31",
-   "jobs": []
   },
   {
    "id": "lk-340604",
@@ -1159,6 +1158,126 @@
    "jobs": []
   },
   {
+   "id": "srm-54608712",
+   "source": "saramin",
+   "company": "덕산테코피아",
+   "title": "각 사업부별 우수인재 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54608712",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54619230",
+   "source": "saramin",
+   "company": "디아이동일천안알루미늄사업장",
+   "title": "알루미늄 사업부문 생산기술직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54619230",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54142770",
+   "source": "saramin",
+   "company": "레이저발테크놀러지",
+   "title": "2026년 3분기 분야별 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54142770",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "lk-341121",
+   "source": "linkareer",
+   "company": "스마일게이트",
+   "title": "[스마일게이트] [LOST ARK] UI디자인 담당",
+   "url": "https://linkareer.com/activity/341121",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "lk-341099",
+   "source": "linkareer",
+   "company": "스마일게이트",
+   "title": "[스마일게이트] [LOST ARK] DBA 담당",
+   "url": "https://linkareer.com/activity/341099",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "lk-341094",
+   "source": "linkareer",
+   "company": "스마일게이트",
+   "title": "[스마일게이트] [LOST ARK Mobile] DBA 담당",
+   "url": "https://linkareer.com/activity/341094",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "lk-341074",
+   "source": "linkareer",
+   "company": "스마일게이트",
+   "title": "[스마일게이트] [글로벌운영] 게임운영 담당",
+   "url": "https://linkareer.com/activity/341074",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "lk-341071",
+   "source": "linkareer",
+   "company": "스마일게이트",
+   "title": "[스마일게이트] [퍼블리싱/플랫폼] 스토어 서버 개발 및 운영",
+   "url": "https://linkareer.com/activity/341071",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "lk-341057",
+   "source": "linkareer",
+   "company": "스마일게이트",
+   "title": "[스마일게이트] [LOST ARK] 시나리오기획 담당",
+   "url": "https://linkareer.com/activity/341057",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54547535",
+   "source": "saramin",
+   "company": "아이즈비전",
+   "title": "2026 아이즈비전 신사업 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54547535",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "lk-341132",
+   "source": "linkareer",
+   "company": "휴메딕스",
+   "title": "[휴메딕스] 에스테틱 영업(부산/경남) 신입/경력직 채용",
+   "url": "https://linkareer.com/activity/341132",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54617998",
+   "source": "saramin",
+   "company": "데이터유니버스",
+   "title": "[데이터유니버스] 2026년 신입/경력직 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54617998",
+   "start": "",
+   "end": "2026-09-01",
+   "jobs": []
+  },
+  {
    "id": "js-105513",
    "source": "jasoseol",
    "company": "에코마케팅",
@@ -1171,6 +1290,16 @@
    ],
    "cg": 6091,
    "size": "기타"
+  },
+  {
+   "id": "srm-54143667",
+   "source": "saramin",
+   "company": "성풍이앤에이",
+   "title": "(주)성풍이앤에이 각 부문별 신입 및 경력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54143667",
+   "start": "",
+   "end": "2026-09-13",
+   "jobs": []
   },
   {
    "id": "js-105114",
@@ -1202,33 +1331,13 @@
    "size": "중견"
   },
   {
-   "id": "lk-340261",
-   "source": "linkareer",
-   "company": "원웨이",
-   "title": "[브랜드] 콘텐츠 마케터 신입/인턴 채용",
-   "url": "https://linkareer.com/activity/340261",
+   "id": "srm-54288652",
+   "source": "saramin",
+   "company": "원빌딩부동산중개",
+   "title": "원빌딩부동산중개㈜ 2026년 신입 정기 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54288652",
    "start": "",
-   "end": "2026-11-02",
-   "jobs": []
-  },
-  {
-   "id": "lk-340360",
-   "source": "linkareer",
-   "company": "제피러스랩",
-   "title": "창업기획자,액셀러레이터 (서울근무)",
-   "url": "https://linkareer.com/activity/340360",
-   "start": "",
-   "end": "2026-11-02",
-   "jobs": []
-  },
-  {
-   "id": "lk-340157",
-   "source": "linkareer",
-   "company": "팬마음",
-   "title": "[리비바이오] 팬마음 마케터",
-   "url": "https://linkareer.com/activity/340157",
-   "start": "",
-   "end": "2026-11-02",
+   "end": "2026-10-14",
    "jobs": []
   },
   {
@@ -1262,6 +1371,16 @@
    "jobs": []
   },
   {
+   "id": "lk-340981",
+   "source": "linkareer",
+   "company": "NHN",
+   "title": "[NHN Cloud] 법무",
+   "url": "https://linkareer.com/activity/340981",
+   "start": "",
+   "end": "2026-11-04",
+   "jobs": []
+  },
+  {
    "id": "lk-340809",
    "source": "linkareer",
    "company": "발효문화",
@@ -1289,6 +1408,26 @@
    "url": "https://linkareer.com/activity/340871",
    "start": "",
    "end": "2026-11-04",
+   "jobs": []
+  },
+  {
+   "id": "lk-341201",
+   "source": "linkareer",
+   "company": "Moida K-Beauty",
+   "title": "[미국인턴/미국전역] Moida K-Beauty 플래그십 스토어 - 매장관리 직원 채용",
+   "url": "https://linkareer.com/activity/341201",
+   "start": "",
+   "end": "2026-11-05",
+   "jobs": []
+  },
+  {
+   "id": "lk-341117",
+   "source": "linkareer",
+   "company": "Vita Medical",
+   "title": "Vita Medical_글로벌 SCM (신입)",
+   "url": "https://linkareer.com/activity/341117",
+   "start": "",
+   "end": "2026-11-05",
    "jobs": []
   }
  ],
