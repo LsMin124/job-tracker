@@ -1,20 +1,6 @@
 {
- "updated": "2026-08-08T06:34:01+09:00",
+ "updated": "2026-08-09T06:24:35+09:00",
  "postings": [
-  {
-   "id": "js-105312",
-   "source": "jasoseol",
-   "company": "팀민트",
-   "title": "하반기 신입 마케터 채용 (8/4 채용설명회 진행)",
-   "url": "https://jasoseol.com/recruit/105312",
-   "start": "2026-07-27",
-   "end": "2026-08-08",
-   "jobs": [
-    "디지털 마케터"
-   ],
-   "cg": 15365,
-   "size": "기타"
-  },
   {
    "id": "js-105308",
    "source": "jasoseol",
@@ -82,16 +68,6 @@
    ],
    "cg": 6091,
    "size": "기타"
-  },
-  {
-   "id": "srm-54610053",
-   "source": "saramin",
-   "company": "엠에스홀딩스",
-   "title": "MS홀딩스 매장 전략 관리자(계장) / 실무파트 리더(주임) 신입 공채",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54610053",
-   "start": "",
-   "end": "2026-08-09",
-   "jobs": []
   },
   {
    "id": "js-105346",
@@ -355,6 +331,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54673558",
+   "source": "saramin",
+   "company": "씨제이푸드빌",
+   "title": "[공식] CJ푸드빌 음성공장 베이커리 생산직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54673558",
+   "start": "",
+   "end": "2026-08-12",
+   "jobs": []
+  },
+  {
    "id": "srm-54649082",
    "source": "saramin",
    "company": "의료법의료법인 한국의료재단 종합검진센터(여의도IFC)",
@@ -370,6 +356,16 @@
    "company": "코오롱생명과학",
    "title": "[코오롱생명과학] 김천공장 생산 정규직 신입 채용",
    "url": "https://linkareer.com/activity/340629",
+   "start": "",
+   "end": "2026-08-12",
+   "jobs": []
+  },
+  {
+   "id": "srm-54599923",
+   "source": "saramin",
+   "company": "환인제약",
+   "title": "환인제약(주) 8월 각 부문 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54599923",
    "start": "",
    "end": "2026-08-12",
    "jobs": []
@@ -723,6 +719,26 @@
    "jobs": []
   },
   {
+   "id": "srm-54573547",
+   "source": "saramin",
+   "company": "조인트유창써멀시스템",
+   "title": "[주 4일 근무제 도입] 각 부문별 신입 및 경력사원 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54573547",
+   "start": "",
+   "end": "2026-08-17",
+   "jobs": []
+  },
+  {
+   "id": "srm-54679456",
+   "source": "saramin",
+   "company": "티에이케이정보시스템",
+   "title": "[티에이케이정보시스템] 상반기 신입 및 경력사원 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54679456",
+   "start": "",
+   "end": "2026-08-17",
+   "jobs": []
+  },
+  {
    "id": "srm-54685890",
    "source": "saramin",
    "company": "포스포",
@@ -1018,6 +1034,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-54681810",
+   "source": "saramin",
+   "company": "엔케이텍",
+   "title": "2026년 공개채용 모집공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54681810",
+   "start": "",
+   "end": "2026-08-23",
+   "jobs": []
+  },
+  {
    "id": "lk-341162",
    "source": "linkareer",
    "company": "커리어넷",
@@ -1168,21 +1194,21 @@
    "jobs": []
   },
   {
-   "id": "srm-54619230",
-   "source": "saramin",
-   "company": "디아이동일천안알루미늄사업장",
-   "title": "알루미늄 사업부문 생산기술직 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54619230",
-   "start": "",
-   "end": "2026-08-31",
-   "jobs": []
-  },
-  {
    "id": "srm-54142770",
    "source": "saramin",
    "company": "레이저발테크놀러지",
    "title": "2026년 3분기 분야별 공개 채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54142770",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54683650",
+   "source": "saramin",
+   "company": "모다이노칩",
+   "title": "[전국] 모다아울렛 영업관리(정규직) 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54683650",
    "start": "",
    "end": "2026-08-31",
    "jobs": []
