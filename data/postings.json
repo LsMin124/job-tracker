@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-15T06:19:54+09:00",
+ "updated": "2026-08-16T06:15:44+09:00",
  "postings": [
   {
    "id": "js-105382",
@@ -262,6 +262,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54604649",
+   "source": "saramin",
+   "company": "한강식품",
+   "title": "하림그룹 (주)한강식품 2026년 8월 한강식품 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54604649",
+   "start": "",
+   "end": "2026-08-17",
+   "jobs": []
+  },
+  {
    "id": "js-105341",
    "source": "jasoseol",
    "company": "한국투자저축은행",
@@ -407,6 +417,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-54740587",
+   "source": "saramin",
+   "company": "씨제이푸드빌",
+   "title": "[공식] CJ푸드빌 음성공장 베이커리 생산직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54740587",
+   "start": "",
+   "end": "2026-08-19",
+   "jobs": []
+  },
+  {
    "id": "srm-54700234",
    "source": "saramin",
    "company": "엠에스홀딩스",
@@ -414,26 +434,6 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54700234",
    "start": "",
    "end": "2026-08-19",
-   "jobs": []
-  },
-  {
-   "id": "srm-54633732",
-   "source": "saramin",
-   "company": "지에스메디칼",
-   "title": "[척추 임플란트 전문기업] 영업ㆍ생산ㆍ품질관리 부문 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54633732",
-   "start": "",
-   "end": "2026-08-19",
-   "jobs": []
-  },
-  {
-   "id": "srm-54727792",
-   "source": "saramin",
-   "company": "그린파워",
-   "title": "㈜그린파워 하반기 각 부문 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54727792",
-   "start": "",
-   "end": "2026-08-20",
    "jobs": []
   },
   {
@@ -709,6 +709,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-54722644",
+   "source": "saramin",
+   "company": "동방",
+   "title": "각 부문 수시채용 (정비직,중기직 CSU(양하기) 운전원)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54722644",
+   "start": "",
+   "end": "2026-08-23",
+   "jobs": []
+  },
+  {
    "id": "js-105562",
    "source": "jasoseol",
    "company": "마이다스그룹",
@@ -901,6 +911,16 @@
    "size": "대기업"
   },
   {
+   "id": "srm-54750945",
+   "source": "saramin",
+   "company": "에이제이솔루션테크",
+   "title": "AJ솔루션테크 8월 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54750945",
+   "start": "",
+   "end": "2026-08-24",
+   "jobs": []
+  },
+  {
    "id": "js-105595",
    "source": "jasoseol",
    "company": "울산대학교",
@@ -1075,6 +1095,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54597725",
+   "source": "saramin",
+   "company": "자연과환경",
+   "title": "2026년 하반기 정기채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54597725",
+   "start": "",
+   "end": "2026-08-27",
+   "jobs": []
+  },
+  {
    "id": "lk-342441",
    "source": "linkareer",
    "company": "대구경북과학기술원",
@@ -1160,6 +1190,26 @@
    "jobs": []
   },
   {
+   "id": "srm-54703161",
+   "source": "saramin",
+   "company": "인터케어",
+   "title": "인터케어 2026년 공개채용 - 통합구매팀(수주 및 운영관리)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54703161",
+   "start": "",
+   "end": "2026-08-30",
+   "jobs": []
+  },
+  {
+   "id": "srm-54748870",
+   "source": "saramin",
+   "company": "중앙백신연구소",
+   "title": "2026년 중앙백신연구소 하반기 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54748870",
+   "start": "",
+   "end": "2026-08-30",
+   "jobs": []
+  },
+  {
    "id": "lk-342700",
    "source": "linkareer",
    "company": "현대리바트엠앤에스",
@@ -1195,16 +1245,6 @@
    "company": "덕산테코피아",
    "title": "각 사업부별 우수인재 수시채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54608712",
-   "start": "",
-   "end": "2026-08-31",
-   "jobs": []
-  },
-  {
-   "id": "srm-54619230",
-   "source": "saramin",
-   "company": "디아이동일천안알루미늄사업장",
-   "title": "알루미늄 사업부문 생산기술직 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54619230",
    "start": "",
    "end": "2026-08-31",
    "jobs": []
@@ -1384,16 +1424,6 @@
    "jobs": []
   },
   {
-   "id": "srm-54463598",
-   "source": "saramin",
-   "company": "메디렉스",
-   "title": "의료기기 영업 경력 및 신입 사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54463598",
-   "start": "",
-   "end": "2026-09-12",
-   "jobs": []
-  },
-  {
    "id": "srm-54715114",
    "source": "saramin",
    "company": "공간제작소",
@@ -1453,6 +1483,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54702376",
+   "source": "saramin",
+   "company": "스타메드",
+   "title": "[스타메드] 수시 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54702376",
+   "start": "",
+   "end": "2026-10-09",
+   "jobs": []
+  },
+  {
    "id": "lk-342399",
    "source": "linkareer",
    "company": "핸디즈",
@@ -1460,6 +1500,16 @@
    "url": "https://linkareer.com/activity/342399",
    "start": "",
    "end": "2026-10-12",
+   "jobs": []
+  },
+  {
+   "id": "srm-54749666",
+   "source": "saramin",
+   "company": "한국비엠아이",
+   "title": "(주)한국비엠아이 영업지원 신입사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54749666",
+   "start": "",
+   "end": "2026-10-13",
    "jobs": []
   },
   {
@@ -1650,6 +1700,16 @@
    "url": "https://linkareer.com/activity/342938",
    "start": "",
    "end": "2026-11-12",
+   "jobs": []
+  },
+  {
+   "id": "srm-54748243",
+   "source": "saramin",
+   "company": "테이칼튼",
+   "title": "(주)테이칼튼 각 부문별 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54748243",
+   "start": "",
+   "end": "2026-12-31",
    "jobs": []
   }
  ],
