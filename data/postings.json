@@ -1,89 +1,6 @@
 {
- "updated": "2026-08-16T06:15:44+09:00",
+ "updated": "2026-08-17T06:14:33+09:00",
  "postings": [
-  {
-   "id": "js-105382",
-   "source": "jasoseol",
-   "company": "KB라이프파트너스",
-   "title": "본사 직영 KBxL 2기 모집",
-   "url": "https://jasoseol.com/recruit/105382",
-   "start": "2026-08-01",
-   "end": "2026-08-16",
-   "jobs": [
-    "KBxL 2기 (영업관리자 트랙)"
-   ],
-   "cg": 13951,
-   "size": "대기업"
-  },
-  {
-   "id": "js-105543",
-   "source": "jasoseol",
-   "company": "에코마케팅",
-   "title": "프론트엔드 개발자 신입 채용",
-   "url": "https://jasoseol.com/recruit/105543",
-   "start": "2026-08-06",
-   "end": "2026-08-16",
-   "jobs": [
-    "프론트엔드 개발자"
-   ],
-   "cg": 6091,
-   "size": "기타"
-  },
-  {
-   "id": "js-105432",
-   "source": "jasoseol",
-   "company": "에코마케팅",
-   "title": "백엔드 개발자(Java) 인턴/신입 채용",
-   "url": "https://jasoseol.com/recruit/105432",
-   "start": "2026-08-03",
-   "end": "2026-08-16",
-   "jobs": [
-    "백엔드 개발자(Java) (신입)"
-   ],
-   "cg": 6091,
-   "size": "기타"
-  },
-  {
-   "id": "js-105571",
-   "source": "jasoseol",
-   "company": "중앙대학교병원",
-   "title": "(서울병원) 부대사업팀 조리원(휴직대체) 모집 (2026.08)",
-   "url": "https://jasoseol.com/recruit/105571",
-   "start": "2026-08-10",
-   "end": "2026-08-16",
-   "jobs": [
-    "계약직(휴직대체)-부대사업팀-조리원"
-   ],
-   "cg": 7443,
-   "size": "기타"
-  },
-  {
-   "id": "js-105412",
-   "source": "jasoseol",
-   "company": "테크윙",
-   "title": "2026년 8월 각부문 채용",
-   "url": "https://jasoseol.com/recruit/105412",
-   "start": "2026-08-03",
-   "end": "2026-08-16",
-   "jobs": [
-    "해외영업",
-    "기구설계 (아산)",
-    "기구설계 (동탄)",
-    "SW개발",
-    "자재 (아산)",
-    "고객만족 그룹 (CS) - 각 고객사",
-    "고객만족 그룹 (싱가폴 현지 CS)",
-    "고객만족 그룹 (인도 현지 CS)",
-    "제조관리",
-    "HW개발 (아산)",
-    "구매 (동탄)",
-    "HW개발 (동탄)",
-    "Vision SW",
-    "AI"
-   ],
-   "cg": 1954,
-   "size": "중견"
-  },
   {
    "id": "js-105452",
    "source": "jasoseol",
@@ -115,16 +32,6 @@
    "size": "중견"
   },
   {
-   "id": "srm-54620674",
-   "source": "saramin",
-   "company": "동구바이오제약",
-   "title": "동구바이오제약 부문별 수시채용 모집(신입&amp;경력)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54620674",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
    "id": "js-105547",
    "source": "jasoseol",
    "company": "세방그룹",
@@ -141,16 +48,6 @@
    ],
    "cg": 494,
    "size": "중견"
-  },
-  {
-   "id": "srm-54620423",
-   "source": "saramin",
-   "company": "아이씨바이오",
-   "title": "2026년 ICBIO 각 부문 공개채용(신입/경력)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54620423",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
   },
   {
    "id": "js-105532",
@@ -183,16 +80,6 @@
    ],
    "cg": 219,
    "size": "대기업"
-  },
-  {
-   "id": "srm-54619607",
-   "source": "saramin",
-   "company": "와이지엔터테인먼트",
-   "title": "2026년 3분기 YG엔터테인먼트 정기채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54619607",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
   },
   {
    "id": "js-105599",
@@ -257,16 +144,6 @@
    "company": "코오롱생명과학",
    "title": "[코오롱생명과학] 충주공장 API 라인 증설 채용(8월)",
    "url": "https://linkareer.com/activity/342384",
-   "start": "",
-   "end": "2026-08-17",
-   "jobs": []
-  },
-  {
-   "id": "srm-54604649",
-   "source": "saramin",
-   "company": "한강식품",
-   "title": "하림그룹 (주)한강식품 2026년 8월 한강식품 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54604649",
    "start": "",
    "end": "2026-08-17",
    "jobs": []
@@ -338,16 +215,6 @@
    "size": "기타"
   },
   {
-   "id": "srm-54488449",
-   "source": "saramin",
-   "company": "지테크시스템",
-   "title": "2026년도 신입사원 공개채용-영업(거래처 관리)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54488449",
-   "start": "",
-   "end": "2026-08-18",
-   "jobs": []
-  },
-  {
    "id": "js-105456",
    "source": "jasoseol",
    "company": "한국남동발전(KOEN)",
@@ -417,16 +284,6 @@
    "size": "기타"
   },
   {
-   "id": "srm-54740587",
-   "source": "saramin",
-   "company": "씨제이푸드빌",
-   "title": "[공식] CJ푸드빌 음성공장 베이커리 생산직 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54740587",
-   "start": "",
-   "end": "2026-08-19",
-   "jobs": []
-  },
-  {
    "id": "srm-54700234",
    "source": "saramin",
    "company": "엠에스홀딩스",
@@ -434,6 +291,16 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54700234",
    "start": "",
    "end": "2026-08-19",
+   "jobs": []
+  },
+  {
+   "id": "srm-54727792",
+   "source": "saramin",
+   "company": "그린파워",
+   "title": "㈜그린파워 하반기 각 부문 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54727792",
+   "start": "",
+   "end": "2026-08-20",
    "jobs": []
   },
   {
@@ -493,6 +360,16 @@
    ],
    "cg": 3070,
    "size": "대기업"
+  },
+  {
+   "id": "srm-54629111",
+   "source": "saramin",
+   "company": "폴라리스투자자문",
+   "title": "[투자자문사] 경영지원팀 신입사원 채용 (급여공개) - 정규직",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54629111",
+   "start": "",
+   "end": "2026-08-20",
+   "jobs": []
   },
   {
    "id": "lk-339732",
@@ -556,6 +433,16 @@
    ],
    "cg": 15443,
    "size": "중견"
+  },
+  {
+   "id": "srm-54536084",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 생산직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54536084",
+   "start": "",
+   "end": "2026-08-21",
+   "jobs": []
   },
   {
    "id": "js-105603",
@@ -837,6 +724,16 @@
    "company": "하나마이크론",
    "title": "[하나마이크론] [신입/경력] 2026년 6월 반도체PKG 설비엔지니어 모집",
    "url": "https://linkareer.com/activity/342798",
+   "start": "",
+   "end": "2026-08-23",
+   "jobs": []
+  },
+  {
+   "id": "srm-54737639",
+   "source": "saramin",
+   "company": "한국콜마",
+   "title": "[한국콜마] 26년 8월 경력사원 수시채용(RA, 화장품연구, 품질관리, 생산)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54737639",
    "start": "",
    "end": "2026-08-23",
    "jobs": []
@@ -1156,6 +1053,26 @@
    "size": "대기업"
   },
   {
+   "id": "srm-54610791",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 소프트웨어(SW) 개발 대졸 신입 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54610791",
+   "start": "",
+   "end": "2026-08-29",
+   "jobs": []
+  },
+  {
+   "id": "srm-54610739",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 기구설계 대졸 신입 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54610739",
+   "start": "",
+   "end": "2026-08-29",
+   "jobs": []
+  },
+  {
    "id": "lk-342619",
    "source": "linkareer",
    "company": "SK케미칼",
@@ -1265,6 +1182,16 @@
    "company": "위마케팅",
    "title": "[팀모먼트(비나우 자회사)] 글로벌 B2B 영업 지원 (신입)",
    "url": "https://linkareer.com/activity/342716",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54714170",
+   "source": "saramin",
+   "company": "포스텍전자",
+   "title": "포스텍전자㈜ 신입사원 모집 [설비설계/영업/생산]",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54714170",
    "start": "",
    "end": "2026-08-31",
    "jobs": []
@@ -1500,16 +1427,6 @@
    "url": "https://linkareer.com/activity/342399",
    "start": "",
    "end": "2026-10-12",
-   "jobs": []
-  },
-  {
-   "id": "srm-54749666",
-   "source": "saramin",
-   "company": "한국비엠아이",
-   "title": "(주)한국비엠아이 영업지원 신입사원 모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54749666",
-   "start": "",
-   "end": "2026-10-13",
    "jobs": []
   },
   {
