@@ -1,21 +1,6 @@
 {
- "updated": "2026-08-22T06:18:30+09:00",
+ "updated": "2026-08-23T06:16:31+09:00",
  "postings": [
-  {
-   "id": "js-104737",
-   "source": "jasoseol",
-   "company": "어플라이드 머티어리얼즈 코리아",
-   "title": "신입/경력 반도체 엔지니어 채용",
-   "url": "https://jasoseol.com/recruit/104737",
-   "start": "2026-06-23",
-   "end": "2026-08-22",
-   "jobs": [
-    "Customer Engineer(반도체 장비 엔지니어)_학사",
-    "Customer Support Technician(반도체/디스플레이 장비 테크니션)_전문학사"
-   ],
-   "cg": 3070,
-   "size": "대기업"
-  },
   {
    "id": "lk-344328",
    "source": "linkareer",
@@ -377,6 +362,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-54751802",
+   "source": "saramin",
+   "company": "신아티앤씨",
+   "title": "2026년 ㈜신아티앤씨 하반기 신규인력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54751802",
+   "start": "",
+   "end": "2026-08-25",
+   "jobs": []
+  },
+  {
    "id": "lk-344000",
    "source": "linkareer",
    "company": "일화",
@@ -605,6 +600,26 @@
    "jobs": []
   },
   {
+   "id": "srm-54784802",
+   "source": "saramin",
+   "company": "케이씨씨글라스",
+   "title": "[KCC글라스] '26년 8월 신입/경력사원 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54784802",
+   "start": "",
+   "end": "2026-08-26",
+   "jobs": []
+  },
+  {
+   "id": "srm-54629111",
+   "source": "saramin",
+   "company": "폴라리스투자자문",
+   "title": "[투자자문사] 경영지원팀 신입사원 채용 (급여공개) - 정규직",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54629111",
+   "start": "",
+   "end": "2026-08-26",
+   "jobs": []
+  },
+  {
    "id": "js-105692",
    "source": "jasoseol",
    "company": "케이씨텍",
@@ -658,6 +673,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-54695506",
+   "source": "saramin",
+   "company": "대열보일러",
+   "title": "2026년 하반기 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54695506",
+   "start": "",
+   "end": "2026-08-28",
+   "jobs": []
+  },
+  {
    "id": "js-105676",
    "source": "jasoseol",
    "company": "한국무역보험공사(K-SURE)",
@@ -691,6 +716,16 @@
    "company": "한국석유공사",
    "title": "[한국석유공사] 2026년 하반기 직원(정규직) 채용공고",
    "url": "https://linkareer.com/activity/344004",
+   "start": "",
+   "end": "2026-08-28",
+   "jobs": []
+  },
+  {
+   "id": "srm-54739528",
+   "source": "saramin",
+   "company": "한국전력거래소",
+   "title": "전력거래소 2026년 하반기 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54739528",
    "start": "",
    "end": "2026-08-28",
    "jobs": []
@@ -879,16 +914,6 @@
    "size": "중견"
   },
   {
-   "id": "srm-54703161",
-   "source": "saramin",
-   "company": "인터케어",
-   "title": "인터케어 2026년 공개채용 - 통합구매팀(수주 및 운영관리)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54703161",
-   "start": "",
-   "end": "2026-08-30",
-   "jobs": []
-  },
-  {
    "id": "lk-344080",
    "source": "linkareer",
    "company": "일동제약",
@@ -947,6 +972,16 @@
    "company": "SK실트론",
    "title": "[SK실트론] 법무 사내변호사 신입/경력 채용",
    "url": "https://linkareer.com/activity/343875",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54810855",
+   "source": "saramin",
+   "company": "금성에이스산업",
+   "title": "금성에이스산업㈜ 부문별 신입 및 경력 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54810855",
    "start": "",
    "end": "2026-08-31",
    "jobs": []
@@ -1067,6 +1102,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-54795864",
+   "source": "saramin",
+   "company": "해동실업",
+   "title": "무역영업부분 2026년 신입사원 채용공고 올립니다.",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54795864",
+   "start": "",
+   "end": "2026-08-31",
+   "jobs": []
+  },
+  {
    "id": "lk-344431",
    "source": "linkareer",
    "company": "SFA반도체",
@@ -1082,6 +1127,16 @@
    "company": "SK오션플랜트",
    "title": "[SK오션플랜트] 법무 담당 구성원 모집",
    "url": "https://linkareer.com/activity/344326",
+   "start": "",
+   "end": "2026-09-01",
+   "jobs": []
+  },
+  {
+   "id": "srm-54617998",
+   "source": "saramin",
+   "company": "데이터유니버스",
+   "title": "[데이터유니버스] 2026년 신입/경력직 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54617998",
    "start": "",
    "end": "2026-09-01",
    "jobs": []
@@ -1168,16 +1223,6 @@
    ],
    "cg": 14668,
    "size": "기타"
-  },
-  {
-   "id": "srm-54748573",
-   "source": "saramin",
-   "company": "메디포스트",
-   "title": "GMP센터 제조,품질 부문 신입,경력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54748573",
-   "start": "",
-   "end": "2026-09-03",
-   "jobs": []
   },
   {
    "id": "lk-344480",
@@ -1344,6 +1389,16 @@
    "size": "대기업"
   },
   {
+   "id": "srm-54463598",
+   "source": "saramin",
+   "company": "메디렉스",
+   "title": "의료기기 영업 경력 및 신입 사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54463598",
+   "start": "",
+   "end": "2026-09-12",
+   "jobs": []
+  },
+  {
    "id": "srm-54715114",
    "source": "saramin",
    "company": "공간제작소",
@@ -1386,6 +1441,16 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54475948",
    "start": "",
    "end": "2026-09-14",
+   "jobs": []
+  },
+  {
+   "id": "srm-54768020",
+   "source": "saramin",
+   "company": "모든",
+   "title": "2026년 하반기 정기 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54768020",
+   "start": "",
+   "end": "2026-09-16",
    "jobs": []
   },
   {
@@ -1445,21 +1510,11 @@
    "jobs": []
   },
   {
-   "id": "srm-54813178",
+   "id": "srm-54813078",
    "source": "saramin",
    "company": "한화생명보험",
-   "title": "2026 한화금융 신입공채 (투자심사)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54813178",
-   "start": "",
-   "end": "2026-09-18",
-   "jobs": []
-  },
-  {
-   "id": "srm-54813115",
-   "source": "saramin",
-   "company": "한화생명보험",
-   "title": "2026 한화금융 신입공채 (자산운용)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54813115",
+   "title": "2026 한화금융 신입공채 (전략투자)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54813078",
    "start": "",
    "end": "2026-09-18",
    "jobs": []
@@ -1475,11 +1530,21 @@
    "jobs": []
   },
   {
-   "id": "srm-54813078",
+   "id": "srm-54813178",
    "source": "saramin",
    "company": "한화생명보험",
-   "title": "2026 한화금융 신입공채 (전략투자)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54813078",
+   "title": "2026 한화금융 신입공채 (투자심사)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54813178",
+   "start": "",
+   "end": "2026-09-18",
+   "jobs": []
+  },
+  {
+   "id": "srm-54813115",
+   "source": "saramin",
+   "company": "한화생명보험",
+   "title": "2026 한화금융 신입공채 (자산운용)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54813115",
    "start": "",
    "end": "2026-09-18",
    "jobs": []
@@ -1942,16 +2007,6 @@
    "company": "다인정공",
    "title": "[다인정공] [신입] 기획부문 홍보/디자인 담당자 모집 공고",
    "url": "https://linkareer.com/activity/344322",
-   "start": "",
-   "end": "2026-12-31",
-   "jobs": []
-  },
-  {
-   "id": "srm-54748243",
-   "source": "saramin",
-   "company": "테이칼튼",
-   "title": "(주)테이칼튼 각 부문별 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54748243",
    "start": "",
    "end": "2026-12-31",
    "jobs": []
