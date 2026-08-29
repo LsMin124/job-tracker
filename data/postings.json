@@ -1,22 +1,6 @@
 {
- "updated": "2026-08-29T12:01:08+09:00",
+ "updated": "2026-08-30T07:57:27+09:00",
  "postings": [
-  {
-   "id": "js-105668",
-   "source": "jasoseol",
-   "company": "IM뱅크",
-   "title": "2026년 신입행원 채용",
-   "url": "https://jasoseol.com/recruit/105668",
-   "start": "2026-08-14",
-   "end": "2026-08-29",
-   "jobs": [
-    "일반",
-    "지역",
-    "전문"
-   ],
-   "cg": 5072,
-   "size": "대기업"
-  },
   {
    "id": "js-105709",
    "source": "jasoseol",
@@ -238,16 +222,6 @@
    "size": "중견"
   },
   {
-   "id": "srm-54608712",
-   "source": "saramin",
-   "company": "덕산테코피아",
-   "title": "각 사업부별 우수인재 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54608712",
-   "start": "",
-   "end": "2026-08-31",
-   "jobs": []
-  },
-  {
    "id": "lk-346163",
    "source": "linkareer",
    "company": "비테스코테크놀로지스코리아",
@@ -337,11 +311,21 @@
    "size": "기타"
   },
   {
-   "id": "srm-54840282",
+   "id": "srm-54617998",
    "source": "saramin",
+   "company": "데이터유니버스",
+   "title": "[데이터유니버스] 2026년 신입/경력직 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54617998",
+   "start": "",
+   "end": "2026-09-01",
+   "jobs": []
+  },
+  {
+   "id": "lk-345829",
+   "source": "linkareer",
    "company": "자화전자",
-   "title": "2026년 5차 신입/경력 수시 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54840282",
+   "title": "[자화전자] 2026년 5차 신입/경력 수시 채용",
+   "url": "https://linkareer.com/activity/345829",
    "start": "",
    "end": "2026-09-01",
    "jobs": []
@@ -416,6 +400,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54795081",
+   "source": "saramin",
+   "company": "리봄화장품",
+   "title": "[리봄화장품(주)] 사세확장에 따른 부문별 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54795081",
+   "start": "",
+   "end": "2026-09-02",
+   "jobs": []
+  },
+  {
    "id": "js-105635",
    "source": "jasoseol",
    "company": "마이다스그룹",
@@ -472,16 +466,6 @@
    "size": "대기업"
   },
   {
-   "id": "srm-54840254",
-   "source": "saramin",
-   "company": "유피케미칼",
-   "title": "(주)유피케미칼 각 부문별 신입사원 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54840254",
-   "start": "",
-   "end": "2026-09-04",
-   "jobs": []
-  },
-  {
    "id": "js-105832",
    "source": "jasoseol",
    "company": "현대비앤지스틸",
@@ -494,16 +478,6 @@
    ],
    "cg": 1407,
    "size": "대기업"
-  },
-  {
-   "id": "srm-54807538",
-   "source": "saramin",
-   "company": "화승코퍼레이션",
-   "title": "2026년 하반기 2차 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54807538",
-   "start": "",
-   "end": "2026-09-04",
-   "jobs": []
   },
   {
    "id": "js-105563",
@@ -535,6 +509,16 @@
    "company": "경기창조경제혁신센터",
    "title": "[경기창조경제혁신센터] 글로벌 액셀러레이터·창업기업 액셀러레이터 등 정규직 및 계약직 채용",
    "url": "https://linkareer.com/activity/345910",
+   "start": "",
+   "end": "2026-09-06",
+   "jobs": []
+  },
+  {
+   "id": "srm-54813246",
+   "source": "saramin",
+   "company": "동구바이오제약",
+   "title": "동구바이오제약 부문별 수시채용 모집(신입&amp;경력)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54813246",
    "start": "",
    "end": "2026-09-06",
    "jobs": []
@@ -589,6 +573,16 @@
    "company": "엠디엠플러스",
    "title": "[엠디엠플러스] 2026년 경영지원부문(재무) 신입사원 채용",
    "url": "https://linkareer.com/activity/345843",
+   "start": "",
+   "end": "2026-09-06",
+   "jobs": []
+  },
+  {
+   "id": "srm-54844911",
+   "source": "saramin",
+   "company": "인터케어",
+   "title": "인터케어 2026년 공개채용 - 총무 및 통관지원",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54844911",
    "start": "",
    "end": "2026-09-06",
    "jobs": []
@@ -698,16 +692,6 @@
    "size": "기타"
   },
   {
-   "id": "srm-54828914",
-   "source": "saramin",
-   "company": "케이티",
-   "title": "2026년 KT 대졸신입 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54828914",
-   "start": "",
-   "end": "2026-09-07",
-   "jobs": []
-  },
-  {
    "id": "lk-345838",
    "source": "linkareer",
    "company": "한국과학기술원 부설 고등과학원",
@@ -767,16 +751,6 @@
    "company": "에르모어",
    "title": "[KOSDAQ 꿈비그룹 계열사] 부문별 수시 채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54852171",
-   "start": "",
-   "end": "2026-09-08",
-   "jobs": []
-  },
-  {
-   "id": "srm-54795578",
-   "source": "saramin",
-   "company": "엠에스홀딩스",
-   "title": "MS홀딩스 매장 전략 관리자(계장) / 실무파트 리더(주임) 신입, 시설기사 공채",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54795578",
    "start": "",
    "end": "2026-09-08",
    "jobs": []
@@ -912,6 +886,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54842506",
+   "source": "saramin",
+   "company": "아토즈",
+   "title": "2026년 하반기 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54842506",
+   "start": "",
+   "end": "2026-09-09",
+   "jobs": []
+  },
+  {
    "id": "js-105856",
    "source": "jasoseol",
    "company": "어플라이드 머티어리얼즈 코리아",
@@ -935,16 +919,6 @@
    "company": "플레이디",
    "title": "[플레이디] [신입] 2026년 하반기 퍼포먼스마케팅AE(인센티브제) 채용",
    "url": "https://linkareer.com/activity/345840",
-   "start": "",
-   "end": "2026-09-09",
-   "jobs": []
-  },
-  {
-   "id": "srm-54851746",
-   "source": "saramin",
-   "company": "한국동서발전",
-   "title": "2026년 사회형평 신입직원(대졸수준[보훈/장애]) 채용공고",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54851746",
    "start": "",
    "end": "2026-09-09",
    "jobs": []
@@ -1090,346 +1064,6 @@
    ],
    "cg": 15270,
    "size": "대기업"
-  },
-  {
-   "id": "srm-54869792",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-BMS_SOX알고리즘 설계)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869792",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870783",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "2026년 하반기(9월) 신입사원 수시채용(제조지능화(로봇))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870783",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870565",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(생산기술혁신센터-공정기술(Pack))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870565",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870107",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(ESS전지사업부-BMS SW개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870107",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869790",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-AI진단솔루션개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869790",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869855",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-특허 분석/개발/관리)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869855",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870780",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "2026년 하반기(9월) 신입사원 수시채용(제조지능화(원격))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870780",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870782",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "2026년 하반기(9월) 신입사원 수시채용(제조지능화(디지털트윈))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870782",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870127",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(생산기술혁신센터-검사기술(원통형))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870127",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870291",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(ESS전지사업부-System개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870291",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869812",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-Pack선행개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869812",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870368",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(생산기술혁신센터-원통형DX))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870368",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869809",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-BMS_SW개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869809",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870194",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(생산기술혁신센터-공정기술(원통형))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870194",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869791",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-BMS_HW개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869791",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870017",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(ESS전지사업부-BMS HW개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870017",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869747",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-소재개발AX)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869747",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869811",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-Data Enginring)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869811",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869851",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-전장부품설계)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869851",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870726",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(소형전지사업부-원통형Cell개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870726",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869733",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(생산기술혁신센터-검사기술(전극))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869733",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869978",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "2026년 하반기(9월) 신입사원 수시채용(Cell개발(각형전지))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869978",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870779",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "2026년 하반기(9월) 신입사원 수시채용(설비기술(FA))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870779",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869853",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-차세대전지 생산운영)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869853",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870486",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(CPO-설비관리(전극))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870486",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870378",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(CPO-생산운영(Cell))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870378",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870034",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(생산기술혁신센터-설비기술(전극))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870034",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870804",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(소형전지사업부-선행공정기술_생산운영)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870804",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870519",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(CPO-생산운영(전극))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870519",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870160",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(ESS전지사업부-Cell개발)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870160",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870781",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "2026년 하반기(9월) 신입사원 수시채용(공무/생산인프라(에너지)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870781",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870784",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "2026년 하반기(9월) 신입사원 수시채용(설비기술(Pack, 제어)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870784",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870866",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "신입사원 수시채용(소형전지사업부-마케팅)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870866",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54869746",
-   "source": "saramin",
-   "company": "엘지에너지솔루션",
-   "title": "하반기(9월) 신입사원 수시채용 (CTO-선행공정기술)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54869746",
-   "start": "",
-   "end": "2026-09-10",
-   "jobs": []
   },
   {
    "id": "js-105841",
@@ -1623,6 +1257,36 @@
    "cg": 789
   },
   {
+   "id": "srm-54715114",
+   "source": "saramin",
+   "company": "공간제작소",
+   "title": "2026년 부문별 신입 및 경력사원 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54715114",
+   "start": "",
+   "end": "2026-09-13",
+   "jobs": []
+  },
+  {
+   "id": "srm-54876841",
+   "source": "saramin",
+   "company": "성풍이앤에이",
+   "title": "(주)성풍이앤에이 각 부문별 신입 및 경력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54876841",
+   "start": "",
+   "end": "2026-09-13",
+   "jobs": []
+  },
+  {
+   "id": "srm-54811868",
+   "source": "saramin",
+   "company": "세웅플랜트",
+   "title": "[세웅플랜트] 2026년 하반기 해외영업 신입사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54811868",
+   "start": "",
+   "end": "2026-09-13",
+   "jobs": []
+  },
+  {
    "id": "js-105775",
    "source": "jasoseol",
    "company": "아이쓰리시스템",
@@ -1686,16 +1350,6 @@
    "company": "영케미칼",
    "title": "[영케미칼] 김해공장 생산직군 재단파트 신규 채용",
    "url": "https://linkareer.com/activity/346328",
-   "start": "",
-   "end": "2026-09-13",
-   "jobs": []
-  },
-  {
-   "id": "srm-54870594",
-   "source": "saramin",
-   "company": "인컴즈",
-   "title": "[네이버 계열사] 2026 하반기 인컴즈 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54870594",
    "start": "",
    "end": "2026-09-13",
    "jobs": []
@@ -1775,16 +1429,6 @@
    ],
    "cg": 5859,
    "size": "기타"
-  },
-  {
-   "id": "srm-54846301",
-   "source": "saramin",
-   "company": "에쓰와이이앤씨",
-   "title": "2026년 하반기 신입/경력 공개 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54846301",
-   "start": "",
-   "end": "2026-09-14",
-   "jobs": []
   },
   {
    "id": "js-105861",
@@ -1885,6 +1529,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54781063",
+   "source": "saramin",
+   "company": "삼진지게차",
+   "title": "삼진지게차 정비 신입 사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54781063",
+   "start": "",
+   "end": "2026-09-17",
+   "jobs": []
+  },
+  {
    "id": "js-105895",
    "source": "jasoseol",
    "company": "서울교통공사(Seoul Metro)",
@@ -1946,6 +1600,16 @@
    "url": "https://linkareer.com/activity/344479",
    "start": "",
    "end": "2026-09-18",
+   "jobs": []
+  },
+  {
+   "id": "srm-54807036",
+   "source": "saramin",
+   "company": "두산푸드농업회사법인",
+   "title": "정규직 직원 모집 [수시채용]",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54807036",
+   "start": "",
+   "end": "2026-09-19",
    "jobs": []
   },
   {
@@ -2042,11 +1706,11 @@
    "jobs": []
   },
   {
-   "id": "srm-54786328",
+   "id": "srm-54828333",
    "source": "saramin",
-   "company": "이노스페이스",
-   "title": "2026 이노스페이스 신입/경력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54786328",
+   "company": "소노인터내셔널",
+   "title": "[비발디파크]2026년 하반기공개채용｜전국 소노 숙박포인트 지급",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54828333",
    "start": "",
    "end": "2026-09-30",
    "jobs": []
@@ -2107,6 +1771,16 @@
    "url": "https://linkareer.com/activity/345807",
    "start": "",
    "end": "2026-10-22",
+   "jobs": []
+  },
+  {
+   "id": "srm-54855669",
+   "source": "saramin",
+   "company": "티에스이",
+   "title": "(주)티에스이 인사총무팀 인사파트 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54855669",
+   "start": "",
+   "end": "2026-10-25",
    "jobs": []
   },
   {
@@ -2355,6 +2029,16 @@
    "company": "콜마비앤에이치",
    "title": "[콜마비앤에이치] 음성공장 환경안전관리 신입/경력 채용 (채용시 마감)",
    "url": "https://linkareer.com/activity/346110",
+   "start": "",
+   "end": "2026-12-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54748243",
+   "source": "saramin",
+   "company": "테이칼튼",
+   "title": "(주)테이칼튼 각 부문별 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54748243",
    "start": "",
    "end": "2026-12-31",
    "jobs": []
