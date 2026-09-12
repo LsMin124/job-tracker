@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-12T07:55:44+09:00",
+ "updated": "2026-09-13T07:47:07+09:00",
  "postings": [
   {
    "id": "js-105857",
@@ -107,16 +107,6 @@
    "cg": 14058
   },
   {
-   "id": "srm-54876163",
-   "source": "saramin",
-   "company": "SIMPAC",
-   "title": "2026년 SIMPAC그룹 하반기 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54876163",
-   "start": "",
-   "end": "2026-09-13",
-   "jobs": []
-  },
-  {
    "id": "js-105890",
    "source": "jasoseol",
    "company": "SIMPAC그룹",
@@ -210,16 +200,6 @@
    "company": "부광약품",
    "title": "[부광약품] 2026 병원영업 신입 채용 (인천)",
    "url": "https://linkareer.com/activity/349693",
-   "start": "",
-   "end": "2026-09-13",
-   "jobs": []
-  },
-  {
-   "id": "srm-54931465",
-   "source": "saramin",
-   "company": "신아티앤씨",
-   "title": "2026년 ㈜신아티앤씨 하반기 신규인력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54931465",
    "start": "",
    "end": "2026-09-13",
    "jobs": []
@@ -442,16 +422,6 @@
     "Convergence Engineer (설비/인프라)"
    ],
    "cg": 57
-  },
-  {
-   "id": "srm-54979218",
-   "source": "saramin",
-   "company": "깨끗한나라",
-   "title": "[깨끗한나라] 2026년 9월 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54979218",
-   "start": "",
-   "end": "2026-09-14",
-   "jobs": []
   },
   {
    "id": "js-105985",
@@ -1495,11 +1465,11 @@
    "size": "대기업"
   },
   {
-   "id": "srm-54975300",
+   "id": "srm-54629111",
    "source": "saramin",
-   "company": "한국경영지원협회",
-   "title": "2026년 사무직 신입사원 모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54975300",
+   "company": "폴라리스투자자문",
+   "title": "[투자자문사] 경영지원팀 신입사원 채용 (급여공개) - 정규직",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54629111",
    "start": "",
    "end": "2026-09-16",
    "jobs": []
@@ -2052,6 +2022,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54941373",
+   "source": "saramin",
+   "company": "선광",
+   "title": "(주)선광 2026년도 하반기 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54941373",
+   "start": "",
+   "end": "2026-09-20",
+   "jobs": []
+  },
+  {
    "id": "js-106133",
    "source": "jasoseol",
    "company": "아모레퍼시픽",
@@ -2077,11 +2057,11 @@
    "size": "대기업"
   },
   {
-   "id": "srm-54696923",
+   "id": "srm-54939393",
    "source": "saramin",
-   "company": "에이큐엔씨",
-   "title": "(주)에이큐엔씨 영업팀 신입 사원 공채 모집해요",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54696923",
+   "company": "오토바이오그래피",
+   "title": "[벤처기업] PM/공정관리 신입 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54939393",
    "start": "",
    "end": "2026-09-20",
    "jobs": []
@@ -3266,6 +3246,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54610791",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 소프트웨어(SW) 개발 대졸 신입 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54610791",
+   "start": "",
+   "end": "2026-09-28",
+   "jobs": []
+  },
+  {
    "id": "js-106138",
    "source": "jasoseol",
    "company": "와이즈넛",
@@ -3490,16 +3480,6 @@
    "company": "대한적십자사",
    "title": "[대한적십자사] 2026년도 혈장분획센터 정규직 연구원 채용 공고",
    "url": "https://linkareer.com/activity/349523",
-   "start": "",
-   "end": "2026-09-30",
-   "jobs": []
-  },
-  {
-   "id": "srm-54898094",
-   "source": "saramin",
-   "company": "덕산테코피아",
-   "title": "각 사업부별 우수인재 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54898094",
    "start": "",
    "end": "2026-09-30",
    "jobs": []
@@ -3764,13 +3744,23 @@
    "size": "대기업"
   },
   {
-   "id": "srm-54892730",
+   "id": "srm-54930167",
    "source": "saramin",
-   "company": "모트렉스이에프엠",
-   "title": "2026년 모트렉스이에프엠㈜ 신입/경력사원 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54892730",
+   "company": "엠케이피",
+   "title": "반도체 제조업 생산직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54930167",
    "start": "",
-   "end": "2026-10-09",
+   "end": "2026-10-03",
+   "jobs": []
+  },
+  {
+   "id": "srm-54917091",
+   "source": "saramin",
+   "company": "청오디피케이",
+   "title": "도미노피자 각 부문(자회사 포함) 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54917091",
+   "start": "",
+   "end": "2026-10-05",
    "jobs": []
   },
   {
@@ -3985,16 +3975,6 @@
    "jobs": []
   },
   {
-   "id": "lk-349625",
-   "source": "linkareer",
-   "company": "라이브즈인라이프",
-   "title": "AI 기록 서비스 사업 운영 지원 담당자 채용 (신입~3년 · 정규직 · 판교)",
-   "url": "https://linkareer.com/activity/349625",
-   "start": "",
-   "end": "2026-12-09",
-   "jobs": []
-  },
-  {
    "id": "lk-349734",
    "source": "linkareer",
    "company": "루미르",
@@ -4162,16 +4142,6 @@
    "url": "https://linkareer.com/activity/349997",
    "start": "",
    "end": "2026-12-10",
-   "jobs": []
-  },
-  {
-   "id": "srm-54876841",
-   "source": "saramin",
-   "company": "성풍이앤에이",
-   "title": "(주)성풍이앤에이 각 부문별 신입 및 경력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54876841",
-   "start": "",
-   "end": "2026-12-13",
    "jobs": []
   },
   {
