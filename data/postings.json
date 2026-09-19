@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-19T07:58:17+09:00",
+ "updated": "2026-09-20T07:37:13+09:00",
  "postings": [
   {
    "id": "js-106175",
@@ -188,16 +188,6 @@
    ],
    "cg": 1140,
    "size": "중견"
-  },
-  {
-   "id": "srm-54941373",
-   "source": "saramin",
-   "company": "선광",
-   "title": "(주)선광 2026년도 하반기 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54941373",
-   "start": "",
-   "end": "2026-09-20",
-   "jobs": []
   },
   {
    "id": "js-106032",
@@ -632,6 +622,16 @@
    "size": "대기업"
   },
   {
+   "id": "srm-55052644",
+   "source": "saramin",
+   "company": "시스멕스코리아",
+   "title": "[시스멕스코리아 광주] Field Service Engineer 신입사원",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55052644",
+   "start": "",
+   "end": "2026-09-21",
+   "jobs": []
+  },
+  {
    "id": "js-105918",
    "source": "jasoseol",
    "company": "신원",
@@ -864,6 +864,16 @@
    "company": "부광약품",
    "title": "[부광약품] 2026 병원영업 신입 채용 (수원)",
    "url": "https://linkareer.com/activity/351465",
+   "start": "",
+   "end": "2026-09-22",
+   "jobs": []
+  },
+  {
+   "id": "srm-55066723",
+   "source": "saramin",
+   "company": "씨제이푸드빌",
+   "title": "[공식] CJ푸드빌 음성공장 베이커리 생산직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55066723",
    "start": "",
    "end": "2026-09-22",
    "jobs": []
@@ -1207,6 +1217,16 @@
    "size": "중견"
   },
   {
+   "id": "srm-55064911",
+   "source": "saramin",
+   "company": "비티젠",
+   "title": "동아쏘시오그룹 비티젠 2026년도 9월 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55064911",
+   "start": "",
+   "end": "2026-09-27",
+   "jobs": []
+  },
+  {
    "id": "lk-351699",
    "source": "linkareer",
    "company": "아시아나에어포트",
@@ -1283,6 +1303,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-55002729",
+   "source": "saramin",
+   "company": "태경그룹",
+   "title": "2026년 태경그룹 전국 사업장 (서울, 공주, 단양, 정선) 신입 및 경력직 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55002729",
+   "start": "",
+   "end": "2026-09-27",
+   "jobs": []
+  },
+  {
    "id": "lk-351360",
    "source": "linkareer",
    "company": "하이엠솔루텍",
@@ -1318,6 +1348,16 @@
    "company": "하츠",
    "title": "[하츠] 제품개발 개발자 모집 공고(신입)",
    "url": "https://linkareer.com/activity/351851",
+   "start": "",
+   "end": "2026-09-27",
+   "jobs": []
+  },
+  {
+   "id": "srm-55001064",
+   "source": "saramin",
+   "company": "한강식품",
+   "title": "하림그룹 (주)한강식품 2026년 9월 한강식품 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55001064",
    "start": "",
    "end": "2026-09-27",
    "jobs": []
@@ -1655,6 +1695,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54610791",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 소프트웨어(SW) 개발 대졸 신입 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54610791",
+   "start": "",
+   "end": "2026-09-28",
+   "jobs": []
+  },
+  {
    "id": "js-106138",
    "source": "jasoseol",
    "company": "와이즈넛",
@@ -1842,16 +1892,6 @@
    "company": "사조푸디스트",
    "title": "[사조푸디스트] 신입/경력사원 채용 (영업)",
    "url": "https://linkareer.com/activity/351349",
-   "start": "",
-   "end": "2026-09-29",
-   "jobs": []
-  },
-  {
-   "id": "srm-55030700",
-   "source": "saramin",
-   "company": "아트리움컨설턴트",
-   "title": "2026년 하반기 각 부문 신입·경력사원 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55030700",
    "start": "",
    "end": "2026-09-29",
    "jobs": []
@@ -2481,6 +2521,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54901215",
+   "source": "saramin",
+   "company": "도그마루",
+   "title": "(주)도그마루 회계팀 신입사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54901215",
+   "start": "",
+   "end": "2026-09-30",
+   "jobs": []
+  },
+  {
    "id": "lk-351681",
    "source": "linkareer",
    "company": "브이엠",
@@ -2834,6 +2884,35 @@
    "jobs": []
   },
   {
+   "id": "srm-55065717",
+   "source": "saramin",
+   "company": "엔피씨",
+   "title": "엔피씨 주식회사 부문별 신입사원 채용 (국내/글로벌 물류 마케팅, NRS 운영/관리)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55065717",
+   "start": "",
+   "end": "2026-10-01",
+   "jobs": []
+  },
+  {
+   "id": "js-106304",
+   "source": "jasoseol",
+   "company": "율촌화학",
+   "title": "2026년 농심그룹 부문별 신입/경력 공개채용",
+   "url": "https://jasoseol.com/recruit/106304",
+   "start": "2026-09-19",
+   "end": "2026-10-01",
+   "jobs": [
+    "전지소재개발",
+    "회로,반도체 소재 개발",
+    "해외영업(전자소재)",
+    "구매",
+    "사업기획",
+    "품질관리(전지소재)"
+   ],
+   "cg": 2694,
+   "size": "중견"
+  },
+  {
    "id": "js-105772",
    "source": "jasoseol",
    "company": "DB그룹",
@@ -2948,6 +3027,26 @@
    "url": "https://linkareer.com/activity/351932",
    "start": "",
    "end": "2026-10-02",
+   "jobs": []
+  },
+  {
+   "id": "srm-54985863",
+   "source": "saramin",
+   "company": "엠에스홀딩스",
+   "title": "[MS홀딩스] 2026년 공산 · 농산 · 축산 신입 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54985863",
+   "start": "",
+   "end": "2026-10-02",
+   "jobs": []
+  },
+  {
+   "id": "srm-54930167",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 생산직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54930167",
+   "start": "",
+   "end": "2026-10-03",
    "jobs": []
   },
   {
@@ -3154,6 +3253,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54892730",
+   "source": "saramin",
+   "company": "모트렉스이에프엠",
+   "title": "2026년 모트렉스이에프엠㈜ 신입/경력사원 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54892730",
+   "start": "",
+   "end": "2026-10-09",
+   "jobs": []
+  },
+  {
    "id": "lk-351279",
    "source": "linkareer",
    "company": "윗유",
@@ -3204,11 +3313,11 @@
    "jobs": []
   },
   {
-   "id": "lk-351753",
-   "source": "linkareer",
+   "id": "srm-54975614",
+   "source": "saramin",
    "company": "신세계",
-   "title": "[신세계] 27년 신입사원 채용",
-   "url": "https://linkareer.com/activity/351753",
+   "title": "2027년 신세계그룹 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54975614",
    "start": "",
    "end": "2026-10-12",
    "jobs": []
@@ -3738,6 +3847,16 @@
    "url": "https://linkareer.com/activity/351723",
    "start": "",
    "end": "2026-12-17",
+   "jobs": []
+  },
+  {
+   "id": "srm-54748243",
+   "source": "saramin",
+   "company": "테이칼튼",
+   "title": "(주)테이칼튼 각 부문별 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54748243",
+   "start": "",
+   "end": "2026-12-31",
    "jobs": []
   }
  ],
