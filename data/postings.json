@@ -1,30 +1,6 @@
 {
- "updated": "2026-09-25T08:43:05+09:00",
+ "updated": "2026-09-26T08:45:18+09:00",
  "postings": [
-  {
-   "id": "js-106184",
-   "source": "jasoseol",
-   "company": "한국우편사업진흥원(POSA)",
-   "title": "2026년 신규직원(정규직, 무기계약직, 청년인턴, 사회형평 계약직) 채용 공고",
-   "url": "https://jasoseol.com/recruit/106184",
-   "start": "2026-09-11",
-   "end": "2026-09-25",
-   "jobs": [
-    "일반직5급_전자우편 서비스 마케팅·운영",
-    "일반직5급_전자우편 시스템 관리",
-    "일반직5급_전시회 기획·운영",
-    "일반직5급_문화우편상품 마케팅",
-    "일반직5급_전자상거래지원센터 사업 운영",
-    "일반직5급_임대 관리",
-    "무기계약_전문직(사무)_우체국쇼핑 협업사업 관리",
-    "무기계약_전문직(사무)_우체국쇼핑 품질관리",
-    "무기계약_전문직(사무)_개인정보보호",
-    "무기계약_전문직(사무)_경영정보시스템 개발 및 유지보수",
-    "무기계약_전문직(특수)_전자우편 제작"
-   ],
-   "cg": 208,
-   "size": "기타"
-  },
   {
    "id": "js-106313",
    "source": "jasoseol",
@@ -540,6 +516,16 @@
    "size": "중견"
   },
   {
+   "id": "srm-54610791",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 소프트웨어(SW) 개발 대졸 신입 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54610791",
+   "start": "",
+   "end": "2026-09-28",
+   "jobs": []
+  },
+  {
    "id": "js-106138",
    "source": "jasoseol",
    "company": "와이즈넛",
@@ -596,6 +582,16 @@
    "company": "한미약품",
    "title": "[한미약품] 온라인팜(주) B2B플랫폼 운영 및 AS고객상담 채용",
    "url": "https://linkareer.com/activity/352021",
+   "start": "",
+   "end": "2026-09-28",
+   "jobs": []
+  },
+  {
+   "id": "srm-55099798",
+   "source": "saramin",
+   "company": "한일정밀",
+   "title": "㈜한일정밀 하반기 정기 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55099798",
    "start": "",
    "end": "2026-09-28",
    "jobs": []
@@ -740,16 +736,6 @@
    ],
    "cg": 15505,
    "size": "기타"
-  },
-  {
-   "id": "srm-55039887",
-   "source": "saramin",
-   "company": "춘천에너지",
-   "title": "춘천에너지(주) 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55039887",
-   "start": "",
-   "end": "2026-09-29",
-   "jobs": []
   },
   {
    "id": "js-106142",
@@ -1465,16 +1451,6 @@
    "jobs": []
   },
   {
-   "id": "srm-55031257",
-   "source": "saramin",
-   "company": "조광요턴",
-   "title": "[외국계기업] 조광요턴(주) 구매 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55031257",
-   "start": "",
-   "end": "2026-09-30",
-   "jobs": []
-  },
-  {
    "id": "js-105702",
    "source": "jasoseol",
    "company": "중앙대학교병원",
@@ -1866,6 +1842,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-55102045",
+   "source": "saramin",
+   "company": "대륙제관",
+   "title": "대륙제관 그룹사 신입 및 경력 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55102045",
+   "start": "",
+   "end": "2026-10-02",
+   "jobs": []
+  },
+  {
    "id": "js-106054",
    "source": "jasoseol",
    "company": "두산건설",
@@ -2145,21 +2131,21 @@
    "jobs": []
   },
   {
-   "id": "srm-55110790",
-   "source": "saramin",
-   "company": "(재)우체국금융개발원",
-   "title": "2026년 9차 공개채용(예금회계)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55110790",
-   "start": "",
-   "end": "2026-10-06",
-   "jobs": []
-  },
-  {
    "id": "srm-55110227",
    "source": "saramin",
    "company": "(재)우체국금융개발원",
    "title": "2026년 9차 공개채용(특별조사)",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55110227",
+   "start": "",
+   "end": "2026-10-06",
+   "jobs": []
+  },
+  {
+   "id": "srm-55110790",
+   "source": "saramin",
+   "company": "(재)우체국금융개발원",
+   "title": "2026년 9차 공개채용(예금회계)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55110790",
    "start": "",
    "end": "2026-10-06",
    "jobs": []
@@ -2301,16 +2287,6 @@
    "company": "서울시메트로구호선",
    "title": "서울시메트로9호선(주) 2026년 하반기 신입사원 채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55103283",
-   "start": "",
-   "end": "2026-10-06",
-   "jobs": []
-  },
-  {
-   "id": "srm-55101766",
-   "source": "saramin",
-   "company": "서울시메트로구호선",
-   "title": "서울시메트로9호선(주) 2026년 하반기 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55101766",
    "start": "",
    "end": "2026-10-06",
    "jobs": []
@@ -2555,6 +2531,16 @@
    "jobs": []
   },
   {
+   "id": "srm-55102083",
+   "source": "saramin",
+   "company": "티디케이한국",
+   "title": "[평택본사] 생산직/기술직/사무직 정규직ㆍ계약직 신입,경력 인력 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55102083",
+   "start": "",
+   "end": "2026-10-09",
+   "jobs": []
+  },
+  {
    "id": "lk-352840",
    "source": "linkareer",
    "company": "JSR Micro Korea",
@@ -2623,16 +2609,6 @@
    "company": "넥슨스페이스",
    "title": "[넥슨스페이스] HR Generalist 채용 (인사/총무)",
    "url": "https://linkareer.com/activity/352747",
-   "start": "",
-   "end": "2026-10-11",
-   "jobs": []
-  },
-  {
-   "id": "srm-55086623",
-   "source": "saramin",
-   "company": "대한전선",
-   "title": "2027 신입사원 채용 (시공기술)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55086623",
    "start": "",
    "end": "2026-10-11",
    "jobs": []
@@ -2933,16 +2909,6 @@
    ],
    "cg": 14394,
    "size": "대기업"
-  },
-  {
-   "id": "srm-55086631",
-   "source": "saramin",
-   "company": "호반티비엠",
-   "title": "2027 신입사원 채용 (TBM(안전))",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55086631",
-   "start": "",
-   "end": "2026-10-11",
-   "jobs": []
   },
   {
    "id": "js-106234",
@@ -3264,11 +3230,11 @@
    "jobs": []
   },
   {
-   "id": "srm-55113989",
+   "id": "srm-55042336",
    "source": "saramin",
-   "company": "조인트유창써멀시스템",
-   "title": "[주 4일 근무제 도입] 각 부문별 신입 및 경력사원 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55113989",
+   "company": "데이터유니버스",
+   "title": "[데이터유니버스] 2026년 신입/경력직 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55042336",
    "start": "",
    "end": "2026-10-18",
    "jobs": []
@@ -3311,6 +3277,16 @@
    ],
    "cg": 43,
    "size": "대기업"
+  },
+  {
+   "id": "srm-55114322",
+   "source": "saramin",
+   "company": "로엘법무법인",
+   "title": "[로엘법무법인] 서울 부동산, 금융(PF팀) 신입사원 채용(비서)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55114322",
+   "start": "",
+   "end": "2026-10-26",
+   "jobs": []
   },
   {
    "id": "lk-352170",
@@ -3396,6 +3372,16 @@
    ],
    "cg": 15972,
    "size": "기타"
+  },
+  {
+   "id": "srm-55111442",
+   "source": "saramin",
+   "company": "이제너두",
+   "title": "2026년 이제너두(주) 하반기 수시 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55111442",
+   "start": "",
+   "end": "2026-11-05",
+   "jobs": []
   },
   {
    "id": "js-106307",
