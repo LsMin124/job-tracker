@@ -1,21 +1,6 @@
 {
- "updated": "2026-09-26T08:45:18+09:00",
+ "updated": "2026-09-27T08:20:27+09:00",
  "postings": [
-  {
-   "id": "js-106313",
-   "source": "jasoseol",
-   "company": "전북은행",
-   "title": "2026년 신입행원 채용공고",
-   "url": "https://jasoseol.com/recruit/106313",
-   "start": "2026-09-18",
-   "end": "2026-09-26",
-   "jobs": [
-    "UB_일반인재",
-    "UB_지역인재"
-   ],
-   "cg": 6891,
-   "size": "대기업"
-  },
   {
    "id": "lk-352555",
    "source": "linkareer",
@@ -292,26 +277,6 @@
    ],
    "cg": 4359,
    "size": "기타"
-  },
-  {
-   "id": "srm-55002729",
-   "source": "saramin",
-   "company": "태경그룹",
-   "title": "2026년 태경그룹 전국 사업장 (서울, 공주, 단양, 정선) 신입 및 경력직 수시 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55002729",
-   "start": "",
-   "end": "2026-09-27",
-   "jobs": []
-  },
-  {
-   "id": "srm-55001064",
-   "source": "saramin",
-   "company": "한강식품",
-   "title": "하림그룹 (주)한강식품 2026년 9월 한강식품 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55001064",
-   "start": "",
-   "end": "2026-09-27",
-   "jobs": []
   },
   {
    "id": "js-106130",
@@ -1372,6 +1337,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54939218",
+   "source": "saramin",
+   "company": "디아이동일천안알루미늄사업장",
+   "title": "알루미늄 사업부문 생산기술직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54939218",
+   "start": "",
+   "end": "2026-09-30",
+   "jobs": []
+  },
+  {
    "id": "js-106272",
    "source": "jasoseol",
    "company": "세스코",
@@ -1401,6 +1376,16 @@
    "company": "씨제이포디플렉스",
    "title": "2026 CJ 4DPLEX 신입사원 모집",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55066011",
+   "start": "",
+   "end": "2026-09-30",
+   "jobs": []
+  },
+  {
+   "id": "srm-55115629",
+   "source": "saramin",
+   "company": "씨제이푸드빌",
+   "title": "[공식] CJ푸드빌 음성공장 베이커리 생산직 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55115629",
    "start": "",
    "end": "2026-09-30",
    "jobs": []
@@ -1715,16 +1700,6 @@
    "jobs": []
   },
   {
-   "id": "srm-55065717",
-   "source": "saramin",
-   "company": "엔피씨",
-   "title": "엔피씨 주식회사 부문별 신입사원 채용 (국내/글로벌 물류 마케팅, NRS 운영/관리)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55065717",
-   "start": "",
-   "end": "2026-10-01",
-   "jobs": []
-  },
-  {
    "id": "js-106304",
    "source": "jasoseol",
    "company": "율촌화학",
@@ -1982,11 +1957,11 @@
    "jobs": []
   },
   {
-   "id": "srm-54940835",
+   "id": "srm-55112954",
    "source": "saramin",
-   "company": "디엔서비스",
-   "title": "2026년 DN서비스 신입/경력사원 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54940835",
+   "company": "셀트리온제약",
+   "title": "㈜셀트리온제약 신입/경력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55112954",
    "start": "",
    "end": "2026-10-05",
    "jobs": []
@@ -2040,16 +2015,6 @@
    "company": "월덱스",
    "title": "(주)월덱스 각 부문 신입/경력 공개채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54901220",
-   "start": "",
-   "end": "2026-10-05",
-   "jobs": []
-  },
-  {
-   "id": "srm-54917091",
-   "source": "saramin",
-   "company": "청오디피케이",
-   "title": "도미노피자 각 부문(자회사 포함) 공개 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54917091",
    "start": "",
    "end": "2026-10-05",
    "jobs": []
@@ -2131,41 +2096,11 @@
    "jobs": []
   },
   {
-   "id": "srm-55110227",
-   "source": "saramin",
-   "company": "(재)우체국금융개발원",
-   "title": "2026년 9차 공개채용(특별조사)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55110227",
-   "start": "",
-   "end": "2026-10-06",
-   "jobs": []
-  },
-  {
    "id": "srm-55110790",
    "source": "saramin",
    "company": "(재)우체국금융개발원",
    "title": "2026년 9차 공개채용(예금회계)",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55110790",
-   "start": "",
-   "end": "2026-10-06",
-   "jobs": []
-  },
-  {
-   "id": "srm-55109960",
-   "source": "saramin",
-   "company": "(재)우체국금융개발원",
-   "title": "2026년 9차 공개채용(보험청구심사)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55109960",
-   "start": "",
-   "end": "2026-10-06",
-   "jobs": []
-  },
-  {
-   "id": "srm-55109823",
-   "source": "saramin",
-   "company": "(재)우체국금융개발원",
-   "title": "2026년 9차 공개채용(실손보험 지급심사)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55109823",
    "start": "",
    "end": "2026-10-06",
    "jobs": []
@@ -2244,6 +2179,16 @@
    "size": "대기업"
   },
   {
+   "id": "srm-55077136",
+   "source": "saramin",
+   "company": "동원산업",
+   "title": "2026년 하반기 동원그룹 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55077136",
+   "start": "",
+   "end": "2026-10-06",
+   "jobs": []
+  },
+  {
    "id": "js-106381",
    "source": "jasoseol",
    "company": "서강대학교",
@@ -2287,6 +2232,16 @@
    "company": "서울시메트로구호선",
    "title": "서울시메트로9호선(주) 2026년 하반기 신입사원 채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55103283",
+   "start": "",
+   "end": "2026-10-06",
+   "jobs": []
+  },
+  {
+   "id": "srm-55101766",
+   "source": "saramin",
+   "company": "서울시메트로구호선",
+   "title": "서울시메트로9호선(주) 2026년 하반기 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55101766",
    "start": "",
    "end": "2026-10-06",
    "jobs": []
@@ -2531,6 +2486,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54988461",
+   "source": "saramin",
+   "company": "에이티글로벌",
+   "title": "(주)에이티글로벌 개발팀 신입사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54988461",
+   "start": "",
+   "end": "2026-10-09",
+   "jobs": []
+  },
+  {
    "id": "srm-55102083",
    "source": "saramin",
    "company": "티디케이한국",
@@ -2609,6 +2574,16 @@
    "company": "넥슨스페이스",
    "title": "[넥슨스페이스] HR Generalist 채용 (인사/총무)",
    "url": "https://linkareer.com/activity/352747",
+   "start": "",
+   "end": "2026-10-11",
+   "jobs": []
+  },
+  {
+   "id": "srm-55038595",
+   "source": "saramin",
+   "company": "더유제약",
+   "title": "2027 더유제약 상반기 부문별 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55038595",
    "start": "",
    "end": "2026-10-11",
    "jobs": []
@@ -3220,6 +3195,16 @@
    "jobs": []
   },
   {
+   "id": "srm-54851468",
+   "source": "saramin",
+   "company": "세종화재해상자동차손해사정",
+   "title": "세종화재해상자동차손해사정(주) 대구 재물팀 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54851468",
+   "start": "",
+   "end": "2026-10-16",
+   "jobs": []
+  },
+  {
    "id": "srm-55038621",
    "source": "saramin",
    "company": "공간제작소",
@@ -3235,6 +3220,16 @@
    "company": "데이터유니버스",
    "title": "[데이터유니버스] 2026년 신입/경력직 공개채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55042336",
+   "start": "",
+   "end": "2026-10-18",
+   "jobs": []
+  },
+  {
+   "id": "srm-55113989",
+   "source": "saramin",
+   "company": "조인트유창써멀시스템",
+   "title": "[주 4일 근무제 도입] 각 부문별 신입 및 경력사원 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55113989",
    "start": "",
    "end": "2026-10-18",
    "jobs": []
@@ -3277,16 +3272,6 @@
    ],
    "cg": 43,
    "size": "대기업"
-  },
-  {
-   "id": "srm-55114322",
-   "source": "saramin",
-   "company": "로엘법무법인",
-   "title": "[로엘법무법인] 서울 부동산, 금융(PF팀) 신입사원 채용(비서)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55114322",
-   "start": "",
-   "end": "2026-10-26",
-   "jobs": []
   },
   {
    "id": "lk-352170",
