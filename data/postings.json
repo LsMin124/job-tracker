@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T09:06:17+09:00",
+ "updated": "2026-10-04T08:28:21+09:00",
  "postings": [
   {
    "id": "lk-354143",
@@ -458,11 +458,31 @@
    "jobs": []
   },
   {
+   "id": "srm-55102222",
+   "source": "saramin",
+   "company": "폴라리스투자자문",
+   "title": "[투자자문사] 경영지원팀 신입사원 채용 (급여공개) - 정규직",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55102222",
+   "start": "",
+   "end": "2026-10-07",
+   "jobs": []
+  },
+  {
    "id": "srm-55145733",
    "source": "saramin",
    "company": "한양이엔지",
    "title": "부문별 수시채용 직원모집",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55145733",
+   "start": "",
+   "end": "2026-10-07",
+   "jobs": []
+  },
+  {
+   "id": "srm-55102006",
+   "source": "saramin",
+   "company": "효림엑스이",
+   "title": "2026년 효림그룹 하반기 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55102006",
    "start": "",
    "end": "2026-10-07",
    "jobs": []
@@ -577,16 +597,6 @@
    "company": "코스트코코리아",
    "title": "[코스트코코리아] [천안점] 신입사원 채용공고",
    "url": "https://linkareer.com/activity/354098",
-   "start": "",
-   "end": "2026-10-09",
-   "jobs": []
-  },
-  {
-   "id": "srm-55102083",
-   "source": "saramin",
-   "company": "티디케이한국",
-   "title": "[평택본사] 생산직/기술직/사무직 정규직ㆍ계약직 신입,경력 인력 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55102083",
    "start": "",
    "end": "2026-10-09",
    "jobs": []
@@ -958,16 +968,6 @@
    ],
    "cg": 9236,
    "size": "중견"
-  },
-  {
-   "id": "srm-55164150",
-   "source": "saramin",
-   "company": "티에이케이텍스타일",
-   "title": "티에이케이텍스타일 생산관리 신입사원 모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55164150",
-   "start": "",
-   "end": "2026-10-11",
-   "jobs": []
   },
   {
    "id": "js-106533",
@@ -1479,16 +1479,6 @@
    "size": "기타"
   },
   {
-   "id": "srm-55130447",
-   "source": "saramin",
-   "company": "인컴즈",
-   "title": "[네이버 계열사] 2026 하반기 인컴즈 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55130447",
-   "start": "",
-   "end": "2026-10-12",
-   "jobs": []
-  },
-  {
    "id": "js-106548",
    "source": "jasoseol",
    "company": "지역난방안전",
@@ -1822,26 +1812,6 @@
    "size": "대기업"
   },
   {
-   "id": "srm-55189537",
-   "source": "saramin",
-   "company": "상미당홀딩스",
-   "title": "[파리크라상] 2026 하반기 대졸 신입사원 모집(총무)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55189537",
-   "start": "",
-   "end": "2026-10-14",
-   "jobs": []
-  },
-  {
-   "id": "srm-55189536",
-   "source": "saramin",
-   "company": "상미당홀딩스",
-   "title": "[파리크라상] 2026 하반기 대졸 신입사원 모집(SI)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55189536",
-   "start": "",
-   "end": "2026-10-14",
-   "jobs": []
-  },
-  {
    "id": "js-106403",
    "source": "jasoseol",
    "company": "서울대학교",
@@ -2075,6 +2045,16 @@
    "jobs": []
   },
   {
+   "id": "srm-55102680",
+   "source": "saramin",
+   "company": "사회복지법인굿네이버스",
+   "title": "2027년 상반기 신입직원 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55102680",
+   "start": "",
+   "end": "2026-10-16",
+   "jobs": []
+  },
+  {
    "id": "srm-55146923",
    "source": "saramin",
    "company": "참프레",
@@ -2149,6 +2129,16 @@
    "jobs": []
   },
   {
+   "id": "srm-55136946",
+   "source": "saramin",
+   "company": "뷰니스",
+   "title": "글로벌 매니저 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55136946",
+   "start": "",
+   "end": "2026-10-18",
+   "jobs": []
+  },
+  {
    "id": "lk-354185",
    "source": "linkareer",
    "company": "에스에이엠지엔터테인먼트",
@@ -2177,21 +2167,11 @@
    "size": "대기업"
   },
   {
-   "id": "lk-353875",
-   "source": "linkareer",
-   "company": "인동에프엔",
-   "title": "2026년 하반기 INDONG FN 신입사원 채용 (채용연계형 인턴)",
-   "url": "https://linkareer.com/activity/353875",
-   "start": "",
-   "end": "2026-10-18",
-   "jobs": []
-  },
-  {
-   "id": "srm-55113989",
+   "id": "srm-55161725",
    "source": "saramin",
-   "company": "조인트유창써멀시스템",
-   "title": "[주 4일 근무제 도입] 각 부문별 신입 및 경력사원 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55113989",
+   "company": "인동에프엔",
+   "title": "2026년 하반기 INDONG FN 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55161725",
    "start": "",
    "end": "2026-10-18",
    "jobs": []
@@ -2517,6 +2497,16 @@
    "jobs": []
   },
   {
+   "id": "srm-55114322",
+   "source": "saramin",
+   "company": "로엘법무법인",
+   "title": "[로엘법무법인] 서울 부동산, 금융(PF팀) 신입사원 채용(비서)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55114322",
+   "start": "",
+   "end": "2026-10-26",
+   "jobs": []
+  },
+  {
    "id": "srm-55129612",
    "source": "saramin",
    "company": "트라코월드",
@@ -2567,6 +2557,16 @@
    "jobs": []
   },
   {
+   "id": "srm-55086913",
+   "source": "saramin",
+   "company": "이노스페이스",
+   "title": "2026 이노스페이스 신입/경력 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55086913",
+   "start": "",
+   "end": "2026-10-31",
+   "jobs": []
+  },
+  {
    "id": "lk-354330",
    "source": "linkareer",
    "company": "휴온스메디텍",
@@ -2582,6 +2582,16 @@
    "company": "오스템임플란트",
    "title": "[오스템임플란트] 국내 치과 영업",
    "url": "https://linkareer.com/activity/354417",
+   "start": "",
+   "end": "2026-11-01",
+   "jobs": []
+  },
+  {
+   "id": "srm-55165737",
+   "source": "saramin",
+   "company": "이평종합건설",
+   "title": "2026년 하반기 분야별 신입 및 경력직 공개 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55165737",
    "start": "",
    "end": "2026-11-01",
    "jobs": []
@@ -2733,6 +2743,16 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55116368",
    "start": "",
    "end": "2026-11-22",
+   "jobs": []
+  },
+  {
+   "id": "srm-55148280",
+   "source": "saramin",
+   "company": "내츄럴스",
+   "title": "일하기좋은기업 영업사원 (고객관리) 공채",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55148280",
+   "start": "",
+   "end": "2026-11-27",
    "jobs": []
   },
   {
@@ -2961,6 +2981,16 @@
    "company": "테스",
    "title": "[테스] FEM 기반 구조 해석 신입/경력사원 모집",
    "url": "https://linkareer.com/activity/354509",
+   "start": "",
+   "end": "2026-12-31",
+   "jobs": []
+  },
+  {
+   "id": "srm-54748243",
+   "source": "saramin",
+   "company": "테이칼튼",
+   "title": "(주)테이칼튼 각 부문별 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54748243",
    "start": "",
    "end": "2026-12-31",
    "jobs": []
