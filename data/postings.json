@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T08:43:19+09:00",
+ "updated": "2026-10-25T07:49:28+09:00",
  "postings": [
   {
    "id": "js-106774",
@@ -433,16 +433,6 @@
    "jobs": []
   },
   {
-   "id": "srm-55350688",
-   "source": "saramin",
-   "company": "육바연에프앤비",
-   "title": "[육바연 F&amp;B] 직영점 매니저 공개 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55350688",
-   "start": "",
-   "end": "2026-10-27",
-   "jobs": []
-  },
-  {
    "id": "js-106675",
    "source": "jasoseol",
    "company": "한국지역정보개발원",
@@ -498,11 +488,11 @@
    "jobs": []
   },
   {
-   "id": "srm-55286848",
+   "id": "srm-55367150",
    "source": "saramin",
-   "company": "네오텍",
-   "title": "(주)네오텍 자동차부문 부문별 경력 및 신입사원 모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55286848",
+   "company": "대륙제관",
+   "title": "대륙제관 그룹사 신입 및 경력 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55367150",
    "start": "",
    "end": "2026-10-28",
    "jobs": []
@@ -573,6 +563,16 @@
    ],
    "cg": 5415,
    "size": "기타"
+  },
+  {
+   "id": "srm-55296217",
+   "source": "saramin",
+   "company": "에스티엠",
+   "title": "총무팀 경력 및 신입사원 모집 (군위공장)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55296217",
+   "start": "",
+   "end": "2026-10-28",
+   "jobs": []
   },
   {
    "id": "srm-55300258",
@@ -743,16 +743,6 @@
    "company": "덕산테코피아",
    "title": "각 사업부별 우수인재 수시채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55160477",
-   "start": "",
-   "end": "2026-10-31",
-   "jobs": []
-  },
-  {
-   "id": "srm-55296355",
-   "source": "saramin",
-   "company": "세림티에스지",
-   "title": "[공채] 세림 신입 공개채용 - SW 개발 / 시스템 엔지니어 / IT 기술영업",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55296355",
    "start": "",
    "end": "2026-10-31",
    "jobs": []
@@ -940,6 +930,26 @@
    ],
    "cg": 1719,
    "size": "중견"
+  },
+  {
+   "id": "srm-55312240",
+   "source": "saramin",
+   "company": "동구바이오제약",
+   "title": "동구바이오제약 부문별 수시채용 모집(경력)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55312240",
+   "start": "",
+   "end": "2026-11-01",
+   "jobs": []
+  },
+  {
+   "id": "srm-55312222",
+   "source": "saramin",
+   "company": "동구바이오제약",
+   "title": "동구바이오제약 생산,공장 부문 수시채용 모집(신입&amp;경력)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55312222",
+   "start": "",
+   "end": "2026-11-01",
+   "jobs": []
   },
   {
    "id": "srm-55240583",
@@ -1331,11 +1341,21 @@
    "size": "기타"
   },
   {
-   "id": "srm-55284858",
+   "id": "srm-55353867",
    "source": "saramin",
-   "company": "이마트",
-   "title": "이마트/TRADERS 점포 신선직무 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55284858",
+   "company": "티디케이한국",
+   "title": "[평택본사] 생산직/기술직/사무직 정규직ㆍ계약직 신입,경력 인력 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55353867",
+   "start": "",
+   "end": "2026-11-02",
+   "jobs": []
+  },
+  {
+   "id": "srm-55272111",
+   "source": "saramin",
+   "company": "펜타시스템테크놀러지",
+   "title": "펜타시스템 40기 신입사원 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55272111",
    "start": "",
    "end": "2026-11-02",
    "jobs": []
@@ -1548,16 +1568,6 @@
    "size": "기타"
   },
   {
-   "id": "srm-55361879",
-   "source": "saramin",
-   "company": "그린파워",
-   "title": "㈜그린파워 하반기 각 부문 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55361879",
-   "start": "",
-   "end": "2026-11-05",
-   "jobs": []
-  },
-  {
    "id": "lk-359101",
    "source": "linkareer",
    "company": "근로복지공단",
@@ -1608,31 +1618,11 @@
    "jobs": []
   },
   {
-   "id": "srm-55176414",
-   "source": "saramin",
-   "company": "에스티아이",
-   "title": "[㈜에스티아이] 2026년 하반기 공채",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55176414",
-   "start": "",
-   "end": "2026-11-05",
-   "jobs": []
-  },
-  {
    "id": "lk-359040",
    "source": "linkareer",
    "company": "울산항만공사",
    "title": "[울산항만공사] 2026년 하반기 신입직원 (채용형 인턴) 채용 공고",
    "url": "https://linkareer.com/activity/359040",
-   "start": "",
-   "end": "2026-11-05",
-   "jobs": []
-  },
-  {
-   "id": "srm-55111442",
-   "source": "saramin",
-   "company": "이제너두",
-   "title": "2026년 이제너두(주) 하반기 수시 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55111442",
    "start": "",
    "end": "2026-11-05",
    "jobs": []
@@ -1706,6 +1696,16 @@
    ],
    "cg": 3988,
    "size": "대기업"
+  },
+  {
+   "id": "srm-55228822",
+   "source": "saramin",
+   "company": "엠케이피",
+   "title": "반도체 제조업 자재관리 신입사원 채용(전문대졸)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55228822",
+   "start": "",
+   "end": "2026-11-06",
+   "jobs": []
   },
   {
    "id": "lk-358912",
@@ -2014,6 +2014,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-55235674",
+   "source": "saramin",
+   "company": "이로운",
+   "title": "2026년 기술진단(토목,환경,기계,전기)하반기 정기채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55235674",
+   "start": "",
+   "end": "2026-11-10",
+   "jobs": []
+  },
+  {
    "id": "js-106633",
    "source": "jasoseol",
    "company": "아이센스",
@@ -2039,26 +2049,6 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55262483",
    "start": "",
    "end": "2026-11-11",
-   "jobs": []
-  },
-  {
-   "id": "srm-55270808",
-   "source": "saramin",
-   "company": "일흥",
-   "title": "각 부문 신입 및 경력 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55270808",
-   "start": "",
-   "end": "2026-11-12",
-   "jobs": []
-  },
-  {
-   "id": "srm-55332820",
-   "source": "saramin",
-   "company": "다세미텍",
-   "title": "2026년 대졸(예정) 신입채용(일본 해외영업/ 영업관리 및 총무)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55332820",
-   "start": "",
-   "end": "2026-11-13",
    "jobs": []
   },
   {
@@ -2111,13 +2101,13 @@
    "jobs": []
   },
   {
-   "id": "srm-55366233",
+   "id": "srm-55354825",
    "source": "saramin",
-   "company": "루트케이",
-   "title": "주식회사 루트케이 각 부문 수시 채용 (생산, 생산관리, A/S, 구매, 제어)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55366233",
+   "company": "안국약품",
+   "title": "안국약품(주) 총무팀 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55354825",
    "start": "",
-   "end": "2026-11-24",
+   "end": "2026-11-20",
    "jobs": []
   },
   {
@@ -2136,26 +2126,6 @@
    "company": "공간제작소",
    "title": "2026년 부문별 신입 및 경력사원 공개채용",
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55326716",
-   "start": "",
-   "end": "2026-11-30",
-   "jobs": []
-  },
-  {
-   "id": "srm-55343616",
-   "source": "saramin",
-   "company": "대진휀스",
-   "title": "대진휀스(주) 각 부문 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55343616",
-   "start": "",
-   "end": "2026-11-30",
-   "jobs": []
-  },
-  {
-   "id": "srm-55345222",
-   "source": "saramin",
-   "company": "아모텍",
-   "title": "㈜아모텍 2026년 하반기 신입/경력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55345222",
    "start": "",
    "end": "2026-11-30",
    "jobs": []
@@ -2271,16 +2241,6 @@
    ],
    "cg": 6039,
    "size": "기타"
-  },
-  {
-   "id": "srm-55283383",
-   "source": "saramin",
-   "company": "스마트에프앤디",
-   "title": "(주)스마트에프앤디 부문별 수시 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283383",
-   "start": "",
-   "end": "2026-12-31",
-   "jobs": []
   },
   {
    "id": "lk-358613",
