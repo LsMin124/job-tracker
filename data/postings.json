@@ -1,20 +1,6 @@
 {
- "updated": "2026-11-14T10:12:09+09:00",
+ "updated": "2026-11-15T09:39:13+09:00",
  "postings": [
-  {
-   "id": "js-106272",
-   "source": "jasoseol",
-   "company": "세스코",
-   "title": "2026년 하반기 전문영업직 신입 대규모 채용 (전국)",
-   "url": "https://jasoseol.com/recruit/106272",
-   "start": "2026-09-16",
-   "end": "2026-11-14",
-   "jobs": [
-    "전문영업직(SD)"
-   ],
-   "cg": 217,
-   "size": "중견"
-  },
   {
    "id": "js-107091",
    "source": "jasoseol",
@@ -147,16 +133,6 @@
    "size": "중견"
   },
   {
-   "id": "srm-55425571",
-   "source": "saramin",
-   "company": "선광",
-   "title": "(주)선광 2026년도 하반기 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55425571",
-   "start": "",
-   "end": "2026-11-15",
-   "jobs": []
-  },
-  {
    "id": "js-107096",
    "source": "jasoseol",
    "company": "세방그룹",
@@ -171,16 +147,6 @@
    ],
    "cg": 494,
    "size": "중견"
-  },
-  {
-   "id": "srm-55478791",
-   "source": "saramin",
-   "company": "신아티앤씨",
-   "title": "2026년 ㈜신아티앤씨 하반기 신규인력 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478791",
-   "start": "",
-   "end": "2026-11-15",
-   "jobs": []
   },
   {
    "id": "js-107082",
@@ -202,16 +168,6 @@
    "company": "엘오케이",
    "title": "로레알코리아 2027 상반기 채용 전제형 인턴십 모집 (~11/15)",
    "url": "https://linkareer.com/activity/362400",
-   "start": "",
-   "end": "2026-11-15",
-   "jobs": []
-  },
-  {
-   "id": "srm-55532340",
-   "source": "saramin",
-   "company": "재원산업",
-   "title": "[여수산단] 재원산업(주) 재무관리실 회계담당 (대졸 신입)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55532340",
    "start": "",
    "end": "2026-11-15",
    "jobs": []
@@ -253,16 +209,6 @@
    ],
    "cg": 1741,
    "size": "대기업"
-  },
-  {
-   "id": "srm-55418306",
-   "source": "saramin",
-   "company": "패스트파이브",
-   "title": "2026 하반기 각 부문 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55418306",
-   "start": "",
-   "end": "2026-11-15",
-   "jobs": []
   },
   {
    "id": "lk-364113",
@@ -740,6 +686,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-55542362",
+   "source": "saramin",
+   "company": "한양이엔지",
+   "title": "[정규 • 계약] 수시채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55542362",
+   "start": "",
+   "end": "2026-11-18",
+   "jobs": []
+  },
+  {
    "id": "lk-363757",
    "source": "linkareer",
    "company": "강남대학교",
@@ -947,11 +903,11 @@
    "size": "대기업"
   },
   {
-   "id": "srm-55552465",
+   "id": "srm-55430475",
    "source": "saramin",
-   "company": "한국경영지원협회",
-   "title": "2026년 사무직 신입사원 모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55552465",
+   "company": "크린팩토메이션",
+   "title": "2027년 1월 부문별 정기 공개채용 (정규직전환형 인턴)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55430475",
    "start": "",
    "end": "2026-11-20",
    "jobs": []
@@ -1180,6 +1136,16 @@
    "size": "기타"
   },
   {
+   "id": "srm-55566807",
+   "source": "saramin",
+   "company": "한국무브넥스",
+   "title": "2026년 한국무브넥스 생산직 신입사원 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55566807",
+   "start": "",
+   "end": "2026-11-22",
+   "jobs": []
+  },
+  {
    "id": "srm-55535470",
    "source": "saramin",
    "company": "한국평가데이터",
@@ -1302,6 +1268,16 @@
    "size": "대기업"
   },
   {
+   "id": "srm-55546773",
+   "source": "saramin",
+   "company": "티디케이한국",
+   "title": "[평택본사] 생산직/기술직 정규직 신입 인력 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55546773",
+   "start": "",
+   "end": "2026-11-23",
+   "jobs": []
+  },
+  {
    "id": "lk-363988",
    "source": "linkareer",
    "company": "동성화인텍",
@@ -1410,16 +1386,6 @@
    "jobs": []
   },
   {
-   "id": "srm-55408099",
-   "source": "saramin",
-   "company": "엠케이피",
-   "title": "반도체 제조업 CS 대졸 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55408099",
-   "start": "",
-   "end": "2026-11-26",
-   "jobs": []
-  },
-  {
    "id": "lk-363748",
    "source": "linkareer",
    "company": "한국한의학연구원",
@@ -1435,16 +1401,6 @@
    "company": "LS네트웍스",
    "title": "[LS네트웍스] 프로-스펙스 신발디자인팀 신발MD 채용",
    "url": "https://linkareer.com/activity/364189",
-   "start": "",
-   "end": "2026-11-27",
-   "jobs": []
-  },
-  {
-   "id": "srm-55490486",
-   "source": "saramin",
-   "company": "리봄화장품",
-   "title": "[리봄화장품(주)] 사세확장에 따른 부문별 공개채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55490486",
    "start": "",
    "end": "2026-11-27",
    "jobs": []
@@ -1487,6 +1443,16 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55551901",
    "start": "",
    "end": "2026-11-27",
+   "jobs": []
+  },
+  {
+   "id": "srm-55546086",
+   "source": "saramin",
+   "company": "동구바이오제약",
+   "title": "동구바이오제약 부문별 수시채용 모집(경력)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55546086",
+   "start": "",
+   "end": "2026-11-29",
    "jobs": []
   },
   {
@@ -1629,16 +1595,6 @@
    "jobs": []
   },
   {
-   "id": "srm-55439865",
-   "source": "saramin",
-   "company": "덕산테코피아",
-   "title": "각 사업부별 우수인재 수시채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55439865",
-   "start": "",
-   "end": "2026-11-30",
-   "jobs": []
-  },
-  {
    "id": "lk-364180",
    "source": "linkareer",
    "company": "세스코",
@@ -1771,23 +1727,13 @@
    "size": "대기업"
   },
   {
-   "id": "srm-55472245",
+   "id": "srm-55448650",
    "source": "saramin",
-   "company": "동보로지스",
-   "title": "[사무직] 동보로지스 사무직물류배차  경력사원/신입사원모집",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472245",
+   "company": "세종화재해상자동차손해사정",
+   "title": "세종화재해상자동차손해사정(주) 대구 재물팀 신입사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55448650",
    "start": "",
-   "end": "2026-12-03",
-   "jobs": []
-  },
-  {
-   "id": "srm-55503840",
-   "source": "saramin",
-   "company": "엠케이피",
-   "title": "반도체 제조업 자재관리 (전문)대졸 신입사원 채용",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503840",
-   "start": "",
-   "end": "2026-12-06",
+   "end": "2026-12-04",
    "jobs": []
   },
   {
